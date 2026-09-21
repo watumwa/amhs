@@ -8,9 +8,9 @@ const featureCards = [
 ];
 
 const approaches = [
-  ["Hands-on learning", "We make learning tangible through projects that connect knowledge with the real world.", "PBL"],
-  ["Made for the team", "Sport, brass band, clubs and exchanges teach our students how to belong and contribute.", "LIFE"],
-  ["Grounded leadership", "Our students learn to lead with humility, courage, and service to others.", "LEAD"],
+  ["Hands-on learning", "We make learning tangible through projects that connect knowledge with the real world.", "PBL", "/project-based-learning"],
+  ["Made for the team", "Sport, brass band, clubs and exchanges teach our students how to belong and contribute.", "LIFE", "/associations-and-clubs"],
+  ["Grounded leadership", "Our students learn to lead with humility, courage, and service to others.", "LEAD", "/student-leadership"],
 ];
 
 export default function HomePage() {
@@ -74,9 +74,9 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading centered"><p className="eyebrow"><span /> Learning beyond the classroom</p><h2>Learning that comes <em>alive.</em></h2><p>Opportunity here is never one-size-fits-all. It happens in the classroom, on the field, on stage, and out in the community.</p></div>
           <div className="approach-grid">
-            {approaches.map(([title, copy, tag], i) => <article className={`approach-card approach-${i + 1}`} key={title}>
+            {approaches.map(([title, copy, tag, href], i) => <article className={`approach-card approach-${i + 1}`} key={title}>
               <div className="approach-image" /><div className="approach-overlay" />
-              <div className="approach-content"><span>{tag}</span><h3>{title}</h3><p>{copy}</p><Link href="/our-approach" aria-label={`Learn about ${title}`}><Arrow /></Link></div>
+              <div className="approach-content"><span>{tag}</span><h3>{title}</h3><p>{copy}</p><Link href={href} aria-label={`Learn about ${title}`}><Arrow /></Link></div>
             </article>)}
           </div>
           <div className="center-action"><Link className="text-link" href="/our-approach">Explore our approach <Arrow /></Link></div>
