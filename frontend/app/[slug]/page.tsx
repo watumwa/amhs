@@ -38,7 +38,77 @@ const pages: Record<string, PageInfo> = {
   "school-exchange-programmes": { label: "Get involved", title: "A wider world", emphasis: "within reach.", eyebrow: "School Exchange Programmes", intro: "Exchange programmes help students see new perspectives, build friendships across borders and bring fresh ideas back to AMHS.", image: "exchange", details: ["We welcome partnerships with schools and organisations that share our belief in open-minded, globally engaged education.", "Get in touch to explore an exchange that is purposeful, safe and enriching for young people."], facts: [["6", "Partner links"], ["3", "Countries"], ["∞", "New perspectives"]], cta: "Start a conversation" },
 };
 
+type PageFamily = "story" | "people" | "learning" | "practical" | "experience" | "community";
+
+const pageHeadings: Record<string, [string, string]> = {
+  academics: ["Ambition with", "the right support."], about: ["The values behind", "our school."], "amhs-roots": ["A story worth", "carrying forward."],
+  team: ["Teaching, mentoring,", "and belonging."], staff: ["Dedicated to each", "student’s growth."], "board-of-governors": ["Leadership with students", "at the centre."],
+  "pta-leadership": ["Home and school", "working together."], "student-leadership": ["A voice, a responsibility,", "a chance to lead."], "success-stories": ["What our community", "carries forward."],
+  "school-policies": ["The guidance that keeps", "our community safe."], partners: ["Partnerships with", "real purpose."], facilities: ["A campus ready for", "every kind of learning."],
+  curriculum: ["A clear journey through", "knowledge and possibility."], "academic-calendar": ["Plan the year", "with confidence."], subjects: ["Areas of study that", "open up choices."],
+  library: ["Time and space", "to think deeply."], syllabus: ["What students learn,", "and how it builds."], admission: ["Everything families need", "to begin well."],
+  fees: ["Straightforward support", "for family planning."], uniform: ["What students need", "to feel ready."], "our-approach": ["How learning becomes", "part of who students are."],
+  "project-based-learning": ["Questions, action,", "and meaningful work."], "brass-band-club": ["Practice, performance,", "and pride."], "games-and-sport": ["A place to play,", "compete, and grow."],
+  "talent-development": ["A pathway for", "every strength."], "associations-and-clubs": ["Interests become", "a sense of belonging."], "students-life": ["A school day with", "more to discover."],
+  "get-involved": ["Ways to make", "a lasting difference."], "school-exchange-programmes": ["New perspectives", "that travel both ways."],
+};
+
+const actionDestinations: Record<string, string> = {
+  academics: "/subjects", about: "/team", "amhs-roots": "/about", team: "/staff", staff: "mailto:info@amhs.ac.ug",
+  "board-of-governors": "mailto:info@amhs.ac.ug", "pta-leadership": "mailto:info@amhs.ac.ug", "student-leadership": "/students-life",
+  "success-stories": "mailto:info@amhs.ac.ug", "school-policies": "mailto:info@amhs.ac.ug", partners: "mailto:info@amhs.ac.ug", facilities: "/apply-now",
+  curriculum: "/subjects", "academic-calendar": "mailto:info@amhs.ac.ug", subjects: "mailto:info@amhs.ac.ug", library: "mailto:info@amhs.ac.ug",
+  syllabus: "mailto:info@amhs.ac.ug", admission: "/apply-now", fees: "mailto:admissions@amhs.ac.ug", uniform: "mailto:admissions@amhs.ac.ug",
+  "our-approach": "/students-life", "project-based-learning": "/our-approach", "brass-band-club": "/students-life", "games-and-sport": "/students-life",
+  "talent-development": "/students-life", "associations-and-clubs": "/students-life", "students-life": "/our-approach", "get-involved": "/donate",
+  "school-exchange-programmes": "mailto:info@amhs.ac.ug",
+};
+
+const familyContent: Record<PageFamily, { label: string; title: string; emphasis: string; description: string }> = {
+  story: { label: "The bigger picture", title: "A shared", emphasis: "sense of purpose.", description: "The details below show the people, values and experiences that shape this part of AMHS." },
+  people: { label: "People first", title: "The relationships", emphasis: "behind the work.", description: "Every role contributes to a school where young people are known, challenged and supported." },
+  learning: { label: "Learning in practice", title: "Strong foundations.", emphasis: "Wider horizons.", description: "This is how students build knowledge, confidence and the habits that carry learning forward." },
+  practical: { label: "Useful information", title: "The details", emphasis: "families need.", description: "Clear information helps students and families plan confidently for the next step." },
+  experience: { label: "Beyond the classroom", title: "A chance to", emphasis: "take part and grow.", description: "These experiences give students room to practise, contribute and find what matters to them." },
+  community: { label: "Together with AMHS", title: "Shared effort.", emphasis: "Real opportunity.", description: "This work connects the school with families, partners and a wider community of support." },
+};
+
 const mediaClass = (key: string) => `page-photo image-${key}`;
+
+function getPageFamily(slug: string): PageFamily {
+  if (["academics", "curriculum", "library"].includes(slug)) return "learning";
+  if (["academic-calendar", "subjects", "syllabus", "fees", "uniform", "school-policies", "facilities", "admission"].includes(slug)) return "practical";
+  if (["team", "staff", "board-of-governors", "pta-leadership", "student-leadership"].includes(slug)) return "people";
+  if (["our-approach", "project-based-learning", "brass-band-club", "games-and-sport", "talent-development", "associations-and-clubs", "students-life"].includes(slug)) return "experience";
+  if (["partners", "get-involved", "school-exchange-programmes"].includes(slug)) return "community";
+  return "story";
+}
+
+function PageAction({ slug, label }: { slug: string; label: string }) {
+  const href = actionDestinations[slug] ?? "/apply-now";
+  const content = <>{label} <Arrow /></>;
+  return href.startsWith("mailto:")
+    ? <a className="button button-navy" href={href}>{content}</a>
+    : <Link className="button button-navy" href={href}>{content}</Link>;
+}
+
+function TopicOverview({ page, family }: { page: PageInfo; family: PageFamily }) {
+  const content = familyContent[family];
+  return <section className={`topic-section topic-section--${family}`}>
+    <div className="container">
+      <div className="topic-heading">
+        <div><p className="eyebrow"><span /> {content.label}</p><h2>{content.title}<br /><em>{content.emphasis}</em></h2></div>
+        <p>{content.description}</p>
+      </div>
+      <div className="topic-grid">
+        {page.facts.map(([value, label], index) => <article className="topic-card" key={`${value}-${label}`}>
+          <span className="topic-number">0{index + 1}</span><strong>{value}</strong><h3>{label}</h3>
+          <p>{page.details[index] ?? `Find out more about ${label.toLowerCase()} and what it means for the AMHS community.`}</p>
+        </article>)}
+      </div>
+    </div>
+  </section>;
+}
 
 export function generateStaticParams() {
   return [...Object.keys(pages), "apply-now", "donate", "sponsor-a-child"].map((slug) => ({ slug }));
@@ -50,11 +120,13 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   if (slug === "donate" || slug === "sponsor-a-child") return <GivingPage sponsor={slug === "sponsor-a-child"} />;
   const page = pages[slug];
   if (!page) notFound();
+  const [sectionTitle, sectionEmphasis] = pageHeadings[slug] ?? [page.eyebrow, "at AMHS."];
+  const family = getPageFamily(slug);
+
   return <>
     <section className="page-hero"><div className={mediaClass(page.image)} /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{page.title}<br /><em>{page.emphasis}</em></h1><p>{page.intro}</p></div></section>
-    <section className="content-section container"><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>Thoughtfully designed<br /><em>for every learner.</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}<Link href="/apply-now" className="button button-navy">{page.cta ?? "Get in touch"} <Arrow /></Link></div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={value}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
-    <section className="wide-photo-section"><div className={`wide-photo ${mediaClass(page.image)}`} /><div className="container"><div className="wide-photo-card"><p className="eyebrow"><span /> The AMHS way</p><h2>Growing capable,<br /><em>compassionate people.</em></h2><p>We see potential in every student, and bring our best to helping it grow.</p></div></div></section>
-    <section className="route-panel"><div className="container"><p className="eyebrow eyebrow-light"><span /> Your next step</p><h2>Come and see what<br /><em>is possible.</em></h2><Link className="button button-gold" href="/apply-now">Start an enquiry <Arrow /></Link></div></section>
+    <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}<br /><em>{sectionEmphasis}</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}<PageAction slug={slug} label={page.cta ?? "Get in touch"} /></div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
+    <TopicOverview page={page} family={family} />
   </>;
 }
 
