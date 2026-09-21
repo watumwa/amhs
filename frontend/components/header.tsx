@@ -12,6 +12,7 @@ type NavigationItem = {
 };
 
 const navigation: readonly NavigationItem[] = [
+  { label: "Home", href: "/" },
   { label: "Who we are", links: [["About us", "/about"], ["AMHS Roots", "/amhs-roots"], ["Our team", "/team"], ["Our staff", "/staff"], ["Board of Governors", "/board-of-governors"], ["PTA Leadership", "/pta-leadership"], ["Student Leadership", "/student-leadership"], ["Success stories", "/success-stories"], ["School policies", "/school-policies"], ["Our partners", "/partners"], ["School facilities", "/facilities"]] },
   { label: "Academics", links: [["Curriculum", "/curriculum"], ["Academic calendar", "/academic-calendar"], ["Subjects offered", "/subjects"], ["School library", "/library"], ["National & school syllabus", "/syllabus"]] },
   { label: "Admission", links: [["Fees structure", "/fees"], ["School uniform", "/uniform"], ["Apply now", "/apply-now"]] },
@@ -35,7 +36,7 @@ export function Header() {
       <Link href="/" className="brand" aria-label="Asaba Memorial High School home"><Crest /><span>Asaba Memorial<br /><strong>High School</strong></span></Link>
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation"><i /><i /><i /></button>
       <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
-        {navigation.map((item) => item.href ? <Link className={path === item.href ? "active" : ""} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link> :
+        {navigation.map((item) => item.href ? <Link className={path === item.href ? "active" : ""} aria-current={path === item.href ? "page" : undefined} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link> :
           <div className="nav-menu" key={item.label}><button className={item.links!.some(([, href]) => path === href) ? "active" : ""}>{item.label}<span>⌄</span></button><div className="dropdown">{item.links!.map(([name, href]) => <Link href={href} key={href} onClick={() => setOpen(false)}>{name}</Link>)}</div></div>)}
       </nav>
       <Link href="/apply-now" className="header-apply">Apply now <span>↗</span></Link>
