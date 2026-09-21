@@ -1,0 +1,39 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+
+type NavigationItem = {
+  label: string;
+  href?: string;
+  links?: readonly (readonly [string, string])[];
+};
+
+const navigation: readonly NavigationItem[] = [
+  { label: "Who we are", links: [["About us", "/about"], ["AMHS Roots", "/amhs-roots"], ["Our team", "/team"], ["Success stories", "/success-stories"], ["School policies", "/school-policies"], ["Our partners", "/partners"], ["Facilities", "/facilities"]] },
+  { label: "Academics", links: [["Curriculum", "/curriculum"], ["Academic calendar", "/academic-calendar"], ["Subjects offered", "/subjects"], ["School library", "/library"], ["National & school syllabus", "/syllabus"]] },
+  { label: "Admission", links: [["Fees structure", "/fees"], ["School uniform", "/uniform"], ["Apply now", "/apply-now"]] },
+  { label: "Our approach", href: "/our-approach" },
+  { label: "Student life", href: "/students-life" },
+  { label: "Get involved", links: [["Donate", "/donate"], ["Sponsor a child", "/sponsor-a-child"], ["School exchanges", "/school-exchange-programmes"]] },
+] as const;
+
+function Crest() { return <span className="crest" aria-label="AMHS"><b>A</b><i>★</i><strong>MHS</strong></span>; }
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+  const path = usePathname();
+  return <>
+    <div className="utility-bar"><div className="container"><span>Applications for 2027 are now open</span><div><a href="mailto:info@amhs.ac.ug">info@amhs.ac.ug</a><span className="utility-dot" /> <span>+256 700 000 000</span></div></div></div>
+    <header className="site-header"><div className="container header-inner">
+      <Link href="/" className="brand" aria-label="Asaba Memorial High School home"><Crest /><span>Asaba Memorial<br /><strong>High School</strong></span></Link>
+      <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation"><i /><i /><i /></button>
+      <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
+        {navigation.map((item) => item.href ? <Link className={path === item.href ? "active" : ""} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link> :
+          <div className="nav-menu" key={item.label}><button className={item.links!.some(([, href]) => path === href) ? "active" : ""}>{item.label}<span>⌄</span></button><div className="dropdown">{item.links!.map(([name, href]) => <Link href={href} key={href} onClick={() => setOpen(false)}>{name}</Link>)}</div></div>)}
+      </nav>
+      <Link href="/apply-now" className="header-apply">Apply now <span>↗</span></Link>
+    </div></header>
+  </>;
+}
