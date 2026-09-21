@@ -1,0 +1,81 @@
+/* Asaba Memorial High School brand colour system */
+:root {
+  --maroon: #800000;
+  --gold: #FFBF00;
+  --cream: #FFFDD0;
+  --white: #FFFFFF;
+  --charcoal: #1C1C1C;
+  --navy: var(--maroon);
+  --navy-2: #660000;
+  --ink: var(--charcoal);
+  --muted: #5e5252;
+  --line: #e7ddb5;
+}
+
+body { background: var(--white); color: var(--charcoal); }
+.utility-bar, .site-footer { background: var(--charcoal); color: var(--cream); }
+.utility-bar a:hover, .site-footer a:hover { color: var(--gold); }
+.site-header, .hero, .stats-band, .admission-callout, .route-panel, .approach-card, .story-main, .support-strip { background: var(--maroon); }
+.header-apply, .button-gold, .quote-card, .story-quote, .circle-arrow, .form-success > span { background: var(--gold); color: var(--charcoal); }
+.header-apply:hover, .button-gold:hover { background: #ffd24d; }
+.button-navy { background: var(--maroon); }
+.button-navy:hover { background: #660000; }
+
+.intro-copy h2, .section-heading h2, .wide-photo-card h2, .content-copy h2, .application-aside h2, .giving-copy h2, .form-heading h2, .form-success h2, .giving-card h2, .feature-card h3, .facts-card strong, .application-aside li, .text-link, .feature-icon, .impact-list b { color: var(--maroon); }
+.intro-copy > p:not(.eyebrow), .content-copy > p:not(.eyebrow), .application-aside > p:not(.eyebrow), .giving-copy > p:not(.eyebrow), .split-heading > p, .centered > p:last-child, .feature-card p, .facts-card span, .wide-photo-card > p:last-child, .form-heading > p:last-child, .form-success p, .impact-list span, .giving-note, .not-found > p:not(.eyebrow) { color: var(--charcoal); }
+.features-section, .facts-card { background: var(--cream); }
+.feature-card, .wide-photo-card, .admission-form, .form-success, .giving-card { background: var(--white); }
+.amount-grid button { background: var(--cream); color: var(--maroon); }
+.amount-grid button.selected { border-color: var(--maroon); background: var(--white); }
+.admission-form label, .giving-card label { color: var(--charcoal); }
+.admission-form input, .admission-form select, .admission-form textarea, .giving-card input { border-color: #d8cba2; color: var(--charcoal); background: var(--white); }
+.consent input { accent-color: var(--maroon); }
+
+.crest {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  display: block;
+  overflow: hidden;
+  padding: 2px;
+  clip-path: none;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgb(28 28 28 / .24);
+}
+.crest-image { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.footer-brand .crest { width: 62px; height: 62px; flex-basis: 62px; border-color: var(--gold); }
+
+.hero-image { background-image: linear-gradient(90deg, rgba(128, 0, 0, .93) 4%, rgba(128, 0, 0, .61) 54%, rgba(28, 28, 28, .18)), url('https://images.unsplash.com/photo-1509062522246-3755977927d3?auto=format&fit=crop&w=1800&q=85'); }
+.page-photo { background-image: linear-gradient(90deg, rgba(128, 0, 0, .9) 0%, rgba(128, 0, 0, .48) 64%, rgba(28, 28, 28, .28)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85'); }
+.image-roots { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=85'); }
+.image-team, .image-board { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=85'); }
+.image-parents { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1600&q=85'); }
+.image-students, .image-life { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1600&q=85'); }
+.image-success { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1462536943532-57a629f6cc60?auto=format&fit=crop&w=1600&q=85'); }
+.image-policies, .image-syllabus { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1600&q=85'); }
+.image-partners, .image-exchange { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1600&q=85'); }
+.image-facilities, .image-library { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=85'); }
+.image-curriculum, .image-subjects, .image-calendar { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1509062522246-3755977927d3?auto=format&fit=crop&w=1600&q=85'); }
+.image-admission, .image-uniform, .image-fees { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=85'); }
+.image-approach { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1600&q=85'); }
+.image-involved { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=85'); }
+.approach-card .approach-overlay { background: linear-gradient(0deg, rgba(28, 28, 28, .95), rgba(128, 0, 0, .08) 75%); }
+.story-image { background-image: linear-gradient(0deg, rgba(28, 28, 28, .87), rgba(128, 0, 0, .08)), url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=85'); }
+.admission-photo { background: linear-gradient(90deg, var(--maroon), transparent 32%), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1100&q=85') center / cover; }
+.site-footer h3, .approach-content > span, .label { color: var(--gold); }
+.hero-geometry { border-color: rgb(255 191 0 / .56); }
+.hero-geometry::before, .hero-geometry::after { border-color: rgb(255 191 0 / .38); }
+
+@media (max-width: 820px) {
+  .hero-image { background-image: linear-gradient(90deg, rgba(128, 0, 0, .93) 4%, rgba(128, 0, 0, .72) 60%, rgba(28, 28, 28, .4)), url('https://images.unsplash.com/photo-1509062522246-3755977927d3?auto=format&fit=crop&w=1200&q=85'); }
+}
+
+@media (max-width: 590px) {
+  .crest { width: 42px; height: 42px; flex-basis: 42px; }
+  .footer-brand .crest { width: 54px; height: 54px; flex-basis: 54px; }
+}
+
+/* Static school-life photography for the home-page hero. */
+.hero-image.hero-image-one { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/hero-students.jpg'); background-position: center; }

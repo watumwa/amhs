@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -19,7 +20,11 @@ const navigation: readonly NavigationItem[] = [
   { label: "Get involved", links: [["Donate", "/donate"], ["Sponsor a child", "/sponsor-a-child"], ["School exchanges", "/school-exchange-programmes"]] },
 ] as const;
 
-function Crest() { return <span className="crest" aria-label="AMHS"><b>A</b><i>★</i><strong>MHS</strong></span>; }
+function Crest() {
+  return <span className="crest" aria-hidden="true">
+    <Image className="crest-image" src="/asaba-memorial-logo.jpeg" alt="" width={500} height={500} priority />
+  </span>;
+}
 
 export function Header() {
   const [open, setOpen] = useState(false);

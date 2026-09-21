@@ -1,4 +1,4 @@
-:root { --navy:#0d233a; --navy-2:#153650; --cream:#f7f9fb; --gold:#f4b41a; --ink:#192a37; --muted:#60707d; --line:#d9e0e4; --serif:Georgia, 'Times New Roman', serif; --sans:Inter, 'Helvetica Neue', Arial, sans-serif; }
+:root { --maroon:#800000; --gold:#FFBF00; --cream:#FFFDD0; --white:#FFFFFF; --charcoal:#1C1C1C; --navy:var(--maroon); --navy-2:#660000; --ink:var(--charcoal); --muted:#5e5252; --line:#e7ddb5; --serif:Georgia, 'Times New Roman', serif; --sans:Inter, 'Helvetica Neue', Arial, sans-serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--cream); color:var(--ink); font-family:var(--sans); }

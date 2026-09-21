@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero" aria-labelledby="hero-heading">
-        <div className="hero-image" />
+        <div className="hero-image hero-image-one" aria-hidden="true" />
         <div className="hero-content container">
           <p className="eyebrow eyebrow-light"><span /> Est. 1985 · A community of possibility</p>
           <h1 id="hero-heading">A place to grow<br /><em>and make a difference.</em></h1>
