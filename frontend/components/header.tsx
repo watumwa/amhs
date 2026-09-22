@@ -37,7 +37,7 @@ export function Header() {
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation"><i /><i /><i /></button>
       <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
         {navigation.map((item) => item.href ? <Link className={path === item.href ? "active" : ""} aria-current={path === item.href ? "page" : undefined} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</Link> :
-          <div className="nav-menu" key={item.label}><button className={item.links!.some(([, href]) => path === href) ? "active" : ""}>{item.label}<span>⌄</span></button><div className="dropdown">{item.links!.map(([name, href]) => <Link href={href} key={href} onClick={() => setOpen(false)}>{name}</Link>)}</div></div>)}
+          <div className="nav-menu" key={item.label}><button className={item.links!.some(([, href]) => path === href) ? "active" : ""}>{item.label}</button><div className="dropdown">{item.links!.map(([name, href]) => <Link href={href} key={href} onClick={() => setOpen(false)}>{name}</Link>)}</div></div>)}
       </nav>
       <Link href="/apply-now" className="header-apply">Apply now <span>↗</span></Link>
     </div></header>
