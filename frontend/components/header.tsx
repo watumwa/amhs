@@ -31,7 +31,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const path = usePathname();
   return <>
-    <div className="utility-bar"><div className="container"><span>Applications for 2027 are now open</span><div><a href="mailto:info@amhs.ac.ug">info@amhs.ac.ug</a><span className="utility-dot" /> <span>+256 700 000 000</span></div></div></div>
+    <div className="utility-bar"><div className="container"><span>Applications for 2027 are now open</span><div><a href="mailto:info@amhs.sc.ug">info@amhs.sc.ug</a><span className="utility-dot" /> <span>+256 766 610 442</span></div></div></div>
     <header className="site-header"><div className="container header-inner">
       <Link href="/" className="brand" aria-label="Asaba Memorial High School home"><Crest /><span>Asaba Memorial<br /><strong>High School</strong></span></Link>
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation"><i /><i /><i /></button>

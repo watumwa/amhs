@@ -2,15 +2,15 @@ import Link from "next/link";
 import { Arrow, Book, Compass, Medal, Sparkle } from "../components/icons";
 
 const featureCards = [
-  { icon: <Book />, number: "01", title: "Academic rigour", text: "A curriculum that builds confident thinkers, purposeful writers, and lifelong learners.", href: "/curriculum" },
-  { icon: <Compass />, number: "02", title: "Whole-child growth", text: "Every learner has room to explore their character, creativity, talents, and voice.", href: "/our-approach" },
-  { icon: <Medal />, number: "03", title: "A culture of excellence", text: "High expectations, personal care, and a community that celebrates progress.", href: "/success-stories" },
+  { icon: <Book />, number: "01", title: "Academic Learning", text: "A broad curriculum designed to build strong foundations in sciences, humanities, languages, technology and practical subjects.", href: "/curriculum" },
+  { icon: <Compass />, number: "02", title: "Project-Based Learning", text: "Students apply classroom knowledge to practical projects and real-life challenges through investigation, creativity and teamwork.", href: "/project-based-learning" },
+  { icon: <Medal />, number: "03", title: "Inclusive Education", text: "We seek to make secondary education accessible to learners from different social and economic backgrounds.", href: "/about" },
 ];
 
 const approaches = [
-  ["Hands-on learning", "We make learning tangible through projects that connect knowledge with the real world.", "PBL", "/project-based-learning"],
-  ["Made for the team", "Sport, brass band, clubs and exchanges teach our students how to belong and contribute.", "LIFE", "/associations-and-clubs"],
-  ["Grounded leadership", "Our students learn to lead with humility, courage, and service to others.", "LEAD", "/student-leadership"],
+  ["Academic excellence", "Our students learn in a school that values strong foundations, clear thinking and purposeful growth.", "ACADEMIC", "/curriculum"],
+  ["Practical skills", "Learning includes areas such as ICT, tailoring and design, carpentry, entrepreneurship and other practical skills.", "PRACTICAL", "/our-approach"],
+  ["Character & leadership", "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", "LEAD", "/student-leadership"],
 ];
 
 export default function HomePage() {
@@ -19,12 +19,12 @@ export default function HomePage() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-image hero-image-one" aria-hidden="true" />
         <div className="hero-content container">
-          <p className="eyebrow eyebrow-light"><span /> Est. 1985 · A community of possibility</p>
-          <h1 id="hero-heading">A place to grow<br /><em>and make a difference.</em></h1>
-          <p className="hero-copy">At Asaba Memorial High School, we nurture capable, curious young people who are ready to shape a brighter future.</p>
+          <p className="eyebrow eyebrow-light"><span /> Asaba Memorial High School</p>
+          <h1 id="hero-heading">Lighting the Path to a Brighter Tomorrow</h1>
+          <p className="hero-copy">Quality Education. Practical Skills. Strong Values. Brighter Futures.</p>
           <div className="hero-actions">
-            <Link className="button button-gold" href="/apply-now">Begin your journey <Arrow /></Link>
-            <Link className="text-link text-link-light" href="/about">Discover AMHS <Arrow /></Link>
+            <Link className="button button-gold" href="/apply-now">Apply for Admission <Arrow /></Link>
+            <Link className="text-link text-link-light" href="/about">Explore AMHS <Arrow /></Link>
           </div>
         </div>
         <a href="#welcome" className="scroll-cue"><span>Explore AMHS</span><i /></a>
@@ -43,14 +43,14 @@ export default function HomePage() {
       <section className="intro-section container" id="welcome">
         <div className="intro-media">
           <div className="image-frame image-welcome" />
-          <div className="quote-card"><Sparkle /><p>“The best preparation for tomorrow is a meaningful today.”</p></div>
-          <div className="experience-mark"><strong>40</strong><span>years of<br />excellence</span></div>
+          <div className="quote-card"><Sparkle /><p>“At AMHS, education goes beyond passing examinations.”</p></div>
+          <div className="experience-mark"><strong>AMHS</strong><span>mixed day &amp;<br />boarding</span></div>
         </div>
         <div className="intro-copy">
           <p className="eyebrow"><span /> Welcome to AMHS</p>
-          <h2>Education with<br /><em>heart and purpose.</em></h2>
-          <p>We believe a truly excellent education sees every child: their potential, their questions, their gifts, and where they want to go next.</p>
-          <p>In our warm, energetic community, students become accomplished learners and grounded young leaders.</p>
+          <h2>Education with<br /><em>knowledge, character and purpose.</em></h2>
+          <p>Asaba Memorial High School is a mixed day and boarding secondary school located in Kitanyata, Kiruli Sub-county, Masindi District, Uganda.</p>
+          <p>We provide an inclusive, values-based and learner-centred education designed to help young people grow academically, socially, spiritually and practically.</p>
           <Link className="text-link" href="/about">Who we are <Arrow /></Link>
         </div>
       </section>
@@ -58,8 +58,8 @@ export default function HomePage() {
       <section className="features-section">
         <div className="container">
           <div className="section-heading split-heading">
-            <div><p className="eyebrow"><span /> The AMHS difference</p><h2>Big ambitions.<br /><em>Individual attention.</em></h2></div>
-            <p>We create the conditions for every student to discover what they can do, then support them as they go further.</p>
+            <div><p className="eyebrow"><span /> Why choose AMHS?</p><h2>Big ambitions.<br /><em>Strong values.</em></h2></div>
+            <p>At AMHS, education goes beyond passing examinations. We prepare learners to think, create, solve problems, serve others and become responsible leaders.</p>
           </div>
           <div className="feature-grid">
             {featureCards.map((card) => <Link href={card.href} className="feature-card" key={card.number}>
@@ -86,9 +86,9 @@ export default function HomePage() {
       <section className="admission-callout">
         <div className="container admission-content">
           <p className="eyebrow eyebrow-light"><span /> Admissions are open</p>
-          <h2>Your next chapter<br />starts <em>here.</em></h2>
-          <p>Give your child a strong start in a community that will know them, challenge them, and cheer them on.</p>
-          <Link className="button button-gold" href="/apply-now">Apply to AMHS <Arrow /></Link>
+          <h2>Your journey at AMHS<br />starts <em>here.</em></h2>
+          <p>We welcome families looking for an education that combines academic learning, practical skills, discipline, values and personal development.</p>
+          <Link className="button button-gold" href="/apply-now">Admission Information <Arrow /></Link>
         </div>
         <div className="admission-photo" />
       </section>
@@ -101,7 +101,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="support-strip"><div className="container"><div><p className="eyebrow eyebrow-light"><span /> A shared future</p><h2>Help a young person<br /><em>go further.</em></h2></div><p>When you give to AMHS, you help open up learning, opportunity, and a hopeful future for the children in our care.</p><Link className="button button-outline-light" href="/get-involved">Get involved <Arrow /></Link></div></section>
+      <section className="support-strip"><div className="container"><div><p className="eyebrow eyebrow-light"><span /> A shared future</p><h2>Support a student.<br /><em>Transform a future.</em></h2></div><p>Some capable young people face significant financial and social barriers to secondary education. Through sponsorships, donations and partnerships, individuals and organisations can help us expand educational opportunities and strengthen the learning environment.</p><Link className="button button-outline-light" href="/sponsor-a-child">Sponsor a Child <Arrow /></Link></div></section>
     </>
   );
 }

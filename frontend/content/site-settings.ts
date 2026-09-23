@@ -5,18 +5,19 @@
 export const siteSettings = {
   schoolName: "Asaba Memorial High School",
   shortName: "AMHS",
-  motto: "Learn. Lead. Serve.",
-  description: "A caring, ambitious learning community in Uganda.",
+  motto: "Lighting the Path to a Brighter Tomorrow",
+  description: "Asaba Memorial High School is a mixed day and boarding secondary school in Kitanyata, Kiruli Sub-county, Masindi District, Uganda.",
   admissions: {
     announcement: "Applications for 2027 are now open",
     entryYears: ["2027", "2028", "2029"],
-    email: "admissions@amhs.ac.ug",
+    email: "info@amhs.sc.ug",
   },
   contact: {
-    email: "info@amhs.ac.ug",
-    phone: "+256 700 000 000",
-    location: "Asaba, Uganda",
-    postalAddress: "P.O. Box 245, Kampala",
+    email: "info@amhs.sc.ug",
+    phone: "+256 766 610 442 / +256 771 477 454",
+    whatsapp: "+256 775 749 226",
+    location: "Kitanyata 1 LCI, Kiruli Sub-county, Buruli County, Masindi District, Uganda",
+    postalAddress: "P.O. Box 480486 Masindi",
   },
   socialLinks: [
     { label: "Facebook", symbol: "f", href: "https://www.facebook.com/" },
