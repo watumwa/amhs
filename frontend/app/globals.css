@@ -1,3 +1,8 @@
+.utility-dot { width:3px;height:3px;border-radius:50%;background:var(--gold); }
+.socials { display:flex;align-items:center;gap:8px; }
+.socials a { display:grid;place-items:center;width:22px;height:22px;border:1px solid rgba(255,255,255,.28);border-radius:50%;color:#dfeaf1; }
+.socials a:hover { color:var(--gold);border-color:rgba(255,191,0,.7); }
+.socials svg { width:11px;height:11px; }
 :root { --maroon:#800000; --gold:#FFBF00; --cream:#FFFDD0; --white:#FFFFFF; --charcoal:#1C1C1C; --navy:var(--maroon); --navy-2:#660000; --ink:var(--charcoal); --muted:#5e5252; --line:#e7ddb5; --serif:Georgia, 'Times New Roman', serif; --sans:Inter, 'Helvetica Neue', Arial, sans-serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }

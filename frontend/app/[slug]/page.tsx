@@ -36,6 +36,8 @@ const pages: Record<string, PageInfo> = {
   "associations-and-clubs": { label: "Our approach", title: "Find your people.", emphasis: "Make your mark.", eyebrow: "Associations & Clubs", intro: "Our associations and clubs give every student a place to explore interests, form friendships and contribute to school life.", image: "life", details: ["Students can join established clubs or help shape new ones around the ideas and causes that matter to them.", "These communities build confidence, responsibility and the joy of doing something worthwhile together."], facts: [["24", "Clubs & societies"], ["Every interest", "A place to belong"], ["Student-led", "Ideas welcome"]], cta: "Explore student life" },
   "students-life": { label: "Student life", title: "There is more", emphasis: "to discover here.", eyebrow: "Life at AMHS", intro: "The school day is only the beginning. Student life at AMHS is where friendships form, talents emerge and memories are made.", image: "life", details: ["There is a place for every kind of interest: sport, music, creative arts, debating, service, science and much more.", "We want each young person to find something that makes them feel capable, connected and fully themselves."], facts: [["24", "Clubs & societies"], ["8", "Sports teams"], ["100%", "Room to belong"]], cta: "See our approach" },
   "get-involved": { label: "Get involved", title: "A brighter future", emphasis: "takes all of us.", eyebrow: "Support AMHS", intro: "You can help create opportunities that reach far beyond the classroom and last long after school.", image: "involved", details: ["Whether you give, sponsor a child, share expertise or help build an exchange, your involvement can change what is possible for a young person.", "Every contribution is an investment in confident learners and compassionate future leaders."], facts: [["Give", "Create opportunity"], ["Sponsor", "Change a future"], ["Connect", "Share expertise"]], cta: "Make a difference" },
+  "news-and-events": { label: "News and Events", title: "A school community in motion", emphasis: "with learning, celebration and service.", eyebrow: "News and Events", intro: "AMHS is building a campus culture that celebrates learning, milestones, school life and community engagement.", image: "curriculum", details: ["News and events at AMHS will highlight student achievement, school activities, outreach, open days, community partnerships and meaningful moments across the academic year.", "We welcome families, partners and friends to follow the life of the school and celebrate the progress of our learners."], facts: [["School life", "Student achievement"], ["Community", "Events & outreach"], ["Growth", "Shared milestones"]], cta: "Stay connected" },
+  "contact-us": { label: "Contact Us", title: "We are here to help", emphasis: "and to welcome you.", eyebrow: "Contact AMHS", intro: "We are happy to help with admissions enquiries, general school questions, partnerships and support opportunities.", image: "involved", details: ["Whether you want to find out more about the school, request a visit, discuss sponsorship or ask about admissions, the AMHS team is ready to assist.", "Please use the details below to get in touch and we will help you with the next step."], facts: [["Admissions", "School enquiries"], ["Partnerships", "School exchanges"], ["Support", "Sponsorship & giving"]], cta: "Get in touch" },
   "school-exchange-programmes": { label: "Get involved", title: "A wider world", emphasis: "within reach.", eyebrow: "School Exchange Programmes", intro: "Exchange programmes help students see new perspectives, build friendships across borders and bring fresh ideas back to AMHS.", image: "exchange", details: ["We welcome partnerships with schools and organisations that share our belief in open-minded, globally engaged education.", "Get in touch to explore an exchange that is purposeful, safe and enriching for young people."], facts: [["6", "Partner links"], ["3", "Countries"], ["∞", "New perspectives"]], cta: "Start a conversation" },
 };
 
@@ -51,7 +53,7 @@ const pageHeadings: Record<string, [string, string]> = {
   fees: ["Straightforward support", "for family planning."], uniform: ["What students need", "to feel ready."], "our-approach": ["How learning becomes", "part of who students are."],
   "project-based-learning": ["Questions, action,", "and meaningful work."], "brass-band-club": ["Practice, performance,", "and pride."], "games-and-sport": ["A place to play,", "compete, and grow."],
   "talent-development": ["A pathway for", "every strength."], "associations-and-clubs": ["Interests become", "a sense of belonging."], "students-life": ["A school day with", "more to discover."],
-  "get-involved": ["Ways to make", "a lasting difference."], "school-exchange-programmes": ["New perspectives", "that travel both ways."],
+  "get-involved": ["Ways to make", "a lasting difference."], "news-and-events": ["What is happening", "across the school."], "contact-us": ["A warm welcome", "from the AMHS team."], "school-exchange-programmes": ["New perspectives", "that travel both ways."],
 };
 
 const actionDestinations: Record<string, string> = {
@@ -62,6 +64,7 @@ const actionDestinations: Record<string, string> = {
   syllabus: "mailto:info@amhs.ac.ug", admission: "/apply-now", fees: "mailto:admissions@amhs.ac.ug", uniform: "mailto:admissions@amhs.ac.ug",
   "our-approach": "/students-life", "project-based-learning": "/our-approach", "brass-band-club": "/students-life", "games-and-sport": "/students-life",
   "talent-development": "/students-life", "associations-and-clubs": "/students-life", "students-life": "/our-approach", "get-involved": "/donate",
+  "news-and-events": "/news-and-events", "contact-us": "mailto:info@amhs.sc.ug",
   "school-exchange-programmes": "mailto:info@amhs.ac.ug",
 };
 
@@ -81,7 +84,7 @@ function getPageFamily(slug: string): PageFamily {
   if (["academic-calendar", "subjects", "syllabus", "fees", "uniform", "school-policies", "facilities", "admission"].includes(slug)) return "practical";
   if (["team", "staff", "board-of-governors", "pta-leadership", "student-leadership"].includes(slug)) return "people";
   if (["our-approach", "project-based-learning", "brass-band-club", "games-and-sport", "talent-development", "associations-and-clubs", "students-life"].includes(slug)) return "experience";
-  if (["partners", "get-involved", "school-exchange-programmes"].includes(slug)) return "community";
+  if (["partners", "get-involved", "news-and-events", "contact-us", "school-exchange-programmes"].includes(slug)) return "community";
   return "story";
 }
 
