@@ -4,7 +4,10 @@ import { Arrow, Book, Compass, Medal, Sparkle } from "../components/icons";
 const featureCards = [
   { icon: <Book />, number: "01", title: "Academic Learning", text: "A broad curriculum designed to build strong foundations in sciences, humanities, languages, technology and practical subjects.", href: "/curriculum" },
   { icon: <Compass />, number: "02", title: "Project-Based Learning", text: "Students apply classroom knowledge to practical projects and real-life challenges through investigation, creativity and teamwork.", href: "/project-based-learning" },
-  { icon: <Medal />, number: "03", title: "Inclusive Education", text: "We seek to make secondary education accessible to learners from different social and economic backgrounds.", href: "/about" },
+  { icon: <Medal />, number: "03", title: "Day & Boarding Education", text: "Our model serves learners from nearby communities and those travelling from farther away.", href: "/admission" },
+  { icon: <Sparkle />, number: "04", title: "Practical & Vocational Skills", text: "Learning opportunities include ICT, tailoring and design, carpentry, entrepreneurship and other practical skills.", href: "/our-approach" },
+  { icon: <Book />, number: "05", title: "Inclusive Education", text: "We seek to make secondary education accessible to learners from different social and economic backgrounds, including vulnerable and underserved learners.", href: "/about" },
+  { icon: <Compass />, number: "06", title: "Character & Leadership", text: "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", href: "/student-leadership" },
 ];
 
 const approaches = [
@@ -33,10 +36,10 @@ export default function HomePage() {
 
       <section className="stats-band" aria-label="School highlights">
         <div className="container stats-grid">
-          <div><strong>40</strong><span>years of<br />shaping lives</span></div>
-          <div><strong>98<span className="small">%</span></strong><span>national exam<br />pass rate</span></div>
-          <div><strong>24</strong><span>clubs &amp;<br />activities</span></div>
-          <div><strong>1</strong><span>remarkable<br />community</span></div>
+            <div><strong>2</strong><span>learning<br />pathways</span></div>
+            <div><strong>5</strong><span>ASABA<br />values</span></div>
+            <div><strong>1</strong><span>shared<br />mission</span></div>
+            <div><strong>∞</strong><span>brighter<br />futures</span></div>
         </div>
       </section>
 
@@ -51,7 +54,17 @@ export default function HomePage() {
           <h2>Education with<br /><em>knowledge, character and purpose.</em></h2>
           <p>Asaba Memorial High School is a mixed day and boarding secondary school located in Kitanyata, Kiruli Sub-county, Masindi District, Uganda.</p>
           <p>We provide an inclusive, values-based and learner-centred education designed to help young people grow academically, socially, spiritually and practically.</p>
+          <p>Our school combines the national secondary curriculum with practical learning, leadership development, character formation, technology, vocational skills, sports and co-curricular activities.</p>
+          <p>Whether a learner&apos;s future lies in university education, professional training, entrepreneurship, technology, vocational work or community leadership, our goal is to provide the foundation upon which that future can be built.</p>
           <Link className="text-link" href="/about">Who we are <Arrow /></Link>
+        </div>
+      </section>
+
+      <section className="values-section">
+        <div className="container values-grid">
+          <div className="values-intro"><p className="eyebrow"><span /> Our foundation</p><h2>Knowledge, character<br /><em>and purpose.</em></h2><p>Our vision and mission guide an education that is inclusive, holistic, transformative and rooted in community responsibility.</p></div>
+          <div className="values-panel"><div><p className="label">Our Vision</p><p>To be a model school that nurtures responsible, empowered, and values-driven leaders through inclusive, holistic, and transformative education that equips students to become change makers in their communities.</p></div><div><p className="label">Our Mission</p><p>To provide quality, inclusive, and values-based education that empowers students, especially from vulnerable and underserved communities, to grow in knowledge, character, and purpose.</p></div></div>
+          <div className="asaba-values"><p className="label">The ASABA Values</p><div><strong>A</strong><span><b>Accountability</b> Responsibility, honesty and integrity.</span></div><div><strong>S</strong><span><b>Service</b> Leadership begins with serving others.</span></div><div><strong>A</strong><span><b>Ambition</b> Dream, set goals and work persistently.</span></div><div><strong>B</strong><span><b>Belief</b> Confidence, resilience, faith and optimism.</span></div><div><strong>A</strong><span><b>Action for Empowerment</b> Turn knowledge into positive action.</span></div></div>
         </div>
       </section>
 
@@ -59,7 +72,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading split-heading">
             <div><p className="eyebrow"><span /> Why choose AMHS?</p><h2>Big ambitions.<br /><em>Strong values.</em></h2></div>
-            <p>At AMHS, education goes beyond passing examinations. We prepare learners to think, create, solve problems, serve others and become responsible leaders.</p>
+            <p>At AMHS, education goes beyond passing examinations. We prepare learners to think, create, solve problems, develop practical skills, serve others and become responsible leaders in their communities.</p>
           </div>
           <div className="feature-grid">
             {featureCards.map((card) => <Link href={card.href} className="feature-card" key={card.number}>
