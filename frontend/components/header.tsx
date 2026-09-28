@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from "./icons";
+import { SocialLinks } from "./icons";
 
 type NavigationItem = {
   label: string;
@@ -37,11 +37,7 @@ export function Header() {
   const closeAll = () => { setOpen(false); setOpenMenu(null); };
   return <>
     <div className="utility-bar"><div className="container"><span>Applications for 2027 are now open</span><div><a href="mailto:info@amhs.sc.ug">info@amhs.sc.ug</a><span className="utility-dot" /> <span>+256 766 610 442</span><span className="utility-dot" />
-      <div className="socials socials--utility" aria-label="Social media links">
-        <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer"><FacebookIcon /></a>
-        <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noreferrer"><InstagramIcon /></a>
-        <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noreferrer"><YoutubeIcon /></a>
-      </div>
+      <SocialLinks className="socials socials--utility" />
     </div></div></div>
     <header className="site-header"><div className="container header-inner">
       <Link href="/" className="brand" aria-label="Asaba Memorial High School home" onClick={closeAll}><Crest /><span>Asaba Memorial <br /><strong>High School</strong></span></Link>

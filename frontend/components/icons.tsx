@@ -29,3 +29,24 @@ export function InstagramIcon() {
 export function YoutubeIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12c0-1.4-.2-2.8-.6-4.1-.5-1.5-1.7-2.7-3.2-3.1C15.5 4.2 12 4 12 4s-3.5.2-5.2.8c-1.5.4-2.7 1.6-3.2 3.1C3.2 9.2 3 10.6 3 12s.2 2.8.6 4.1c.5 1.5 1.7 2.7 3.2 3.1C8.5 19.8 12 20 12 20s3.5-.2 5.2-.8c1.5-.4 2.7-1.6 3.2-3.1.4-1.3.6-2.7.6-4.1Zm-11.5 3.1V8.9l6.2 3.1-6.2 3.1Z" fill="currentColor"/></svg>;
 }
+
+export function XIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.5l11.2 14.5Z" fill="currentColor"/></svg>;
+}
+
+export function TiktokIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3c.3 2.3 1.6 3.8 3.9 4v2.6c-1.4.1-2.6-.3-3.9-1.1v5.9c0 3.9-3.4 6.4-6.8 5.4-3.6-1.1-4.6-5.6-2.2-8.1 1.2-1.3 2.9-1.8 4.6-1.5v2.8c-.4-.1-.8-.2-1.2-.1-1.4.2-2.3 1.4-2 2.8.4 1.7 2.6 2.3 3.8 1 .4-.5.6-1.1.6-1.7V3h3.2Z" fill="currentColor"/></svg>;
+}
+
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/share/1FzBptSnYQ", Icon: FacebookIcon },
+  { label: "X", href: "https://x.com/asabamemorpgv9", Icon: XIcon },
+  { label: "YouTube", href: "https://www.youtube.com/@asabamemorialhighschool", Icon: YoutubeIcon },
+  { label: "TikTok", href: "https://www.tiktok.com/@asaba171", Icon: TiktokIcon },
+] as const;
+
+export function SocialLinks({ className = "socials" }: { className?: string }) {
+  return <div className={className} aria-label="Social media links">
+    {socialLinks.map(({ label, href, Icon }) => <a href={href} aria-label={label} target="_blank" rel="noreferrer" key={label}><Icon /></a>)}
+  </div>;
+}
