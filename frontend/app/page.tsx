@@ -16,6 +16,16 @@ const approaches = [
   ["Character & leadership", "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", "LEAD", "/student-leadership"],
 ];
 
+const asabaValues = [
+  ["A", "Accountability", "We teach learners to take responsibility for their choices, learning and responsibilities and to act with honesty and integrity."],
+  ["S", "Service", "We believe leadership begins with serving others. Students are encouraged to care, contribute and use their abilities for the good of others."],
+  ["A", "Ambition", "We encourage every learner to dream, set meaningful goals and work persistently towards achieving them."],
+  ["B", "Belief", "We nurture confidence, resilience, faith and optimism so that students learn to believe in their potential and the potential of others."],
+  ["A", "Action for Empowerment", "Knowledge should lead to action. We equip learners with knowledge, skills and confidence that they can use to improve their lives and contribute positively to society."],
+];
+
+const plannedFacilities = ["Science laboratories", "Additional classrooms", "Dormitories", "Sports facilities", "Other learning infrastructure"];
+
 export default function HomePage() {
   return (
     <>
@@ -51,10 +61,12 @@ export default function HomePage() {
         </div>
         <div className="intro-copy">
           <p className="eyebrow"><span /> Welcome to AMHS</p>
-          <h2>Education with<br /><em>knowledge, character and purpose.</em></h2>
-          <p>Asaba Memorial High School is a mixed day and boarding secondary school located in Kitanyata, Kiruli Sub-county, Masindi District, Uganda.</p>
-          <p>We provide an inclusive, values-based and learner-centred education designed to help young people grow academically, socially, spiritually and practically.</p>
-          <p>Our school combines the national secondary curriculum with practical learning, leadership development, character formation, technology, vocational skills, sports and co-curricular activities.</p>
+          <h2>Welcome to Asaba<br /><em>Memorial High School.</em></h2>
+          <p>Asaba Memorial High School (AMHS) is a mixed day and boarding secondary school located in Kitanyata, Kiruli Sub-county, Masindi District, Uganda. We provide an inclusive, values-based and learner-centred education designed to help young people grow academically, socially, spiritually and practically.</p>
+          <p>The school was established to improve access to secondary education within Kiruli Sub-county and surrounding communities, particularly for families affected by distance, poverty and limited access to affordable secondary schools.</p>
+          <p>At Asaba Memorial High School, we believe that every child deserves an opportunity to learn, discover their potential and build a meaningful future.</p>
+          <p>Our school combines the national secondary school curriculum with practical learning, leadership development, character formation, technology, vocational skills, sports and co-curricular activities.</p>
+          <p>We serve learners from Kiruli Sub-county, the wider Masindi District and other communities, including learners who require boarding facilities. Particular attention is given to creating opportunities for vulnerable and underserved learners.</p>
           <p>Whether a learner&apos;s future lies in university education, professional training, entrepreneurship, technology, vocational work or community leadership, our goal is to provide the foundation upon which that future can be built.</p>
           <Link className="text-link" href="/about">Who we are <Arrow /></Link>
         </div>
@@ -62,9 +74,9 @@ export default function HomePage() {
 
       <section className="values-section">
         <div className="container values-grid">
-          <div className="values-intro"><p className="eyebrow"><span /> Our foundation</p><h2>Knowledge, character<br /><em>and purpose.</em></h2><p>Our vision and mission guide an education that is inclusive, holistic, transformative and rooted in community responsibility.</p></div>
+          <div className="values-intro"><p className="eyebrow"><span /> Our foundation</p><h2>Knowledge, character<br /><em>and purpose.</em></h2><p>Our educational approach combines academic excellence, spiritual growth, life skills development and community responsibility.</p></div>
           <div className="values-panel"><div><p className="label">Our Vision</p><p>To be a model school that nurtures responsible, empowered, and values-driven leaders through inclusive, holistic, and transformative education that equips students to become change makers in their communities.</p></div><div><p className="label">Our Mission</p><p>To provide quality, inclusive, and values-based education that empowers students, especially from vulnerable and underserved communities, to grow in knowledge, character, and purpose.</p></div></div>
-          <div className="asaba-values"><p className="label">The ASABA Values</p><div><strong>A</strong><span><b>Accountability</b> Responsibility, honesty and integrity.</span></div><div><strong>S</strong><span><b>Service</b> Leadership begins with serving others.</span></div><div><strong>A</strong><span><b>Ambition</b> Dream, set goals and work persistently.</span></div><div><strong>B</strong><span><b>Belief</b> Confidence, resilience, faith and optimism.</span></div><div><strong>A</strong><span><b>Action for Empowerment</b> Turn knowledge into positive action.</span></div></div>
+          <div className="asaba-values"><p className="label">The ASABA Values</p><p className="asaba-note">Our name expresses the values we want every learner to carry beyond the school gates.</p>{asabaValues.map(([letter, name, text]) => <div key={name}><strong>{letter}</strong><span><b>{name}</b> {text}</span></div>)}<p className="asaba-note">These five principles form the school&apos;s documented ASABA Values.</p></div>
         </div>
       </section>
 
@@ -85,15 +97,26 @@ export default function HomePage() {
 
       <section className="approach-section">
         <div className="container">
-          <div className="section-heading centered"><p className="eyebrow"><span /> Learning beyond the classroom</p><h2>Learning that comes <em>alive.</em></h2><p>Opportunity here is never one-size-fits-all. It happens in the classroom, on the field, on stage, and out in the community.</p></div>
+          <div className="section-heading centered"><p className="eyebrow"><span /> Learning for life</p><h2>Learning that comes <em>alive.</em></h2><p>AMHS adopts Project-Based Learning as an important part of its educational approach. Students are encouraged to move beyond memorising information and learn through investigation, creativity, teamwork and practical application.</p><p>The school&apos;s practical learning areas include computer and technology skills, tailoring and design, hairdressing and beauty services, soap making, carpentry, business and entrepreneurship.</p></div>
           <div className="approach-grid">
             {approaches.map(([title, copy, tag, href], i) => <article className={`approach-card approach-${i + 1}`} key={title}>
               <div className="approach-image" /><div className="approach-overlay" />
               <div className="approach-content"><span>{tag}</span><h3>{title}</h3><p>{copy}</p><Link href={href} aria-label={`Learn about ${title}`}><Arrow /></Link></div>
             </article>)}
           </div>
-          <div className="center-action"><Link className="text-link" href="/our-approach">Explore our approach <Arrow /></Link></div>
+          <div className="center-action"><Link className="text-link" href="/our-approach">Discover Our Approach <Arrow /></Link></div>
         </div>
+      </section>
+
+      <section className="content-section container home-facilities">
+        <div className="content-copy">
+          <p className="eyebrow"><span /> School facilities</p>
+          <h2>Building a growing<br /><em>school community.</em></h2>
+          <p>AMHS is developing its campus progressively to meet the educational needs of a growing student population.</p>
+          <p>Current and developing facilities include classrooms, administration facilities, boarding accommodation, vocational training space, sanitation facilities, a kitchen, playground, library facilities, computer facilities and reliable water and electricity systems.</p>
+          <Link className="button button-navy" href="/facilities">Explore Our Facilities <Arrow /></Link>
+        </div>
+        <aside className="facts-card"><p>Longer-term development programme</p><ul className="check-list">{plannedFacilities.map((item) => <li key={item}>{item}</li>)}</ul></aside>
       </section>
 
       <section className="admission-callout">
@@ -101,7 +124,8 @@ export default function HomePage() {
           <p className="eyebrow eyebrow-light"><span /> Admissions are open</p>
           <h2>Your journey at AMHS<br />starts <em>here.</em></h2>
           <p>We welcome families looking for an education that combines academic learning, practical skills, discipline, values and personal development.</p>
-          <Link className="button button-gold" href="/apply-now">Admission Information <Arrow /></Link>
+          <p>AMHS provides opportunities for both day and boarding students.</p>
+          <div className="hero-actions"><Link className="button button-gold" href="/admission">Admission Information <Arrow /></Link><Link className="text-link text-link-light" href="/apply-now">Apply Now <Arrow /></Link></div>
         </div>
         <div className="admission-photo" />
       </section>
@@ -114,7 +138,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="support-strip"><div className="container"><div><p className="eyebrow eyebrow-light"><span /> A shared future</p><h2>Support a student.<br /><em>Transform a future.</em></h2></div><p>Some capable young people face significant financial and social barriers to secondary education. Through sponsorships, donations and partnerships, individuals and organisations can help us expand educational opportunities and strengthen the learning environment.</p><Link className="button button-outline-light" href="/sponsor-a-child">Sponsor a Child <Arrow /></Link></div></section>
+      <section className="support-strip"><div className="container"><div><p className="eyebrow eyebrow-light"><span /> A shared future</p><h2>Support a student.<br /><em>Transform a future.</em></h2></div><div className="support-copy"><p>Some capable young people face significant financial and social barriers to secondary education.</p><p>AMHS seeks to ensure that vulnerability does not automatically end a learner&apos;s educational journey. The school&apos;s inclusive approach includes consideration of bursary support based on individual socio-economic circumstances.</p><p>Through sponsorships, donations and partnerships, individuals and organisations can help us expand educational opportunities and strengthen the learning environment.</p></div><div className="support-actions"><Link className="button button-gold" href="/sponsor-a-child">Sponsor a Child <Arrow /></Link><Link className="button button-outline-light" href="/get-involved">Support AMHS <Arrow /></Link></div></div></section>
     </>
   );
 }
