@@ -40,6 +40,7 @@ export function TiktokIcon() {
 
 const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/share/1FzBptSnYQ", Icon: FacebookIcon },
+  { label: "Instagram", href: "https://www.instagram.com/amhs2.025", Icon: InstagramIcon },
   { label: "X", href: "https://x.com/asabamemorpgv9", Icon: XIcon },
   { label: "YouTube", href: "https://www.youtube.com/@asabamemorialhighschool", Icon: YoutubeIcon },
   { label: "TikTok", href: "https://www.tiktok.com/@asaba171", Icon: TiktokIcon },
