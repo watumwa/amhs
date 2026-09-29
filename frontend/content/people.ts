@@ -36,15 +36,12 @@ export type StudentLeader = {
   role?: string;
 };
 
-/**
- * Student leader portraits (4:5 crops in `public/people/student-leaders/`).
- * Fill in `name` and `role` as the school confirms them; cards without them show "Student leader".
- */
+/** Student leader portraits displayed on the Student Leadership page. */
 export const studentLeaders: StudentLeader[] = [
-  { image: "/people/student-leaders/leader-1.jpg", role: "Head Girl" },
-  { image: "/people/student-leaders/leader-4.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
-  { image: "/people/student-leaders/leader-2.jpg" },
-  { image: "/people/student-leaders/leader-3.jpg" },
-  { image: "/people/student-leaders/leader-5.jpg" },
-  { image: "/people/student-leaders/leader-6.jpg" },
+  { image: "/people/student-leaders/faith-michelle.jpg", name: "Faith Michelle", role: "Head Girl" },
+  { image: "/people/student-leaders/lillian-sifa.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
+  { image: "/people/student-leaders/gift-emmanuel.jpg", name: "Gift Emmanuel", role: "Clubs and Societies" },
+  { image: "/people/student-leaders/ibrahim-ssekaja.jpg", name: "Ibrahim Ssekaja", role: "Welfare" },
+  { image: "/people/student-leaders/mucunguzi-lawrence.jpg", name: "Mucunguzi Lawrence", role: "ICT Laboratory" },
+  { image: "/people/student-leaders/sabiti-joseph.jpg", name: "Sabiti Joseph", role: "Sanitation Prefect" },
 ];
