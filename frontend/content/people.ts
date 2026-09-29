@@ -21,12 +21,10 @@ export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
     { initials: "FL", name: "Family Liaison", role: "Home–school partnership", bio: "Helps families stay connected to school life and ensures questions, transitions and important conversations are handled with care." },
   ],
   staff: [
-    { initials: "SM", name: "Science & Mathematics Faculty", role: "Subject teachers", bio: "Builds strong foundations in reasoning, inquiry and problem-solving, helping students approach challenging ideas with confidence." },
-    { initials: "EH", name: "English & Humanities Faculty", role: "Subject teachers", bio: "Develops articulate readers, thoughtful writers and curious learners who can understand different people, places and perspectives." },
-    { initials: "CA", name: "Creative Arts & Languages", role: "Subject teachers", bio: "Encourages expression, communication and cultural awareness through creative practice, performance and language learning." },
-    { initials: "DT", name: "Digital & Technical Learning", role: "Subject teachers", bio: "Helps students apply technology with purpose and develop practical skills for a rapidly changing world." },
-    { initials: "LS", name: "Learning Support Team", role: "Student support", bio: "Works alongside teachers and families to remove barriers to learning and make sure each student receives the right support at the right time." },
-    { initials: "SS", name: "Student Services Team", role: "Administration and care", bio: "Keeps the practical side of school life running smoothly, from student records and reception to everyday care and communication." },
+    { initials: "BJ", name: "Baguma Justus", role: "School Bursar", bio: "Supports the careful management of school finances and day-to-day administrative operations.", image: "/people/staff/baguma-justus.jpg" },
+    { initials: "BS", name: "Bandiki Sibomana", role: "Security Guard", bio: "Helps maintain a safe, welcoming and secure environment for learners, staff and visitors.", image: "/people/staff/bandiki-sibomana.jpg" },
+    { initials: "KG", name: "Kaburuli Grace", role: "School Matron", bio: "Supports student welfare, care and the routines that help learners feel settled at school.", image: "/people/staff/kaburuli-grace.jpg" },
+    { initials: "MS", name: "Mujuni Silver", role: "Head of the Agriculture Department", bio: "Leads Agriculture learning and helps students connect practical skills with responsible stewardship.", image: "/people/staff/mujuni-silver.jpg" },
   ],
 };
 
