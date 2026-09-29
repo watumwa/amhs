@@ -41,10 +41,10 @@ export type StudentLeader = {
  * Fill in `name` and `role` as the school confirms them; cards without them show "Student leader".
  */
 export const studentLeaders: StudentLeader[] = [
-  { image: "/people/student-leaders/leader-1.jpg" },
+  { image: "/people/student-leaders/leader-1.jpg", role: "Head Girl" },
+  { image: "/people/student-leaders/leader-4.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
   { image: "/people/student-leaders/leader-2.jpg" },
   { image: "/people/student-leaders/leader-3.jpg" },
-  { image: "/people/student-leaders/leader-4.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
   { image: "/people/student-leaders/leader-5.jpg" },
   { image: "/people/student-leaders/leader-6.jpg" },
 ];
