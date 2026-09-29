@@ -92,6 +92,15 @@ button { cursor:pointer; }
 .leader-card figcaption { min-height:97px;padding:20px 22px 21px;border-top:1px solid #edf1f2; }
 .leader-card strong { display:block;color:var(--navy);font:400 24px/1.1 var(--serif);letter-spacing:-.02em;margin-bottom:8px; }
 .leader-card span { display:block;color:#6d7d86;font-size:10px;font-weight:700;letter-spacing:.13em;line-height:1.35;text-transform:uppercase; }
+.activity-gallery { background:#f7f4e9;padding:102px 0 110px; }
+.activity-gallery-heading { display:flex;align-items:end;justify-content:space-between;gap:60px;margin-bottom:43px; }
+.activity-gallery-heading h2 { color:var(--navy);font:400 clamp(35px,4vw,52px)/1.05 var(--serif);letter-spacing:-.04em;margin:0; }
+.activity-gallery-heading h2 em { color:var(--gold);font-style:italic;font-weight:400; }
+.activity-gallery-heading > p { width:min(390px,100%);margin:0 0 5px;color:#5d6c77;font-size:14px;line-height:1.65; }
+.activity-gallery-grid { display:grid;grid-template-columns:1.1fr .9fr;gap:22px; }
+.activity-gallery-card { margin:0;background:#fff;box-shadow:0 12px 30px #0d233a0a;overflow:hidden; }
+.activity-gallery-card img { display:block;width:100%;height:390px;object-fit:cover;object-position:center; }
+.activity-gallery-card figcaption { border-top:4px solid var(--gold);padding:17px 20px 19px;color:var(--navy);font:400 21px/1.2 var(--serif);letter-spacing:-.02em; }
 
 @media (max-width: 820px) {
   .topic-section { padding:78px 0; }
@@ -183,4 +192,18 @@ body { overflow-x:hidden; }
   .site-header .brand br { display:inline; }
   .site-header .brand { font-size:10px; }
   .site-header .brand strong { font-size:12px; }
+}
+
+/* School activity photography */
+.image-brass-band { background-image:linear-gradient(90deg,rgba(8,25,41,.86),rgba(8,25,41,.35)),url('/activities/brass-band/brass-band-hero.jpg');background-position:center 56%; }
+
+@media (max-width: 820px) {
+  .activity-gallery { padding:78px 0; }
+  .activity-gallery-heading { display:block;margin-bottom:34px; }
+  .activity-gallery-heading > p { width:auto;margin-top:18px; }
+}
+
+@media (max-width: 590px) {
+  .activity-gallery-grid { grid-template-columns:1fr;gap:15px; }
+  .activity-gallery-card img { height:330px; }
 }

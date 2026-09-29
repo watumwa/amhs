@@ -44,4 +44,6 @@ export const studentLeaders: StudentLeader[] = [
   { image: "/people/student-leaders/ibrahim-ssekaja.jpg", name: "Ibrahim Ssekaja", role: "Welfare" },
   { image: "/people/student-leaders/mucunguzi-lawrence.jpg", name: "Mucunguzi Lawrence", role: "ICT Laboratory" },
   { image: "/people/student-leaders/sabiti-joseph.jpg", name: "Sabiti Joseph", role: "Sanitation Prefect" },
+  { image: "/people/student-leaders/kobusinge-racheal.jpg", name: "Kobusinge Racheal", role: "Timekeeper" },
+  { image: "/people/student-leaders/mbabazi-sarah.jpg", name: "Mbabazi Sarah", role: "Assistant Games and Sports" },
 ];
