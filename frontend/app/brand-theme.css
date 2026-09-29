@@ -77,8 +77,14 @@ body { background: var(--white); color: var(--charcoal); }
   .footer-brand .crest { width: 54px; height: 54px; flex-basis: 54px; }
 }
 
-/* Static school-life photography for the home-page hero. */
-.hero-image.hero-image-one { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/hero-students.jpg'); background-position: center; }
+/* Home-page hero: two school-life photos crossfading with a slow zoom. */
+.hero-image.hero-image-one { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/hero-students.jpg'); background-position: center; animation: hero-zoom 16s ease-in-out infinite; }
+.hero-image.hero-image-two { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/AMHS%20Female%20Football%20Team.jpeg'); background-position: center; opacity: 0; animation: hero-fade 16s ease-in-out infinite, hero-zoom 16s ease-in-out -8s infinite; }
+@keyframes hero-fade { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes hero-zoom { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-image.hero-image-one, .hero-image.hero-image-two { animation: none; }
+}
 
 /* Light links sit on dark backgrounds; keep them readable over the maroon .text-link colour above. */
 .text-link.text-link-light { color: var(--white); }

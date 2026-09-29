@@ -31,6 +31,7 @@ export default function HomePage() {
     <>
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-image hero-image-one" aria-hidden="true" />
+        <div className="hero-image hero-image-two" aria-hidden="true" />
         <div className="hero-content container">
           <p className="eyebrow eyebrow-light"><span /> Asaba Memorial High School</p>
           <h1 id="hero-heading">Lighting the Path to a Brighter Tomorrow</h1>
