@@ -79,7 +79,7 @@ button { cursor:pointer; }
 .profile-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:18px; }
 .profile-card { min-height:330px;background:white;padding:27px 28px;position:relative;box-shadow:0 12px 30px #0d233a08; }
 .profile-avatar { display:grid;place-items:center;width:64px;height:64px;background:var(--navy);color:var(--gold);border-radius:50%;font:400 21px var(--serif);letter-spacing:.04em;outline:1px solid var(--gold);outline-offset:5px;margin:6px 0 28px 6px; }
-.profile-avatar.has-photo { width:calc(100% + 56px);height:205px;margin:-27px -28px 25px;border-radius:0;outline:0;background-size:cover;background-position:center 22%; }
+.profile-avatar.has-photo { width:calc(100% + 56px);height:auto;aspect-ratio:3/4;margin:-27px -28px 25px;border-radius:0;outline:0;background-size:cover;background-position:center 18%; }
 .profile-card > p:first-of-type { margin:0;color:#6d7d86;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase; }
 .profile-card h3 { color:var(--navy);font:400 27px/1.08 var(--serif);letter-spacing:-.03em;margin:9px 0 13px; }
 .profile-rule { display:block;width:28px;height:2px;background:var(--gold);margin-bottom:15px; }
