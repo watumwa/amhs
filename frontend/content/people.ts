@@ -29,3 +29,22 @@ export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
     { initials: "SS", name: "Student Services Team", role: "Administration and care", bio: "Keeps the practical side of school life running smoothly, from student records and reception to everyday care and communication." },
   ],
 };
+
+export type StudentLeader = {
+  image: string;
+  name?: string;
+  role?: string;
+};
+
+/**
+ * Student leader portraits (4:5 crops in `public/people/student-leaders/`).
+ * Fill in `name` and `role` as the school confirms them; cards without them show "Student leader".
+ */
+export const studentLeaders: StudentLeader[] = [
+  { image: "/people/student-leaders/leader-1.jpg" },
+  { image: "/people/student-leaders/leader-2.jpg" },
+  { image: "/people/student-leaders/leader-3.jpg" },
+  { image: "/people/student-leaders/leader-4.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
+  { image: "/people/student-leaders/leader-5.jpg" },
+  { image: "/people/student-leaders/leader-6.jpg" },
+];

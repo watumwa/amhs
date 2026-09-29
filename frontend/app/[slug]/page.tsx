@@ -4,7 +4,7 @@ import { AdmissionForm } from "../../components/admission-form";
 import { Arrow } from "../../components/icons";
 import { GivingOptions } from "../../components/giving-options";
 import { ExchangeForm } from "../../components/exchange-form";
-import { peopleProfiles, type Profile } from "../../content/people";
+import { peopleProfiles, studentLeaders, type Profile } from "../../content/people";
 
 type PageSection = { title: string; body?: string[]; items?: string[] };
 type PageInfo = { label: string; title: string; emphasis: string; intro: string; image: string; eyebrow: string; details: string[]; facts: [string, string][]; cta?: string; sections?: PageSection[] };
@@ -160,6 +160,23 @@ function ProfileDirectory({ type }: { type: "team" | "staff" }) {
   </section>;
 }
 
+function StudentLeaders() {
+  return <section className="profiles-section">
+    <div className="container">
+      <div className="profiles-heading">
+        <div><p className="eyebrow"><span /> Meet our student leaders</p><h2>Trusted by their peers.<br /><em>Growing as leaders.</em></h2></div>
+        <p>Our prefects and student leaders represent their fellow learners, support school routines and set an example of responsibility, service and respect.</p>
+      </div>
+      <div className="leader-grid">
+        {studentLeaders.map((leader) => <figure className="leader-card" key={leader.image}>
+          <img src={leader.image} alt={leader.name ? `${leader.name}, ${leader.role ?? "student leader"} at AMHS` : "AMHS student leader"} loading="lazy" width={600} height={750} />
+          <figcaption>{leader.name ? <strong>{leader.name}</strong> : null}<span>{leader.role ?? "Student leader"}</span></figcaption>
+        </figure>)}
+      </div>
+    </div>
+  </section>;
+}
+
 export function generateStaticParams() {
   return [...Object.keys(pages), "apply-now", "donate", "sponsor-a-child"].map((slug) => ({ slug }));
 }
@@ -177,6 +194,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     <section className="page-hero"><div className={mediaClass(page.image)} /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{page.title}<br /><em>{page.emphasis}</em></h1><p>{page.intro}</p></div></section>
     <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}<br /><em>{sectionEmphasis}</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}<PageAction slug={slug} label={page.cta ?? "Get in touch"} /></div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
     {page.sections ? <PageSections sections={page.sections} /> : null}
+    {slug === "student-leadership" ? <StudentLeaders /> : null}
     {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : <TopicOverview page={page} family={family} />}
     {slug === "school-exchange-programmes" ? <section className="application-section container" id="exchange-form"><ExchangeForm /></section> : null}
   </>;
