@@ -28,6 +28,15 @@ export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
   ],
 };
 
+export const governanceProfiles: Record<"board" | "pta", Profile[]> = {
+  board: [
+    { initials: "BG", name: "Board of Governors Member", role: "PTA Treasurer", bio: "Supports responsible governance and the careful stewardship of resources for the AMHS community.", image: "/people/governance/board-member-pta-treasurer.jpg" },
+  ],
+  pta: [
+    { initials: "BW", name: "Businge William", role: "PTA Chairperson", bio: "Leads the Parents Teachers Association in strengthening partnership between families and the school.", image: "/people/governance/businge-william.jpg" },
+  ],
+};
+
 export type StudentLeader = {
   image: string;
   name?: string;
@@ -39,9 +48,10 @@ export const studentLeaders: StudentLeader[] = [
   { image: "/people/student-leaders/faith-michelle.jpg", name: "Faith Michelle", role: "Head Girl" },
   { image: "/people/student-leaders/lillian-sifa.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
   { image: "/people/student-leaders/gift-emmanuel.jpg", name: "Gift Emmanuel", role: "Clubs and Societies" },
-  { image: "/people/student-leaders/ibrahim-ssekaja.jpg", name: "Ibrahim Ssekaja", role: "Welfare" },
+  { image: "/people/student-leaders/ibrahim-ssekaja.jpg", name: "Ibrahim Ssekaja", role: "Prefect in Charge of Welfare" },
   { image: "/people/student-leaders/mucunguzi-lawrence.jpg", name: "Mucunguzi Lawrence", role: "ICT Laboratory" },
   { image: "/people/student-leaders/sabiti-joseph.jpg", name: "Sabiti Joseph", role: "Sanitation Prefect" },
   { image: "/people/student-leaders/kobusinge-racheal.jpg", name: "Kobusinge Racheal", role: "Timekeeper" },
   { image: "/people/student-leaders/mbabazi-sarah.jpg", name: "Mbabazi Sarah", role: "Assistant Games and Sports" },
+  { image: "/people/student-leaders/namudu-doreen.jpg", name: "Namudu Doreen", role: "Assistant Entertainment" },
 ];
