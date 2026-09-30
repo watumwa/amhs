@@ -60,6 +60,7 @@ body { background: var(--white); color: var(--charcoal); }
 .page-photo.image-ict-class { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-teacher.jpg'); background-position: center; }
 .page-photo.image-curriculum, .page-photo.image-students-life, .page-photo.image-exchange { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-students.jpg'); background-position: center; }
 .page-photo.image-approach { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/practical/tailoring-student.jpg'); background-position: center 34%; }
+.page-photo.image-project-learning { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/practical/tailoring-measurements.jpg'); background-position: center; }
 .page-photo.image-brass-band, .page-photo.image-talent { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/brass-band/brass-band-hero.jpg'); background-position: center 56%; }
 .page-photo.image-journalism { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/journalism/school-journalists.jpg'); background-position: center 42%; }
 
