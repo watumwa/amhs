@@ -47,35 +47,30 @@ body { background: var(--white); color: var(--charcoal); }
 .crest-image { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 .footer-brand .crest { width: 62px; height: 62px; flex-basis: 62px; border-color: var(--gold); }
 
-.hero-image { background-image: linear-gradient(90deg, rgba(128, 0, 0, .93) 4%, rgba(128, 0, 0, .61) 54%, rgba(28, 28, 28, .18)), url('https://images.unsplash.com/photo-1509062522246-3755977927d3?auto=format&fit=crop&w=1800&q=85'); }
-.page-photo { background-image: linear-gradient(90deg, rgba(128, 0, 0, .9) 0%, rgba(128, 0, 0, .48) 64%, rgba(28, 28, 28, .28)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85'); }
-.image-roots { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=85'); }
-.image-board { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=85'); }
-.image-parents { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1600&q=85'); }
-.image-students, .image-life { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1600&q=85'); }
-.image-success { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1462536943532-57a629f6cc60?auto=format&fit=crop&w=1600&q=85'); }
-.image-policies, .image-syllabus { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1600&q=85'); }
-.image-partners, .image-exchange { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1600&q=85'); }
-.image-facilities, .image-library { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=85'); }
-.image-curriculum, .image-subjects, .image-calendar { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1509062522246-3755977927d3?auto=format&fit=crop&w=1600&q=85'); }
-.image-admission, .image-uniform, .image-fees { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=85'); }
-.image-approach { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1600&q=85'); }
-.image-involved { background-image: linear-gradient(90deg, rgba(128, 0, 0, .86), rgba(128, 0, 0, .34)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=85'); }
-.approach-card .approach-overlay { background: linear-gradient(0deg, rgba(28, 28, 28, .95), rgba(128, 0, 0, .08) 75%); }
-.story-image { background-image: linear-gradient(0deg, rgba(28, 28, 28, .87), rgba(128, 0, 0, .08)), url('/people/student-leaders/mucunguzi-lawrence.jpg'); background-position: center 22%; }
+/* Real AMHS photography, matched to the subject of each page. */
+.page-photo { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .46) 64%, rgb(28 28 28 / .22)), url('/hero-students.jpg'); }
+.page-photo.image-about, .page-photo.image-admission, .page-photo.image-fees, .page-photo.image-uniform { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .46) 64%, rgb(28 28 28 / .22)), url('/amhs-students-uniform.jpg'); background-position: center 56%; }
+.page-photo.image-launch { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .46) 64%, rgb(28 28 28 / .22)), url('/activities/school-launch.jpg'); background-position: center; }
+.page-photo.image-team, .page-photo.image-board, .page-photo.image-parents { background-image: linear-gradient(90deg, rgb(64 0 0 / .86) 0%, rgb(90 0 0 / .48) 64%, rgb(28 28 28 / .22)), url('/people/staff-and-governors.jpg'); background-position: center 54%; }
+.page-photo.image-prefects { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/leadership/top-prefects.jpg'); background-position: center 22%; }
+.page-photo.image-success, .page-photo.image-sports { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/sports/female-football-team.jpg'); background-position: center; }
+.page-photo.image-policies, .page-photo.image-calendar, .page-photo.image-subjects, .page-photo.image-library, .page-photo.image-syllabus, .page-photo.image-classroom-teacher { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-teacher.jpg'); background-position: center; }
+.page-photo.image-partners, .page-photo.image-involved { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/school-launch.jpg'); background-position: center; }
+.page-photo.image-facilities, .page-photo.image-ict-class { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/ict-class.jpg'); background-position: center; }
+.page-photo.image-curriculum, .page-photo.image-students-life, .page-photo.image-exchange { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-students.jpg'); background-position: center; }
+.page-photo.image-approach { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/practical/tailoring-student.jpg'); background-position: center 34%; }
+.page-photo.image-brass-band, .page-photo.image-talent { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/brass-band/brass-band-hero.jpg'); background-position: center 56%; }
+.page-photo.image-journalism { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/journalism/school-journalists.jpg'); background-position: center 42%; }
 
-/* Home-page approach cards use AMHS students; anchor near the top so faces stay in frame. */
-.approach-1 .approach-image { background-image: url('/people/student-leaders/kobusinge-racheal.jpg'); background-position: center 5%; }
-.approach-2 .approach-image { background-image: url('/people/student-leaders/sabiti-joseph.jpg'); background-position: center 20%; }
-.approach-3 .approach-image { background-image: url('/people/student-leaders/faith-michelle.jpg'); background-position: center 20%; }
-.admission-photo { background: linear-gradient(90deg, var(--maroon), transparent 32%), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1100&q=85') center / cover; }
+.approach-card .approach-overlay { background: linear-gradient(0deg, rgba(28, 28, 28, .95), rgba(128, 0, 0, .08) 75%); }
+.approach-1 .approach-image { background-image: url('/activities/learning/ict-class.jpg'); background-position: center; }
+.approach-2 .approach-image { background-image: url('/activities/practical/tailoring-sewing.jpg'); background-position: center; }
+.approach-3 .approach-image { background-image: url('/activities/leadership/top-prefects.jpg'); background-position: center 22%; }
+.story-image { background-image: linear-gradient(0deg, rgba(28, 28, 28, .87), rgba(128, 0, 0, .08)), url('/activities/brass-band/brass-band-hero.jpg'); background-position: center 55%; }
+.admission-photo { background: linear-gradient(90deg, var(--maroon), transparent 32%), url('/amhs-students-uniform.jpg') center 56% / cover; }
 .site-footer h3, .approach-content > span, .label { color: var(--gold); }
 .hero-geometry { border-color: rgb(255 191 0 / .56); }
 .hero-geometry::before, .hero-geometry::after { border-color: rgb(255 191 0 / .38); }
-
-@media (max-width: 820px) {
-  .hero-image { background-image: linear-gradient(90deg, rgba(128, 0, 0, .93) 4%, rgba(128, 0, 0, .72) 60%, rgba(28, 28, 28, .4)), url('https://images.unsplash.com/photo-1509062522246-3755977927d3?auto=format&fit=crop&w=1200&q=85'); }
-}
 
 @media (max-width: 590px) {
   .crest { width: 42px; height: 42px; flex-basis: 42px; }
