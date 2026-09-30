@@ -52,16 +52,18 @@ body { background: var(--white); color: var(--charcoal); }
 .page-photo.image-about, .page-photo.image-admission, .page-photo.image-fees, .page-photo.image-uniform { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .46) 64%, rgb(28 28 28 / .22)), url('/amhs-students-uniform.jpg'); background-position: center 56%; }
 .page-photo.image-launch { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .46) 64%, rgb(28 28 28 / .22)), url('/activities/school-launch.jpg'); background-position: center; }
 .page-photo.image-team, .page-photo.image-board, .page-photo.image-parents { background-image: linear-gradient(90deg, rgb(64 0 0 / .86) 0%, rgb(90 0 0 / .48) 64%, rgb(28 28 28 / .22)), url('/people/staff-and-governors.jpg'); background-position: center 54%; }
-.page-photo.image-prefects { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/leadership/top-prefects.jpg'); background-position: center 22%; }
+.page-photo.image-prefects { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/leadership/top-prefects.jpg'); background-position: center top; }
 .page-photo.image-success, .page-photo.image-sports { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/sports/female-football-team.jpg'); background-position: center; }
 .page-photo.image-policies, .page-photo.image-calendar, .page-photo.image-subjects, .page-photo.image-library, .page-photo.image-syllabus, .page-photo.image-classroom-teacher { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-teacher.jpg'); background-position: center; }
 .page-photo.image-partners, .page-photo.image-involved { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/school-launch.jpg'); background-position: center; }
-.page-photo.image-facilities, .page-photo.image-ict-class { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/ict-class.jpg'); background-position: center; }
+.page-photo.image-facilities { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/amhs-students-uniform.jpg'); background-position: center 56%; }
+.page-photo.image-ict-class { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-teacher.jpg'); background-position: center; }
 .page-photo.image-curriculum, .page-photo.image-students-life, .page-photo.image-exchange { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/learning/classroom-students.jpg'); background-position: center; }
 .page-photo.image-approach { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/practical/tailoring-student.jpg'); background-position: center 34%; }
 .page-photo.image-brass-band, .page-photo.image-talent { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/brass-band/brass-band-hero.jpg'); background-position: center 56%; }
 .page-photo.image-journalism { background-image: linear-gradient(90deg, rgb(64 0 0 / .84) 0%, rgb(90 0 0 / .42) 64%, rgb(28 28 28 / .22)), url('/activities/journalism/school-journalists.jpg'); background-position: center 42%; }
 
+.image-welcome { background-image: url('/hero-students.jpg'); background-position: center 58%; }
 .approach-card .approach-overlay { background: linear-gradient(0deg, rgba(28, 28, 28, .95), rgba(128, 0, 0, .08) 75%); }
 .approach-1 .approach-image { background-image: url('/activities/learning/ict-class.jpg'); background-position: center; }
 .approach-2 .approach-image { background-image: url('/activities/practical/tailoring-sewing.jpg'); background-position: center; }
@@ -78,7 +80,7 @@ body { background: var(--white); color: var(--charcoal); }
 }
 
 /* Home-page hero: two school-life photos crossfading with a slow zoom. */
-.hero-image.hero-image-one { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/hero-students.jpg'); background-position: center; animation: hero-zoom 16s ease-in-out infinite; }
+.hero-image.hero-image-one { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/amhs-students-uniform.jpg'); background-position: center 56%; animation: hero-zoom 16s ease-in-out infinite; }
 .hero-image.hero-image-two { background-image: linear-gradient(90deg, rgb(64 0 0 / .72) 0%, rgb(94 0 0 / .48) 46%, rgb(28 28 28 / .12)), url('/AMHS%20Female%20Football%20Team.jpeg'); background-position: center; opacity: 0; animation: hero-fade 16s ease-in-out infinite, hero-zoom 16s ease-in-out -8s infinite; }
 @keyframes hero-fade { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes hero-zoom { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
