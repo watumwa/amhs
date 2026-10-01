@@ -78,7 +78,7 @@ The school was established in response to a clear local challenge: many children
 AMHS therefore exists not merely as another school, but as a community-responsive educational institution committed to widening access to quality secondary education.
 Our approach brings together:
 Academic excellence • Values and character • Practical skills • Leadership • Inclusion • Technology • Creativity • Community responsibility
-The school is registered with the Uganda Registration Services Bureau under Certificate No. 80034317301770 and its Development Plan records its ongoing progression through the relevant education-sector licensing process.
+The School is duly licensed by the Ministry of Education and Sports of the Republic of Uganda under Licence No. ME/32/6833.
 AMHS Roots
 A Legacy that Became a School
 Asaba Memorial High School was founded in honour of Abwooli Asaba Mary, a devoted mother who passed away on 21 March 2022.
@@ -448,4 +448,3 @@ P.O. Box: 480486 Masindi
 About AMHS | Academics | Admissions | Student Life | Safeguarding | Donate | Contact Us
 Quick Actions:
 Apply Now | Sponsor a Child | Partner With Us
-
