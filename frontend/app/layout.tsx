@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: "Asaba Memorial High School | Lighting the Path to a Brighter Tomorrow",
   description: "Asaba Memorial High School is a mixed day and boarding secondary school in Kitanyata, Kiruli Sub-county, Masindi District, Uganda.",
   icons: {
-    icon: [{ url: "/asaba-memorial-logo.jpeg", type: "image/jpeg" }],
-    shortcut: ["/asaba-memorial-logo.jpeg"],
-    apple: [{ url: "/asaba-memorial-logo.jpeg", type: "image/jpeg" }],
+    icon: [{ url: "/asaba-memorial-logo-tight.jpeg", type: "image/jpeg" }],
+    shortcut: ["/asaba-memorial-logo-tight.jpeg"],
+    apple: [{ url: "/asaba-memorial-logo-tight.jpeg", type: "image/jpeg" }],
   },
 };
 

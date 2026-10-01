@@ -26,7 +26,7 @@ const navigation: readonly NavigationItem[] = [
 
 function Crest() {
   return <span className="crest" aria-hidden="true">
-    <Image className="crest-image" src="/asaba-memorial-logo.jpeg" alt="" width={500} height={500} priority />
+    <Image className="crest-image" src="/asaba-memorial-logo-tight.jpeg" alt="" width={500} height={500} priority />
   </span>;
 }
 
