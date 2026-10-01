@@ -35,8 +35,8 @@ const pages: Record<string, PageInfo> = {
   admission: { label: "Admission", title: "Begin Your AMHS", emphasis: "Journey.", eyebrow: "Join AMHS", intro: "Choosing a secondary school is an important decision for every learner and family. AMHS welcomes students who are ready to learn, develop their abilities and participate positively in school life.", image: "admission", details: ["We provide both day and boarding options, enabling families to select the arrangement most appropriate for their circumstances. The online application is designed to be simple enough for a parent using a mobile phone.", "The admissions team will guide families through student details, parent or guardian information, admission type, educational information, additional needs, required documents and the declaration before reviewing the application and contacting the family about the next stage."], facts: [["Day", "Day scholar option"], ["Boarding", "Boarding student option"], ["Support", "Admissions guidance"]], cta: "Apply now" },
   fees: { label: "Admission", title: "Simple, clear", emphasis: "planning.", eyebrow: "Fees Structure", intro: "We present our fees clearly so families can plan with confidence. Please contact the school or download the current official fees structure before making payment.", image: "fees", details: ["The Development Plan currently records indicative term fees of UGX 150,000 for a day student and UGX 300,000 for a boarding student.", "The official fees sheet can separately show tuition, boarding, meals, uniform, development requirements and other approved charges. Fees and requirements may be reviewed, so families should confirm the current position with the school before payment."], facts: [["UGX 150,000", "Indicative day fee"], ["UGX 300,000", "Indicative boarding fee"], ["Confirm", "Current official fees"]], cta: "Ask about fees" },
   uniform: { label: "Admission", title: "Proud to belong.", emphasis: "Ready to learn.", eyebrow: "School Uniform", intro: "The AMHS uniform represents belonging, discipline, equality and pride in our school community.", image: "uniform", details: ["All students are expected to maintain the approved uniform neatly and responsibly. The requirements will cover day uniform, boarding requirements, sportswear, sweater, shoes, socks and school bag requirements.", "The school will provide actual photographs of male and female students wearing the approved uniform, together with a downloadable uniform and personal-requirements checklist."], facts: [["Everyday", "Day uniform"], ["Boarding", "Personal requirements"], ["Active", "Sportswear"]], cta: "Request a uniform list" },
-  "our-approach": { label: "Our approach", title: "Education That Goes", emphasis: "Beyond the Classroom.", eyebrow: "How we learn", intro: "AMHS believes young people learn best when academic knowledge is connected to experience.", image: "approach", details: ["Our educational approach therefore brings together academics, practical learning, creativity, leadership, sports, technology, service and talent development.", "From school exchanges and brass band to sport, talent development and clubs, every experience grows confidence and connection."], facts: [["PBL", "Hands-on learning"], ["BBC", "Brass Band Club"], ["24", "Clubs & activities"]], cta: "Explore student life" },
-  "project-based-learning": { label: "Our approach", title: "Learn. Create. Solve.", emphasis: "Apply with purpose.", eyebrow: "Project-Based Learning", intro: "Project-Based Learning is a central element of the AMHS approach. Students explore real problems, develop ideas, create solutions and present what they have learned.", image: "project-learning", details: ["Projects connect learning with agriculture, ICT, entrepreneurship, tailoring, carpentry, soap making, the environment and community challenges.", "A project might connect Mathematics with budgeting, Agriculture with crop production, ICT with digital communication or Entrepreneurship with developing and costing a simple product. Students strengthen research, communication, creativity, teamwork and practical application."], facts: [["PBL", "Learning by doing"], ["8", "Practical themes"], ["Real-world", "Meaningful projects"]], cta: "Explore our approach" },
+  "our-approach": { label: "Our approach", title: "Education That Goes", emphasis: "Beyond the Classroom.", eyebrow: "How we learn", intro: "AMHS believes young people learn best when academic knowledge is connected to experience.", image: "approach", details: ["Our educational approach therefore brings together academics, practical learning, creativity, leadership, sports, technology, service and talent development.", "Practical learning includes areas such as branding, garment printing and heat transfer technology, ICT, carpentry, tailoring, hairdressing, entrepreneurship and other hands-on skills."], facts: [["PBL", "Hands-on learning"], ["Skills", "Branding & design"], ["Life", "Useful practice"]], cta: "Explore student life" },
+  "project-based-learning": { label: "Our approach", title: "Learn. Create. Solve.", emphasis: "Apply with purpose.", eyebrow: "Project-Based Learning", intro: "Project-Based Learning is a central element of the AMHS approach. Students explore real problems, develop ideas, create solutions and present what they have learned.", image: "project-learning", details: ["Projects connect learning with agriculture, ICT, entrepreneurship, branding, garment printing, carpentry, soap making, the environment and community challenges.", "A project might connect Mathematics with budgeting, ICT with digital design, Entrepreneurship with developing and costing a simple product, or practical skills with producing branded garments through heat-transfer technology."], facts: [["PBL", "Learning by doing"], ["9", "Practical themes"], ["Real-world", "Meaningful projects"]], cta: "Explore our approach" },
   "brass-band-club": { label: "Our approach", title: "Music. Discipline.", emphasis: "Teamwork. Confidence.", eyebrow: "Brass Band Club", intro: "The AMHS Brass Band Club provides students with an opportunity to discover and develop musical talent while learning teamwork, discipline, concentration and performance skills.", image: "brass-band", details: ["Students progressively learn musical instruments, music reading, marching, ensemble performance and public presentation.", "The Club looks forward to participating in school ceremonies, community events, national celebrations, competitions, exchange programmes and special performances."], facts: [["BBC", "Brass Band Club"], ["Music", "Shared expression"], ["Teamwork", "Playing as one"]], cta: "Discover student life" },
   "games-and-sport": { label: "Our approach", title: "Strong Bodies. Strong Minds.", emphasis: "Strong Teams.", eyebrow: "Games & Sports", intro: "Sports form an important part of holistic education at AMHS.", image: "sports", details: ["Through games and physical activities, learners develop fitness, discipline, resilience, teamwork, leadership and healthy competition.", "The school’s developing playground is intended to support sports and co-curricular activities. Competition matters, but character matters more: respect, resilience and a generous team spirit guide every game."], facts: [["Active", "Fitness & wellbeing"], ["Growth", "Discipline & resilience"], ["Teamwork", "On and off the field"]], cta: "Explore student life" },
   "talent-development": { label: "Our approach", title: "Every learner has", emphasis: "potential.", eyebrow: "Talent Development", intro: "Not every child’s greatest ability appears on an examination paper. AMHS seeks to identify and develop talent in music, sports, art, public speaking, leadership, technology, entrepreneurship, craftsmanship and creative performance.", image: "talent", details: ["Talent development follows three stages: Discover, Develop and Demonstrate. Students discover abilities, receive guidance and practise, then demonstrate those abilities through exhibitions, performances, competitions, projects and community activities.", "Supportive mentors help each learner set ambitious goals and celebrate the progress that comes from steady effort."], facts: [["Discover", "Find a strength"], ["Develop", "Practise with guidance"], ["Demonstrate", "Share and contribute"]], cta: "Discover student life" },
@@ -91,6 +91,29 @@ const familyContent: Record<PageFamily, { label: string; title: string; emphasis
 };
 
 const mediaClass = (key: string) => `page-photo image-${key}`;
+
+const practicalGallery = [
+  {
+    title: "Branding, garment printing and heat transfer",
+    image: "/activities/practical/garment-printing-heat-transfer.jpg",
+    alt: "AMHS student using a heat press machine for garment branding and printing",
+  },
+  {
+    title: "Carpentry workshop practice",
+    image: "/activities/practical/carpentry-training.jpg",
+    alt: "AMHS students learning carpentry skills in a workshop",
+  },
+  {
+    title: "Library study and academic focus",
+    image: "/activities/learning/library-study-group.jpg",
+    alt: "AMHS students studying together in the library",
+  },
+  {
+    title: "Hairdressing and beauty practice",
+    image: "/activities/practical/hairdressing-practice.jpg",
+    alt: "AMHS students practising hairdressing and beauty skills",
+  },
+];
 
 function getPageFamily(slug: string): PageFamily {
   if (["academics", "curriculum", "library"].includes(slug)) return "learning";
@@ -192,6 +215,23 @@ function BrassBandGallery() {
   </section>;
 }
 
+function PracticalLearningGallery() {
+  return <section className="activity-gallery practical-learning-gallery" aria-labelledby="practical-learning-gallery-title">
+    <div className="container">
+      <div className="activity-gallery-heading">
+        <div><p className="eyebrow"><span /> Practical skills</p><h2 id="practical-learning-gallery-title">Vocational learning<br /><em>in action.</em></h2></div>
+        <p>Students build confidence through visible, hands-on practice, from heat-transfer garment branding to carpentry, study habits and beauty skills.</p>
+      </div>
+      <div className="practical-learning-gallery-grid">
+        {practicalGallery.map((item) => <figure className="activity-gallery-card practical-learning-card" key={item.title}>
+          <img src={item.image} alt={item.alt} loading="lazy" width={1280} height={720} />
+          <figcaption>{item.title}</figcaption>
+        </figure>)}
+      </div>
+    </div>
+  </section>;
+}
+
 export function generateStaticParams() {
   return [...Object.keys(pages), "apply-now", "donate", "sponsor-a-child"].map((slug) => ({ slug }));
 }
@@ -210,6 +250,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}<br /><em>{sectionEmphasis}</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}<PageAction slug={slug} label={page.cta ?? "Get in touch"} /></div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
     {page.sections ? <PageSections sections={page.sections} /> : null}
     {slug === "student-leadership" ? <StudentLeaders /> : null}
+    {slug === "our-approach" || slug === "project-based-learning" ? <PracticalLearningGallery /> : null}
     {slug === "brass-band-club" ? <BrassBandGallery /> : null}
     {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : <TopicOverview page={page} family={family} />}
     {slug === "school-exchange-programmes" ? <section className="application-section container" id="exchange-form"><ExchangeForm /></section> : null}

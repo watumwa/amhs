@@ -5,14 +5,14 @@ const featureCards = [
   { icon: <Book />, number: "01", title: "Academic Learning", text: "A broad curriculum designed to build strong foundations in sciences, humanities, languages, technology and practical subjects.", href: "/curriculum" },
   { icon: <Compass />, number: "02", title: "Project-Based Learning", text: "Students apply classroom knowledge to practical projects and real-life challenges through investigation, creativity and teamwork.", href: "/project-based-learning" },
   { icon: <Medal />, number: "03", title: "Day & Boarding Education", text: "Our model serves learners from nearby communities and those travelling from farther away.", href: "/admission" },
-  { icon: <Sparkle />, number: "04", title: "Practical & Vocational Skills", text: "Learning opportunities include ICT, tailoring and design, carpentry, entrepreneurship and other practical skills.", href: "/our-approach" },
+  { icon: <Sparkle />, number: "04", title: "Practical & Vocational Skills", text: "Learning opportunities include ICT, branding and garment printing, tailoring and design, carpentry, entrepreneurship and other practical skills.", href: "/our-approach" },
   { icon: <Book />, number: "05", title: "Inclusive Education", text: "We seek to make secondary education accessible to learners from different social and economic backgrounds, including vulnerable and underserved learners.", href: "/about" },
   { icon: <Compass />, number: "06", title: "Character & Leadership", text: "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", href: "/student-leadership" },
 ];
 
 const approaches = [
   ["Academic excellence", "Our students learn in a school that values strong foundations, clear thinking and purposeful growth.", "ACADEMIC", "/curriculum"],
-  ["Practical skills", "Learning includes areas such as ICT, tailoring and design, carpentry, entrepreneurship and other practical skills.", "PRACTICAL", "/our-approach"],
+  ["Practical skills", "Learning includes ICT, branding and garment printing, tailoring and design, carpentry, entrepreneurship and other practical skills.", "PRACTICAL", "/our-approach"],
   ["Character & leadership", "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", "LEAD", "/student-leadership"],
 ];
 
@@ -25,6 +25,33 @@ const asabaValues = [
 ];
 
 const plannedFacilities = ["Science laboratories", "Additional classrooms", "Dormitories", "Sports facilities", "Other learning infrastructure"];
+
+const practicalShowcase = [
+  {
+    title: "Branding & garment printing",
+    text: "Students practise heat-transfer technology, learning how designs move from preparation to finished branded garments.",
+    image: "/activities/practical/garment-printing-heat-transfer.jpg",
+    alt: "AMHS student using a heat press machine for garment branding and printing",
+  },
+  {
+    title: "Carpentry practice",
+    text: "Learners build confidence with tools, measurement and supervised workshop routines.",
+    image: "/activities/practical/carpentry-training.jpg",
+    alt: "AMHS students receiving carpentry instruction in a workshop",
+  },
+  {
+    title: "Library study",
+    text: "Academic study remains part of the same pathway, helping students connect practical skill with strong understanding.",
+    image: "/activities/learning/library-study-group.jpg",
+    alt: "AMHS students studying together in the school library",
+  },
+  {
+    title: "Hairdressing & beauty",
+    text: "Hands-on practice gives students the discipline and care needed for client-facing vocational work.",
+    image: "/activities/practical/hairdressing-practice.jpg",
+    alt: "AMHS students practising hairdressing and beauty skills",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -98,7 +125,7 @@ export default function HomePage() {
 
       <section className="approach-section">
         <div className="container">
-          <div className="section-heading centered"><p className="eyebrow"><span /> Learning for life</p><h2>Learning that comes <em>alive.</em></h2><p>AMHS adopts Project-Based Learning as an important part of its educational approach. Students are encouraged to move beyond memorising information and learn through investigation, creativity, teamwork and practical application.</p><p>The school&apos;s practical learning areas include computer and technology skills, tailoring and design, hairdressing and beauty services, soap making, carpentry, business and entrepreneurship.</p></div>
+          <div className="section-heading centered"><p className="eyebrow"><span /> Learning for life</p><h2>Learning that comes <em>alive.</em></h2><p>AMHS adopts Project-Based Learning as an important part of its educational approach. Students are encouraged to move beyond memorising information and learn through investigation, creativity, teamwork and practical application.</p><p>The school&apos;s practical learning areas include computer and technology skills, branding, garment printing and heat transfer technology, tailoring and design, hairdressing and beauty services, soap making, carpentry, business and entrepreneurship.</p></div>
           <div className="approach-grid">
             {approaches.map(([title, copy, tag, href], i) => <article className={`approach-card approach-${i + 1}`} key={title}>
               <div className="approach-image" /><div className="approach-overlay" />
@@ -106,6 +133,25 @@ export default function HomePage() {
             </article>)}
           </div>
           <div className="center-action"><Link className="text-link" href="/our-approach">Discover Our Approach <Arrow /></Link></div>
+        </div>
+      </section>
+
+      <section className="practical-showcase-section" aria-labelledby="practical-showcase-heading">
+        <div className="container">
+          <div className="section-heading split-heading">
+            <div><p className="eyebrow"><span /> Practical learning in action</p><h2 id="practical-showcase-heading">Skills students can<br /><em>see, make and use.</em></h2></div>
+            <p>Students develop useful skills across branding, garment printing, carpentry, library study and beauty practice through hands-on learning.</p>
+          </div>
+          <div className="practical-showcase-grid">
+            {practicalShowcase.map((item, index) => <figure className={`practical-showcase-card${index === 0 ? " practical-showcase-card-featured" : ""}`} key={item.title}>
+              <img src={item.image} alt={item.alt} loading="lazy" width={1280} height={720} />
+              <figcaption>
+                <span>{index === 0 ? "Heat transfer technology" : "Student activity"}</span>
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
+              </figcaption>
+            </figure>)}
+          </div>
         </div>
       </section>
 
