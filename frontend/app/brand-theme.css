@@ -32,12 +32,12 @@ body { background: var(--white); color: var(--charcoal); }
 .consent input { accent-color: var(--maroon); }
 
 .crest {
-  width: 54px;
-  height: 54px;
-  flex: 0 0 54px;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
   display: block;
   overflow: hidden;
-  padding: 2px;
+  padding: 3px;
   clip-path: none;
   border: 2px solid var(--gold);
   border-radius: 50%;
@@ -77,7 +77,7 @@ body { background: var(--white); color: var(--charcoal); }
 .hero-geometry::before, .hero-geometry::after { border-color: rgb(255 191 0 / .38); }
 
 @media (max-width: 590px) {
-  .crest { width: 42px; height: 42px; flex-basis: 42px; }
+  .crest { width: 46px; height: 46px; flex-basis: 46px; padding:2px; }
   .footer-brand .crest { width: 54px; height: 54px; flex-basis: 54px; }
 }
 
