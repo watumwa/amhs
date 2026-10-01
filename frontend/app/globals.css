@@ -150,6 +150,7 @@ button { cursor:pointer; }
   .story-grid { grid-template-columns:1fr; }
   .footer-grid > * { min-width:0; }
   .admission-form,.giving-card { min-width:0; }
+  .legacy-feature-grid { grid-template-columns:1fr;gap:35px; }
 }
 
 @media (max-width: 590px) {
@@ -171,6 +172,13 @@ button { cursor:pointer; }
 .page-section-card { background:var(--cream);border-top:4px solid var(--gold);padding:26px 27px; }
 .page-section-card h3 { color:var(--maroon);font:400 25px/1.1 var(--serif);letter-spacing:-.03em;margin:0 0 12px; }
 .page-section-card p { color:var(--charcoal);font-size:14px;line-height:1.65;margin:0 0 12px; }
+.legacy-feature-section { background:#f7f4e9;padding:0 0 95px; }
+.legacy-feature-grid { display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(40px,8vw,105px);align-items:center; }
+.legacy-feature-photo { margin:0;background:#fff;box-shadow:0 14px 34px #0d233a12; }
+.legacy-feature-photo img { display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center; }
+.legacy-feature-photo figcaption { border-top:4px solid var(--gold);padding:17px 20px 19px;color:var(--maroon);font:400 22px/1.2 var(--serif);letter-spacing:-.02em; }
+.legacy-feature-copy h2 { color:var(--maroon);font:400 clamp(35px,4vw,52px)/1.05 var(--serif);letter-spacing:-.04em;margin:0 0 20px; }
+.legacy-feature-copy p:not(.eyebrow) { color:var(--charcoal);font-size:15px;line-height:1.75;margin:0;max-width:520px; }
 .home-facilities { padding-top:0; }
 .support-strip .support-copy p { font-size:14px;line-height:1.65;color:#f3e9e9;margin:0 0 10px; }
 .support-actions { display:grid;gap:10px; }
@@ -195,6 +203,9 @@ button { cursor:pointer; }
   /* 16px stops iPhone Safari zooming in when a field is tapped */
   .admission-form input,.admission-form select,.admission-form textarea,.giving-card input { font-size:16px; }
   .check-list--columns { grid-template-columns:1fr; }
+  .legacy-feature-section { padding-bottom:70px; }
+  .legacy-feature-grid { grid-template-columns:1fr;gap:30px; }
+  .legacy-feature-photo figcaption { padding:14px 16px 16px;font-size:20px; }
   .support-actions { grid-auto-flow:row; }
   .support-actions .button { width:100%; }
   .page-sections { padding-bottom:70px; }

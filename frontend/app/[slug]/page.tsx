@@ -12,7 +12,7 @@ type PageInfo = { label: string; title: string; emphasis: string; intro: string;
 const pages: Record<string, PageInfo> = {
   academics: { label: "Academics", title: "Learning for Understanding, Application and Life", emphasis: "for every future.", eyebrow: "Curriculum", intro: "AMHS follows Uganda's national secondary education curriculum while promoting a learner-centred approach that emphasises understanding, application, creativity and problem-solving.", image: "classroom-teacher", details: ["Academic learning is complemented by continuous assessment, Project-Based Learning, practical skills and co-curricular experiences.", "Our aim is not simply to prepare students for examinations. We want students to become independent thinkers, effective communicators, problem-solvers, innovators and responsible citizens."], facts: [["O-Level", "Core subjects"], ["S1–S6", "Full secondary"], ["A-Level", "Long-term plan"]], cta: "Explore subjects" },
   about: { label: "Who we are", title: "Education with Knowledge, Character and Purpose", emphasis: "for every learner.", eyebrow: "About AMHS", intro: "Asaba Memorial High School is a privately established mixed day and boarding secondary school serving Kiruli Sub-county, Masindi District and surrounding communities.", image: "about", details: ["The school was established in response to a clear local challenge: many children complete primary education but face difficulty continuing to secondary school because of distance, transport costs, boarding expenses and limited access to affordable nearby schools. AMHS therefore exists as a community-responsive institution committed to widening access to quality secondary education.", "Our approach brings together academic excellence, values and character, practical skills, leadership, inclusion, technology, creativity and community responsibility. The school is registered with the Uganda Registration Services Bureau under Certificate No. 80034317301770, and its Development Plan records its ongoing progression through the relevant education-sector licensing process."], facts: [["Mixed", "Day & boarding"], ["Registered", "URSB No. 80034317301770"], ["Values", "ASABA" ]], cta: "Meet our community" },
-  "amhs-roots": { label: "Who we are", title: "A Legacy that Became a School", emphasis: "with purpose.", eyebrow: "AMHS Roots", intro: "Asaba Memorial High School was founded in honour of Abwooli Asaba Mary, a devoted mother who passed away on 21 March 2022.", image: "launch", details: ["Her life and legacy of compassion, resilience and commitment to uplifting others inspired the establishment of a school through which opportunities could be created for generations of young people. From that legacy emerged a bigger vision: to create a school capable of changing lives through accessible, transformative and values-based education.", "AMHS was established in Kitanyata because education remains one of the strongest pathways through which families and communities can build sustainable futures. The word Memorial represents more than remembrance: it represents continuing a legacy through service by serving underserved communities, expanding access, supporting vulnerable learners, developing responsible young leaders and turning education into practical community transformation."], facts: [["2022", "Foundation legacy"], ["Kitanyata", "School location"], ["Service", "Community mission"]], cta: "Read our story", sections: [
+  "amhs-roots": { label: "Who we are", title: "A Legacy that Became a School", emphasis: "with purpose.", eyebrow: "AMHS Roots", intro: "Asaba Memorial High School was founded in honour of Abwooli Asaba Mary, a devoted mother who passed away on 21 March 2022.", image: "legacy", details: ["Her life and legacy of compassion, resilience and commitment to uplifting others inspired the establishment of a school through which opportunities could be created for generations of young people. From that legacy emerged a bigger vision: to create a school capable of changing lives through accessible, transformative and values-based education.", "AMHS was established in Kitanyata because education remains one of the strongest pathways through which families and communities can build sustainable futures. The word Memorial represents more than remembrance: it represents continuing a legacy through service by serving underserved communities, expanding access, supporting vulnerable learners, developing responsible young leaders and turning education into practical community transformation."], facts: [["2022", "Foundation legacy"], ["Kitanyata", "School location"], ["Service", "Community mission"]], cta: "Read our story", sections: [
     { title: "From Memory to Opportunity", body: ["The school's roots continue to shape its commitment to:"], items: ["Serving underserved communities", "Expanding access to secondary education", "Supporting vulnerable learners", "Developing responsible young leaders", "Turning education into practical community transformation"] },
     { title: "A continuing story", body: ["Every learner who discovers a talent, completes secondary education, acquires a practical skill, proceeds to further education, establishes an enterprise or returns to serve the community becomes part of that continuing story."] },
   ] },
@@ -162,6 +162,22 @@ function PageSections({ sections }: { sections: PageSection[] }) {
   </section>;
 }
 
+function LegacyFeature() {
+  return <section className="legacy-feature-section">
+    <div className="container legacy-feature-grid">
+      <figure className="legacy-feature-photo">
+        <img src="/people/legacy/abwooli-asaba-mary.jpg" alt="The late Abwooli Asaba Mary, in whose legacy memory Asaba Memorial High School was established" loading="lazy" width={1800} height={1200} />
+        <figcaption>The late Abwooli Asaba Mary</figcaption>
+      </figure>
+      <div className="legacy-feature-copy">
+        <p className="eyebrow"><span /> Legacy and memory</p>
+        <h2>A life remembered<br /><em>through opportunity.</em></h2>
+        <p>Asaba Memorial High School carries forward the memory of Abwooli Asaba Mary by turning remembrance into service: widening access to education, supporting young people and strengthening the community around them.</p>
+      </div>
+    </div>
+  </section>;
+}
+
 function ProfileDirectory({ type }: { type: "team" | "staff" }) {
   const isLeadership = type === "team";
   const profiles = peopleProfiles[type];
@@ -248,6 +264,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   return <>
     <section className="page-hero"><div className={mediaClass(page.image)} /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{page.title}<br /><em>{page.emphasis}</em></h1><p>{page.intro}</p></div></section>
     <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}<br /><em>{sectionEmphasis}</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}<PageAction slug={slug} label={page.cta ?? "Get in touch"} /></div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
+    {slug === "amhs-roots" ? <LegacyFeature /> : null}
     {page.sections ? <PageSections sections={page.sections} /> : null}
     {slug === "student-leadership" ? <StudentLeaders /> : null}
     {slug === "our-approach" || slug === "project-based-learning" ? <PracticalLearningGallery /> : null}

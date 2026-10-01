@@ -13,14 +13,17 @@ export type Profile = {
 
 export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
   team: [
-    { initials: "SL", name: "School Principal", role: "School leadership", bio: "Provides strategic direction for AMHS and works closely with students, families and staff to sustain a strong, caring school culture." },
-    { initials: "DP", name: "Deputy Principal", role: "Academic and student life", bio: "Coordinates the daily rhythm of the school, supporting high expectations in learning alongside a positive and well-organised student experience." },
+    { initials: "KP", name: "Kyamanywa Patrick", role: "School Headteacher", bio: "Provides strategic direction for AMHS and works closely with students, families and staff to sustain a strong, caring school culture.", image: "/people/staff/kyamanywa-patrick.jpg" },
+    { initials: "KC", name: "Kamusiime Christine", role: "Deputy Headteacher", bio: "Coordinates the daily rhythm of the school, supporting high expectations in learning alongside a positive and well-organised student experience.", image: "/people/staff/kamusiime-christine.jpg" },
+    { initials: "VU", name: "Valentine Uwachu", role: "Social Media Officer", bio: "Helps share the AMHS story with families, alumni and the wider community through school communication and digital media.", image: "/people/staff/valentine-uwachu.jpg" },
     { initials: "DS", name: "Director of Studies", role: "Curriculum and assessment", bio: "Guides curriculum planning and assessment practice, helping teachers create clear pathways for every student to make progress." },
     { initials: "PW", name: "Pastoral Lead", role: "Wellbeing and safeguarding", bio: "Leads the systems and relationships that help students feel safe, heard and ready to learn with confidence." },
     { initials: "AC", name: "Activities Coordinator", role: "Enrichment and student voice", bio: "Creates opportunities for students to lead, perform, compete and contribute beyond the classroom through clubs, sport and service." },
-    { initials: "FL", name: "Family Liaison", role: "Home–school partnership", bio: "Helps families stay connected to school life and ensures questions, transitions and important conversations are handled with care." },
   ],
   staff: [
+    { initials: "KP", name: "Kyamanywa Patrick", role: "School Headteacher", bio: "Provides strategic direction for AMHS and works closely with students, families and staff to sustain a strong, caring school culture.", image: "/people/staff/kyamanywa-patrick.jpg" },
+    { initials: "KC", name: "Kamusiime Christine", role: "Deputy Headteacher", bio: "Coordinates the daily rhythm of the school, supporting high expectations in learning alongside a positive and well-organised student experience.", image: "/people/staff/kamusiime-christine.jpg" },
+    { initials: "VU", name: "Valentine Uwachu", role: "Social Media Officer", bio: "Helps share the AMHS story with families, alumni and the wider community through school communication and digital media.", image: "/people/staff/valentine-uwachu.jpg" },
     { initials: "BJ", name: "Baguma Justus", role: "School Bursar", bio: "Supports the careful management of school finances and day-to-day administrative operations.", image: "/people/staff/baguma-justus.jpg" },
     { initials: "BS", name: "Bandiki Sibomana", role: "Security Guard", bio: "Helps maintain a safe, welcoming and secure environment for learners, staff and visitors.", image: "/people/staff/bandiki-sibomana.jpg" },
     { initials: "KG", name: "Kaburuli Grace", role: "School Matron", bio: "Supports student welfare, care and the routines that help learners feel settled at school.", image: "/people/staff/kaburuli-grace.jpg" },
@@ -45,6 +48,8 @@ export type StudentLeader = {
 
 /** Student leader portraits displayed on the Student Leadership page. */
 export const studentLeaders: StudentLeader[] = [
+  { image: "/people/student-leaders/basome-robinson.jpg", name: "Basome Robinson", role: "Head Boy" },
+  { image: "/people/student-leaders/shania-asifiwe.jpg", name: "Shania Asifiwe", role: "Head Prefect" },
   { image: "/people/student-leaders/faith-michelle.jpg", name: "Faith Michelle", role: "Head Girl" },
   { image: "/people/student-leaders/lillian-sifa.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
   { image: "/people/student-leaders/gift-emmanuel.jpg", name: "Gift Emmanuel", role: "Clubs and Societies" },
