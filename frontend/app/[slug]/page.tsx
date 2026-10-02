@@ -23,7 +23,7 @@ const pages: Record<string, PageInfo> = {
   "student-leadership": { label: "Our team", title: "Learning to Lead by Leading", emphasis: "with responsibility.", eyebrow: "Student Leadership", intro: "Leadership development should begin while young people are still learning.", image: "prefects", details: ["Student leadership at AMHS provides learners with opportunities to develop responsibility, communication, teamwork, accountability and service.", "Student leaders help promote positive behaviour, represent student concerns and support activities within the school community."], facts: [["Responsibility", "Student voice"], ["Leadership", "Service & teamwork"], ["Growth", "Confidence & accountability"]], cta: "Student life", sections: [
     { title: "Student leadership roles", items: ["Head Prefect", "Deputy Head Prefect", "Dormitory Leaders", "Class Leaders", "Club Leaders", "Other Prefects"] },
   ] },
-  "success-stories": { label: "Who we are", title: "Every Journey Matters", emphasis: "and every story counts.", eyebrow: "Success Stories", intro: "Success at AMHS is not measured only by examination results. It can be seen when a learner improves academically, develops confidence, discovers a talent, learns a practical skill or becomes an example to others.", image: "success", details: ["Success can also mean assuming responsibility, overcoming difficult circumstances, contributing to a project, finding a voice through music or sport, or returning to serve the community.", "AMHS is committed to recognising the many forms of growth, achievement and contribution made by students. Future stories will celebrate learners whose progress shows what knowledge, character and purpose can make possible."], facts: [["Growth", "Academic & personal"], ["Talent", "Development"], ["Purpose", "Leadership & service"]], cta: "Share your story" },
+  "success-stories": { label: "Who we are", title: "Every Journey Matters", emphasis: "and every story counts.", eyebrow: "Success Stories", intro: "Success at AMHS is not measured only by examination results. It can be seen when a learner improves academically, develops confidence, discovers a talent, learns a practical skill or becomes an example to others.", image: "success", details: ["Success can also mean assuming responsibility, taking initiative, contributing to a project, finding a voice through teamwork or learning to serve the community.", "Kanshabe Natasha's story shows how AMHS helps students build confidence, communication, problem-solving and leadership skills so they can become responsible changemakers in their communities."], facts: [["Leadership", "Confidence & responsibility"], ["Teamwork", "Ideas into action"], ["Community", "Service & change"]], cta: "Be a Mentor" },
   "school-policies": { label: "Who we are", title: "Creating a Safe and Responsible Learning Environment", emphasis: "for every learner.", eyebrow: "School Policies", intro: "Our policies establish clear standards for learning, conduct, accountability and student protection.", image: "policies", details: ["At AMHS, every learner has a right to a learning environment free from abuse, neglect, exploitation, violence and discrimination. Safeguarding covers prevention, reporting, safe recruitment, supervision, guidance and counselling.", "The downloadable policy centre can include the Child Protection & Safeguarding Policy, Students’ Code of Conduct, Staff Code of Conduct, Admissions Policy, Boarding Policy, Anti-Bullying Policy, ICT/Internet Policy, Health & Safety Policy, Academic Policy and Complaints Procedure."], facts: [["Safeguarding", "Child protection"], ["Support", "Guidance & counselling"], ["Standards", "Conduct & accountability"]], cta: "Request a policy" },
   partners: { label: "Who we are", title: "Working Together for Education", emphasis: "with real purpose.", eyebrow: "Our Partners", intro: "Meaningful educational transformation requires collaboration.", image: "partners", details: ["AMHS welcomes responsible partnerships with parents, communities, education authorities, development organisations, businesses, institutions, professionals and well-wishers who share our commitment to improving opportunities for young people.", "Partnership opportunities include student sponsorship, learning materials, ICT, vocational equipment, infrastructure, sports, school exchanges, teacher development, career guidance and technical support."], facts: [["Partnership", "Shared mission"], ["Support", "Student opportunities"], ["Growth", "Infrastructure & skills"]], cta: "Partner With AMHS" },
   facilities: { label: "Who we are", title: "A Campus Built for Learning and Growth", emphasis: "with purpose.", eyebrow: "School Facilities", intro: "Our campus is being developed progressively to provide safe, functional spaces for academic learning, boarding, practical education and co-curricular development.", image: "facilities", details: ["Facilities include classrooms and an administration block; boarding facilities; a vocational skills block; a developing library; ICT and computer facilities; kitchen and feeding facilities; water infrastructure with an electric pump and distributed tap points; electricity connected to operational buildings; sanitation facilities; and playground and sports areas.", "The school’s longer-term development programme includes science laboratories, additional classrooms, dormitories, sports facilities and other learning infrastructure to meet the needs of a growing student population."], facts: [["Classrooms", "Teaching spaces"], ["Boarding", "Accommodation"], ["Practical", "Skills & learning"]], cta: "Plan a visit" },
@@ -72,7 +72,7 @@ const pageHeadings: Record<string, [string, string]> = {
 const actionDestinations: Record<string, string> = {
   academics: "/subjects", about: "/team", "amhs-roots": "/about", team: "/staff", staff: "mailto:info@amhs.sc.ug",
   "board-of-governors": "mailto:info@amhs.sc.ug", "pta-leadership": "mailto:info@amhs.sc.ug", "student-leadership": "/students-life",
-  "success-stories": "mailto:info@amhs.sc.ug", "school-policies": "mailto:info@amhs.sc.ug", partners: "mailto:info@amhs.sc.ug", facilities: "/apply-now",
+  "success-stories": "mailto:info@amhs.sc.ug?subject=Mentorship%20enquiry", "school-policies": "mailto:info@amhs.sc.ug", partners: "mailto:info@amhs.sc.ug", facilities: "/apply-now",
   curriculum: "/subjects", "academic-calendar": "mailto:info@amhs.sc.ug", subjects: "mailto:info@amhs.sc.ug", library: "mailto:info@amhs.sc.ug",
   syllabus: "mailto:info@amhs.sc.ug", admission: "/apply-now", fees: "mailto:info@amhs.sc.ug", uniform: "mailto:info@amhs.sc.ug",
   "our-approach": "/students-life", "project-based-learning": "/our-approach", "brass-band-club": "/students-life", "games-and-sport": "/students-life",
@@ -178,6 +178,36 @@ function LegacyFeature() {
   </section>;
 }
 
+function SuccessStoryFeature() {
+  return <section className="success-story-section" aria-labelledby="natasha-success-story-title">
+    <div className="container success-story-grid">
+      <figure className="success-story-photo">
+        <img src="/activities/leadership/top-prefects.jpg" alt="AMHS student leaders standing together in school uniform" loading="lazy" width={1800} height={1200} />
+        <figcaption>Leadership, teamwork and responsibility in practice.</figcaption>
+      </figure>
+      <article className="success-story-copy">
+        <p className="eyebrow"><span /> Student success story</p>
+        <h2 id="natasha-success-story-title">Preparing Young Leaders<br /><em>and Community Changemakers.</em></h2>
+        <p><strong>Kanshabe Natasha</strong>, an S3 student at <strong>Asaba Memorial High School (AMHS)</strong>, is growing into a confident young leader through the school's focus on leadership, teamwork, responsibility and community engagement.</p>
+        <p>At AMHS, students are encouraged to share ideas, take initiative, work together and understand how they can contribute to solving challenges in their communities. Through these opportunities, Natasha is developing confidence, communication, problem-solving and leadership skills.</p>
+        <blockquote>
+          <p>"AMHS is helping me become more confident and responsible. I am learning that I can use my ideas and skills to make a positive difference in my community."</p>
+          <cite>Kanshabe Natasha, S3 student</cite>
+        </blockquote>
+        <p>Natasha's story reflects AMHS's commitment to preparing students not only for academic success, but also to become responsible leaders and changemakers in their communities.</p>
+      </article>
+    </div>
+    <div className="container mentor-callout">
+      <div>
+        <p className="eyebrow eyebrow-light"><span /> Be a Mentor</p>
+        <h3>Future leaders need mentors.</h3>
+        <p>Be the person who inspires, guides and empowers them. Be a mentor now.</p>
+      </div>
+      <a className="button button-gold" href="mailto:info@amhs.sc.ug?subject=Mentorship%20enquiry">Be a mentor now <Arrow /></a>
+    </div>
+  </section>;
+}
+
 function ProfileDirectory({ type }: { type: "team" | "staff" }) {
   const isLeadership = type === "team";
   const profiles = peopleProfiles[type];
@@ -265,6 +295,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     <section className="page-hero"><div className={mediaClass(page.image)} /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{page.title}<br /><em>{page.emphasis}</em></h1><p>{page.intro}</p></div></section>
     <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}<br /><em>{sectionEmphasis}</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}<PageAction slug={slug} label={page.cta ?? "Get in touch"} /></div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
     {slug === "amhs-roots" ? <LegacyFeature /> : null}
+    {slug === "success-stories" ? <SuccessStoryFeature /> : null}
     {page.sections ? <PageSections sections={page.sections} /> : null}
     {slug === "student-leadership" ? <StudentLeaders /> : null}
     {slug === "our-approach" || slug === "project-based-learning" ? <PracticalLearningGallery /> : null}
