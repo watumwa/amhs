@@ -27,6 +27,7 @@ export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
     { initials: "BJ", name: "Baguma Justus", role: "School Bursar", bio: "Supports the careful management of school finances and day-to-day administrative operations.", image: "/people/staff/baguma-justus.jpg" },
     { initials: "BS", name: "Bandiki Sibomana", role: "Security Guard", bio: "Helps maintain a safe, welcoming and secure environment for learners, staff and visitors.", image: "/people/staff/bandiki-sibomana.jpg" },
     { initials: "KG", name: "Kaburuli Grace", role: "School Matron", bio: "Supports student welfare, care and the routines that help learners feel settled at school.", image: "/people/staff/kaburuli-grace.jpg" },
+    { initials: "OC", name: "Omirambe Charles", role: "Teacher for Geography and ICT", bio: "Teaches Geography and ICT, helping students understand their communities, environment and digital tools through practical, relevant learning.", image: "/people/staff/omirambe-charles.jpeg" },
     { initials: "MS", name: "Mujuni Silver", role: "Head of the Agriculture Department", bio: "Leads Agriculture learning and helps students connect practical skills with responsible stewardship.", image: "/people/staff/mujuni-silver.jpg" },
   ],
 };
