@@ -25,6 +25,20 @@ export const siteSettings = {
     accountName: "Asaba Memorial High School LTD",
     logo: "/equity-bank-logo.png",
   },
+  schoolFeeMobileMoney: [
+    {
+      provider: "MTN MoMo",
+      merchantId: "26616498",
+      paymentRoute: "MoMo app or *165*3#",
+      brand: "mtn",
+    },
+    {
+      provider: "Airtel Money",
+      merchantId: "4407071",
+      paymentRoute: "Dial *185*9#",
+      brand: "airtel",
+    },
+  ],
   socialLinks: [
     { label: "Facebook", symbol: "f", href: "https://www.facebook.com/" },
     { label: "Instagram", symbol: "◎", href: "https://www.instagram.com/" },

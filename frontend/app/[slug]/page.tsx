@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { AdmissionForm } from "../../components/admission-form";
 import { Arrow } from "../../components/icons";
 import { GivingOptions } from "../../components/giving-options";
-import { BankAccountCard, BankAccountSection } from "../../components/bank-account";
+import { BankAccountCard, BankAccountSection, SchoolFeesPaymentSection } from "../../components/bank-account";
 import { ExchangeForm } from "../../components/exchange-form";
 import { governanceProfiles, peopleProfiles, studentLeaders, type Profile } from "../../content/people";
 
@@ -320,7 +320,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     {slug === "success-stories" ? <SuccessStoryFeature /> : null}
     {page.sections ? <PageSections sections={page.sections} /> : null}
     {slug === "student-leadership" ? <StudentLeaders /> : null}
-    {slug === "fees" || slug === "get-involved" ? <BankAccountSection /> : null}
+    {slug === "fees" ? <SchoolFeesPaymentSection /> : null}
+    {slug === "get-involved" ? <BankAccountSection /> : null}
     {slug === "our-approach" || slug === "project-based-learning" ? <PracticalLearningGallery /> : null}
     {slug === "brass-band-club" ? <BrassBandGallery /> : null}
     {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : slug === "pta-leadership" ? <GovernanceDirectory type="pta" /> : slug === "board-of-governors" ? <GovernanceDirectory type="board" /> : <TopicOverview page={page} family={family} />}

@@ -250,6 +250,12 @@ Boarding Student	UGX 300,000
 Add:
 “Please contact the school or download the current official fees structure before making payment, as fees and other requirements may be reviewed.”
 The downloadable fees sheet can separately show tuition, boarding, meals, uniform, development requirements and any other approved charges.
+Official School Fee Payment Channels
+MTN MoMo Merchant ID: 26616498
+Pay using the MoMo app or *165*3#
+Airtel Money Merchant ID: 4407071
+Pay by dialling *185*9#
+Use the student's name as the payment reference and keep the transaction receipt for verification.
 
 School Uniform
 One School. One Identity.

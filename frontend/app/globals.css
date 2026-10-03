@@ -161,6 +161,40 @@ button { cursor:pointer; }
 .bank-account-section-copy h2 { color:#fff;font:400 clamp(35px,4vw,52px)/1.05 var(--serif);letter-spacing:-.04em;margin:0 0 21px; }
 .bank-account-section-copy h2 em { color:var(--gold);font-weight:400; }
 .bank-account-section-copy > p:last-child { color:#f2e7e7;font-size:14px;line-height:1.7;margin:0;max-width:500px; }
+.school-fees-payment-section { background:var(--maroon);color:#fff;padding:92px 0 98px; }
+.school-fees-payment-heading { display:flex;align-items:end;justify-content:space-between;gap:60px;margin-bottom:42px; }
+.school-fees-payment-heading h2 { color:#fff;font:400 clamp(35px,4vw,52px)/1.05 var(--serif);letter-spacing:-.04em;margin:0; }
+.school-fees-payment-heading h2 em { color:var(--gold);font-weight:400; }
+.school-fees-payment-heading > p { width:min(440px,100%);color:#f2e7e7;font-size:14px;line-height:1.7;margin:0 0 4px; }
+.school-fees-payment-grid { display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:18px;align-items:stretch; }
+.school-fees-payment-grid > * { height:100%; }
+.mobile-money-card { --provider-color:#1e2936;background:#fff;border-top:4px solid var(--provider-color);box-shadow:0 15px 37px #1c080826;padding:28px 27px;color:var(--ink);display:flex;flex-direction:column; }
+.mobile-money-card--mtn { --provider-color:#ffcb05; }
+.mobile-money-card--airtel { --provider-color:#df1530; }
+.mobile-money-card-heading { display:flex;align-items:center;justify-content:space-between;gap:13px;padding-bottom:22px;border-bottom:1px solid var(--line); }
+.payment-brand { flex:0 0 auto;display:flex;align-items:center;justify-content:center;line-height:1; }
+.payment-brand--mtn { min-width:112px;height:58px;gap:8px;background:#ffcb05;color:#111;padding:8px 10px; }
+.payment-brand--mtn span { border:2px solid #111;border-radius:50%;padding:5px 7px;font-size:11px;font-weight:900;letter-spacing:-.04em; }
+.payment-brand--mtn strong { font-size:17px;font-weight:800;letter-spacing:-.06em; }
+.payment-brand--airtel { min-width:112px;height:58px;background:#df1530;color:#fff;display:grid;align-content:center;justify-items:start;padding:8px 15px; }
+.payment-brand--airtel strong { font-size:23px;font-weight:800;letter-spacing:-.08em; }
+.payment-brand--airtel span { font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-top:2px; }
+.payment-purpose { color:#7e7272;font-size:8px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;text-align:right;line-height:1.35; }
+.mobile-money-card > p:not(.mobile-money-note) { color:#796e6e;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:24px 0 7px; }
+.merchant-id { color:var(--provider-color);font:700 clamp(28px,3vw,38px)/1 var(--sans);letter-spacing:.055em;font-variant-numeric:tabular-nums; }
+.mobile-money-card--mtn .merchant-id { color:#25364a; }
+.mobile-money-card dl { margin:23px 0 0; }
+.mobile-money-card dl > div { padding:12px 0;border-top:1px solid #eee6c8; }
+.mobile-money-card dt { color:#796e6e;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px; }
+.mobile-money-card dd { color:var(--navy);font-size:13px;font-weight:700;line-height:1.4;margin:0; }
+.mobile-money-note { color:#6b6161;font-size:10px;line-height:1.55;margin:16px 0 0; }
+.payment-safety-note { color:#f3e8e8;font-size:11px;line-height:1.65;margin:25px 0 0;padding-left:18px;border-left:3px solid var(--gold); }
+.payment-safety-note strong { color:#fff; }
+
+@media (max-width: 1050px) {
+  .school-fees-payment-grid { grid-template-columns:1fr 1fr; }
+  .school-fees-payment-grid .bank-account-card { grid-column:1 / -1; }
+}
 
 @media (max-width: 820px) {
   .values-grid { grid-template-columns:1fr;gap:38px; }
@@ -170,6 +204,8 @@ button { cursor:pointer; }
   .admission-form,.giving-card { min-width:0; }
   .legacy-feature-grid { grid-template-columns:1fr;gap:35px; }
   .bank-account-section-grid { grid-template-columns:1fr; }
+  .school-fees-payment-heading { display:block; }
+  .school-fees-payment-heading > p { width:auto;margin-top:18px; }
 }
 
 @media (max-width: 590px) {
@@ -182,6 +218,11 @@ button { cursor:pointer; }
   .bank-account-heading strong { font-size:22px; }
   .bank-account-card dl > div { grid-template-columns:1fr;gap:5px; }
   .bank-account-card .bank-account-number { font-size:18px;letter-spacing:.025em; }
+  .school-fees-payment-section { padding:70px 0 74px; }
+  .school-fees-payment-grid { grid-template-columns:1fr; }
+  .school-fees-payment-grid .bank-account-card { grid-column:auto; }
+  .mobile-money-card { padding:24px 20px; }
+  .payment-brand--mtn,.payment-brand--airtel { min-width:104px;height:54px; }
 }
 
 /* Extra content blocks from the client copy */

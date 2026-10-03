@@ -32,3 +32,42 @@ export function BankAccountSection() {
     </div>
   </section>;
 }
+
+type MobileMoneyMethod = (typeof siteSettings.schoolFeeMobileMoney)[number];
+
+function MobileMoneyCard({ method }: { method: MobileMoneyMethod }) {
+  return <article className={`mobile-money-card mobile-money-card--${method.brand}`}>
+    <div className="mobile-money-card-heading">
+      {method.brand === "mtn"
+        ? <div className="payment-brand payment-brand--mtn" aria-label="MTN MoMo"><span>MTN</span><strong>MoMo</strong></div>
+        : <div className="payment-brand payment-brand--airtel" aria-label="Airtel Money"><strong>airtel</strong><span>money</span></div>}
+      <span className="payment-purpose">School fees</span>
+    </div>
+    <p>Merchant ID</p>
+    <strong className="merchant-id">{method.merchantId}</strong>
+    <dl>
+      <div><dt>Payment route</dt><dd>{method.paymentRoute}</dd></div>
+      <div><dt>Reference</dt><dd>Student name</dd></div>
+    </dl>
+    <p className="mobile-money-note">Use this merchant ID only for AMHS school fees. Confirm the school details before approving payment and keep the transaction receipt.</p>
+  </article>;
+}
+
+export function SchoolFeesPaymentSection() {
+  return <section className="school-fees-payment-section" aria-labelledby="school-fee-payment-title">
+    <div className="container">
+      <div className="school-fees-payment-heading">
+        <div>
+          <p className="eyebrow eyebrow-light"><span /> Official payment channels</p>
+          <h2 id="school-fee-payment-title">Choose the method<br /><em>that works for your family.</em></h2>
+        </div>
+        <p>School fees may be paid by bank transfer, MTN MoMo or Airtel Money. Use the student&apos;s name as the payment reference and retain the receipt for school verification.</p>
+      </div>
+      <div className="school-fees-payment-grid">
+        <BankAccountCard />
+        {siteSettings.schoolFeeMobileMoney.map((method) => <MobileMoneyCard method={method} key={method.provider} />)}
+      </div>
+      <p className="payment-safety-note"><strong>Payment safety:</strong> confirm the merchant ID or account details before authorising a transaction. If anything shown on your phone differs from the details above, stop and contact the school office.</p>
+    </div>
+  </section>;
+}
