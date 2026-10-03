@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { AdmissionForm } from "../../components/admission-form";
 import { Arrow } from "../../components/icons";
 import { GivingOptions } from "../../components/giving-options";
+import { BankAccountCard, BankAccountSection } from "../../components/bank-account";
 import { ExchangeForm } from "../../components/exchange-form";
 import { governanceProfiles, peopleProfiles, studentLeaders, type Profile } from "../../content/people";
 
@@ -48,7 +49,7 @@ const pages: Record<string, PageInfo> = {
     { title: "Student Welfare & Safeguarding", body: ["Student safety remains central to school life.", "AMHS's safeguarding approach covers prevention, reporting, professional boundaries, supervision, safe recruitment, counselling and appropriate referral where necessary."] },
     { title: "A Typical AMHS Experience", body: ["A learner's school experience may move through:"], items: ["Morning preparation", "Classes", "Break", "Academic lessons", "Lunch", "Practical/project learning", "Sports/clubs", "Evening preparation for boarders"] },
   ] },
-  "get-involved": { label: "Get involved", title: "Help Us Light", emphasis: "Another Path.", eyebrow: "Support AMHS", intro: "A child’s future should not be determined solely by where that child was born or the financial circumstances of the family.", image: "involved", details: ["Support can strengthen books and learning materials, ICT equipment, science facilities, library development, vocational equipment, sports equipment, boarding facilities, classroom development, water and sanitation, and student support.", "Through donations, sponsorships and partnerships, individuals and organisations can help expand educational opportunities. Payment information will only be published after the school’s official receiving account or mobile-money arrangements have been formally approved."], facts: [["Give", "Create opportunity"], ["Sponsor", "Support a learner"], ["Partner", "Strengthen AMHS"]], cta: "Make a difference" },
+  "get-involved": { label: "Get involved", title: "Help Us Light", emphasis: "Another Path.", eyebrow: "Support AMHS", intro: "A child’s future should not be determined solely by where that child was born or the financial circumstances of the family.", image: "involved", details: ["Support can strengthen books and learning materials, ICT equipment, science facilities, library development, vocational equipment, sports equipment, boarding facilities, classroom development, water and sanitation, and student support.", "Through donations, sponsorships and partnerships, individuals and organisations can help expand educational opportunities. The school’s official Equity Bank Uganda account is provided below for approved payments and support."], facts: [["Give", "Create opportunity"], ["Sponsor", "Support a learner"], ["Partner", "Strengthen AMHS"]], cta: "Make a difference" },
   "news-and-events": { label: "News and Events", title: "A school community in motion", emphasis: "with learning, celebration and service.", eyebrow: "News and Events", intro: "AMHS is building a campus culture that celebrates learning, milestones, school life and community engagement.", image: "curriculum", details: ["News and events at AMHS will highlight student achievement, school activities, outreach, open days, community partnerships and meaningful moments across the academic year.", "We welcome families, partners and friends to follow the life of the school and celebrate the progress of our learners."], facts: [["School life", "Student achievement"], ["Community", "Events & outreach"], ["Growth", "Shared milestones"]], cta: "Stay connected" },
   "contact-us": { label: "Contact Us", title: "We are here to help", emphasis: "and to welcome you.", eyebrow: "Contact AMHS", intro: "We are happy to help with admissions enquiries, general school questions, partnerships and support opportunities.", image: "involved", details: ["Whether you want to find out more about the school, request a visit, discuss sponsorship or ask about admissions, the AMHS team is ready to assist.", "Please use the details below to get in touch and we will help you with the next step."], facts: [["Admissions", "School enquiries"], ["Partnerships", "School exchanges"], ["Support", "Sponsorship & giving"]], cta: "Get in touch" },
   "school-exchange-programmes": { label: "Get involved", title: "Connecting Classrooms", emphasis: "and cultures.", eyebrow: "School Exchange Programmes", intro: "AMHS seeks to broaden students’ understanding of the world beyond their immediate community through meaningful exchange relationships.", image: "exchange", details: ["Potential activities include student-to-student correspondence, virtual classroom exchanges, joint projects, cultural exchange, teacher collaboration, educational visits, sports exchanges and arts exchanges.", "AMHS welcomes schools and educational institutions interested in mutual learning rather than one-way assistance. Conversations can begin with the school or organisation name, country, contact person, email, proposed exchange type and a message."], facts: [["Connect", "Classrooms & cultures"], ["Create", "Joint projects"], ["Share", "Mutual learning"]], cta: "Become an Exchange Partner" },
@@ -229,6 +230,27 @@ function ProfileDirectory({ type }: { type: "team" | "staff" }) {
   </section>;
 }
 
+function GovernanceDirectory({ type }: { type: "board" | "pta" }) {
+  const isPta = type === "pta";
+  const profiles = governanceProfiles[type];
+  return <section className="profiles-section">
+    <div className="container">
+      <div className="profiles-heading">
+        <div><p className="eyebrow"><span /> {isPta ? "Meet the PTA leadership" : "Meet the governors"}</p><h2>{isPta ? "Parents and teachers." : "Responsible oversight."}<br /><em>{isPta ? "Working as one." : "Students at the centre."}</em></h2></div>
+        <p>{isPta ? "Our PTA leaders keep families, teachers and school leadership connected around learner welfare, progress and the continued development of AMHS." : "Our governors support sound leadership, accountability and long-term stewardship for the school community."}</p>
+      </div>
+      <div className={`profile-grid${isPta ? " profile-grid--governance" : ""}`}>
+        {profiles.map((profile) => <article className="profile-card" key={profile.name}>
+          <div className={`profile-avatar${profile.image ? " has-photo" : ""}`} aria-hidden="true" style={profile.image ? { backgroundImage: `url(${profile.image})` } : undefined}>{profile.image ? "" : profile.initials}</div>
+          <p>{profile.role}</p><h3>{profile.name}</h3><span className="profile-rule" />
+          <p className="profile-bio">{profile.bio}</p>
+        </article>)}
+      </div>
+      <p className="profiles-contact">To contact the PTA or Board of Governors, <a href="mailto:info@amhs.sc.ug">write to the school office</a>.</p>
+    </div>
+  </section>;
+}
+
 function StudentLeaders() {
   return <section className="profiles-section">
     <div className="container">
@@ -298,9 +320,10 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     {slug === "success-stories" ? <SuccessStoryFeature /> : null}
     {page.sections ? <PageSections sections={page.sections} /> : null}
     {slug === "student-leadership" ? <StudentLeaders /> : null}
+    {slug === "fees" || slug === "get-involved" ? <BankAccountSection /> : null}
     {slug === "our-approach" || slug === "project-based-learning" ? <PracticalLearningGallery /> : null}
     {slug === "brass-band-club" ? <BrassBandGallery /> : null}
-    {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : <TopicOverview page={page} family={family} />}
+    {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : slug === "pta-leadership" ? <GovernanceDirectory type="pta" /> : slug === "board-of-governors" ? <GovernanceDirectory type="board" /> : <TopicOverview page={page} family={family} />}
     {slug === "school-exchange-programmes" ? <section className="application-section container" id="exchange-form"><ExchangeForm /></section> : null}
   </>;
 }
@@ -316,6 +339,6 @@ function GivingPage({ sponsor }: { sponsor: boolean }) {
       {sponsor
         ? <div className="giving-copy"><p className="eyebrow"><span /> Make an impact</p><h2>A sponsorship that <em>keeps a learner learning.</em></h2><p>AMHS&apos;s inclusive education model specifically recognises girls at risk, orphans, refugee learners and other vulnerable children, with bursary support contemplated according to assessed socio-economic circumstances.</p><p>Sponsors should receive appropriate, privacy-respecting updates about the programme and its educational impact.</p><a className="text-link" href="mailto:info@amhs.sc.ug?subject=Sponsorship%20enquiry">Ask About Sponsorship <Arrow /></a></div>
         : <div className="giving-copy"><p className="eyebrow"><span /> Make an impact</p><h2>Support may be <em>directed towards:</em></h2><ul className="check-list check-list--columns">{donationAreas.map((area) => <li key={area}>{area}</li>)}</ul></div>}
-      <GivingOptions sponsor={sponsor} />
+      <div className="giving-payment-stack"><BankAccountCard /><GivingOptions sponsor={sponsor} /></div>
     </section></>;
 }

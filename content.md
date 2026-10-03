@@ -130,7 +130,15 @@ Success Stories
 Every Journey Matters
 Success at AMHS is not measured only by examination results.
 It can be seen when a learner improves academically, develops confidence, discovers a talent, learns a practical skill, assumes responsibility, overcomes difficult circumstances or becomes an example to others.
-More Info to be provided...........
+Success Story: Kanshabe Natasha
+Preparing Young Leaders and Community Changemakers
+Kanshabe Natasha, an S3 student at Asaba Memorial High School (AMHS), is growing into a confident young leader through the school's focus on leadership, teamwork, responsibility, and community engagement.
+At AMHS, students are encouraged to share ideas, take initiative, work together, and understand how they can contribute to solving challenges in their communities. Through these opportunities, Natasha is developing confidence, communication, problem-solving, and leadership skills.
+"AMHS is helping me become more confident and responsible. I am learning that I can use my ideas and skills to make a positive difference in my community."
+-- Kanshabe Natasha, S3 student
+Natasha's story reflects AMHS's commitment to preparing students not only for academic success, but also to become responsible leaders and changemakers in their communities.
+Be a Mentor
+Future leaders need mentors. Be the person who inspires, guides, and empowers them. Be a mentor now.
 
 School Policies
 Creating a Safe and Responsible Learning Environment
@@ -403,7 +411,10 @@ Sports & Talent
 Infrastructure
 Where Most Needed
 Button: Donate Now
-Payment information should only be published after the school's official receiving account/mobile-money arrangements have been formally approved.
+Official School Bank Account
+Bank: Equity Bank Uganda
+Account Number: 1028203591376
+Account Name: Asaba Memorial High School LTD
 
 Sponsor a Child
 One Student. One Opportunity. A Future Changed.

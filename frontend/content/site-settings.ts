@@ -19,6 +19,12 @@ export const siteSettings = {
     location: "Kitanyata 1 LCI, Kiruli Sub-county, Buruli County, Masindi District, Uganda",
     postalAddress: "P.O. Box 480486 Masindi",
   },
+  bankAccount: {
+    bankName: "Equity Bank Uganda",
+    accountNumber: "1028203591376",
+    accountName: "Asaba Memorial High School LTD",
+    logo: "/equity-bank-logo.png",
+  },
   socialLinks: [
     { label: "Facebook", symbol: "f", href: "https://www.facebook.com/" },
     { label: "Instagram", symbol: "◎", href: "https://www.instagram.com/" },

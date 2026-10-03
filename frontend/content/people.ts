@@ -38,6 +38,9 @@ export const governanceProfiles: Record<"board" | "pta", Profile[]> = {
   ],
   pta: [
     { initials: "BW", name: "Businge William", role: "PTA Chairperson", bio: "Leads the Parents Teachers Association in strengthening partnership between families and the school.", image: "/people/governance/businge-william.jpg" },
+    { initials: "NA", name: "Nsekanabo Annet", role: "PTA Vice Chairperson", bio: "Supports PTA leadership and helps strengthen communication and cooperation between parents, teachers and the school.", image: "/people/governance/nsekanabo-annet.jpg" },
+    { initials: "BJ", name: "Besige Joseph", role: "PTA Advisor", bio: "Provides guidance to the PTA as it works with families and school leaders to support learners and school development.", image: "/people/governance/besige-joseph.jpg" },
+    { initials: "FM", name: "Fetura Millian", role: "PTA Member", bio: "Represents parents and contributes to PTA discussions on learner welfare, family engagement and school development.", image: "/people/governance/fetura-millian.jpg" },
   ],
 };
 
