@@ -54,7 +54,7 @@ function MobileMoneyCard({ method }: { method: MobileMoneyMethod }) {
 }
 
 export function SchoolFeesPaymentSection() {
-  return <section className="school-fees-payment-section" aria-labelledby="school-fee-payment-title">
+  return <section className="school-fees-payment-section" id="school-fee-payment-methods" aria-labelledby="school-fee-payment-title">
     <div className="container">
       <div className="school-fees-payment-heading">
         <div>
