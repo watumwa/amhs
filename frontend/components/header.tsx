@@ -17,9 +17,9 @@ const navigation: readonly NavigationItem[] = [
   { label: "Who we are", links: [["About us", "/about"], ["AMHS Roots", "/amhs-roots"], ["Our team", "/team"], ["Our staff", "/staff"], ["Board of Governors", "/board-of-governors"], ["PTA Leadership", "/pta-leadership"], ["Student Leadership", "/student-leadership"], ["Success stories", "/success-stories"], ["School policies", "/school-policies"], ["Our partners", "/partners"], ["School facilities", "/facilities"]] },
   { label: "Academics", links: [["Curriculum", "/curriculum"], ["Academic calendar", "/academic-calendar"], ["Subjects offered", "/subjects"], ["School library", "/library"], ["National & school syllabus", "/syllabus"]] },
   { label: "Admission", links: [["Admission overview", "/admission"], ["Fees structure", "/fees"], ["School uniform", "/uniform"], ["Apply now", "/apply-now"]] },
-  { label: "Our approach", links: [["Our approach overview", "/our-approach"], ["Project-based learning", "/project-based-learning"], ["School exchange programmes", "/school-exchange-programmes"], ["Brass Band Club (BBC)", "/brass-band-club"], ["Games & sports", "/games-and-sport"], ["Talent development", "/talent-development"], ["Associations & clubs", "/associations-and-clubs"]] },
+  { label: "Our approach", links: [["Our approach overview", "/our-approach"], ["Project-based learning", "/project-based-learning"], ["School Exchange Programme", "/school-exchange-programmes"], ["Brass Band Club (BBC)", "/brass-band-club"], ["Games & sports", "/games-and-sport"], ["Talent development", "/talent-development"], ["Associations & clubs", "/associations-and-clubs"]] },
   { label: "Student Life", href: "/students-life" },
-  { label: "Get involved", links: [["Get involved overview", "/get-involved"], ["Donate", "/donate"], ["Sponsor a child", "/sponsor-a-child"], ["School exchanges", "/school-exchange-programmes"]] },
+  { label: "Get involved", links: [["Get involved overview", "/get-involved"], ["Donate", "/donate"], ["Sponsor a child", "/sponsor-a-child"], ["School Exchange Programme", "/school-exchange-programmes"]] },
   { label: "News and Events", href: "/news-and-events" },
   { label: "Contact Us", href: "/contact-us" },
 ] as const;

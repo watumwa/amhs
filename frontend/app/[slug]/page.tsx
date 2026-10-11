@@ -52,7 +52,7 @@ const pages: Record<string, PageInfo> = {
   "get-involved": { label: "Get involved", title: "Help Us Light", emphasis: "Another Path.", eyebrow: "Support AMHS", intro: "A child’s future should not be determined solely by where that child was born or the financial circumstances of the family.", image: "involved", details: ["Support can strengthen books and learning materials, ICT equipment, science facilities, library development, vocational equipment, sports equipment, boarding facilities, classroom development, water and sanitation, and student support.", "Through donations, sponsorships and partnerships, individuals and organisations can help expand educational opportunities. The school’s official Equity Bank Uganda account is provided below for approved payments and support."], facts: [["Give", "Create opportunity"], ["Sponsor", "Support a learner"], ["Partner", "Strengthen AMHS"]], cta: "Make a difference" },
   "news-and-events": { label: "News and Events", title: "A school community in motion", emphasis: "with learning, celebration and service.", eyebrow: "News and Events", intro: "AMHS is building a campus culture that celebrates learning, milestones, school life and community engagement.", image: "curriculum", details: ["News and events at AMHS will highlight student achievement, school activities, outreach, open days, community partnerships and meaningful moments across the academic year.", "We welcome families, partners and friends to follow the life of the school and celebrate the progress of our learners."], facts: [["School life", "Student achievement"], ["Community", "Events & outreach"], ["Growth", "Shared milestones"]], cta: "Stay connected" },
   "contact-us": { label: "Contact Us", title: "We are here to help", emphasis: "and to welcome you.", eyebrow: "Contact AMHS", intro: "We are happy to help with admissions enquiries, general school questions, partnerships and support opportunities.", image: "involved", details: ["Whether you want to find out more about the school, request a visit, discuss sponsorship or ask about admissions, the AMHS team is ready to assist.", "Please use the details below to get in touch and we will help you with the next step."], facts: [["Admissions", "School enquiries"], ["Partnerships", "School exchanges"], ["Support", "Sponsorship & giving"]], cta: "Get in touch" },
-  "school-exchange-programmes": { label: "Get involved", title: "Connecting Classrooms", emphasis: "and cultures.", eyebrow: "School Exchange Programmes", intro: "AMHS seeks to broaden students’ understanding of the world beyond their immediate community through meaningful exchange relationships.", image: "exchange", details: ["Potential activities include student-to-student correspondence, virtual classroom exchanges, joint projects, cultural exchange, teacher collaboration, educational visits, sports exchanges and arts exchanges.", "AMHS welcomes schools and educational institutions interested in mutual learning rather than one-way assistance. Conversations can begin with the school or organisation name, country, contact person, email, proposed exchange type and a message."], facts: [["Connect", "Classrooms & cultures"], ["Create", "Joint projects"], ["Share", "Mutual learning"]], cta: "Become an Exchange Partner" },
+  "school-exchange-programmes": { label: "School Exchange Programme", title: "Connecting Schools.", emphasis: "Inspiring Students.", eyebrow: "Global School Exchange (GSE)", intro: "Bringing students and teachers together across countries to learn, share, connect and grow.", image: "exchange", details: ["The Global School Exchange (GSE) is an initiative of Asaba Memorial High School (AMHS), Uganda, created to connect our students and teachers with schools and educators around the world.", "We believe education becomes richer when students learn not only from books and classrooms, but also from people, cultures and experiences beyond their own communities."], facts: [["Connect", "Students and educators"], ["Learn", "Across borders"], ["Grow", "Lasting partnerships"]], cta: "Become a Partner School" },
 };
 
 type PageFamily = "story" | "people" | "learning" | "practical" | "experience" | "community";
@@ -114,6 +114,36 @@ const practicalGallery = [
     image: "/activities/practical/hairdressing-practice.jpg",
     alt: "AMHS students practising hairdressing and beauty skills",
   },
+];
+
+const exchangeObjectives = [
+  "Connect with students and educators from other countries.",
+  "Exchange ideas, knowledge and experiences.",
+  "Explore different cultures and educational systems.",
+  "Share learning resources and teaching approaches.",
+  "Develop global awareness and cultural understanding.",
+  "Build meaningful and lasting international relationships.",
+];
+
+const exchangeSteps = [
+  ["S", "Start", "Begin with a simple introduction between two schools, teachers or classrooms."],
+  ["T", "Talk", "Talk to Students and teachers begin communicating, asking questions and getting to know one another."],
+  ["D", "Discover", "Discover each other's schools, communities, cultures, experiences, interests and aspirations."],
+  ["C", "Connect", "Build friendships, trust and meaningful relationships across borders."],
+  ["C", "Collaborate", "Work together on learning activities and Project-Based Learning (PBL) projects that connect classroom learning with real-world challenges."],
+  ["E", "Exchange", "Exchange letters, ideas, knowledge, culture, music, art and experiences."],
+  ["V", "Visit", "Where possible, students and teachers can meet through school visits and exchange trips, creating deeper personal and cultural connections."],
+  ["G", "Grow", "Develop the relationship into a long-term school partnership, creating continuing opportunities for students, teachers and communities."],
+];
+
+const partnerSchoolDetails = [
+  "School name and country",
+  "Age group of participating students",
+  "Number of students",
+  "Areas of interest",
+  "Preferred exchange format",
+  "Preferred dates or period",
+  "Any project ideas you would like to explore",
 ];
 
 function getPageFamily(slug: string): PageFamily {
@@ -304,12 +334,33 @@ export function generateStaticParams() {
   return [...Object.keys(pages), "apply-now", "donate", "sponsor-a-child"].map((slug) => ({ slug }));
 }
 
+function SchoolExchangeProgramme() {
+  return <>
+    <section className="page-hero"><div className="page-photo image-exchange" /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> School Exchange Programme</p><h1>Connecting Schools.<br /><em>Inspiring Students.</em></h1><p>Learning Across Borders. Bringing students and teachers together across countries to learn, share, connect and grow.</p></div></section>
+
+    <section className="exchange-intro-section"><div className="container exchange-intro-grid"><div><p className="eyebrow"><span /> Global School Exchange (GSE)</p><h2>Connecting Schools. Inspiring Students.<br /><em>Learning Across Borders.</em></h2></div><div className="exchange-copy"><p>The Global School Exchange (GSE) is an initiative of Asaba Memorial High School (AMHS), Uganda, created to connect our students and teachers with schools and educators around the world.</p><p>We believe education becomes richer when students learn not only from books and classrooms, but also from people, cultures and experiences beyond their own communities.</p></div></div></section>
+
+    <section className="exchange-objectives-section"><div className="container"><div className="exchange-section-heading"><div><p className="eyebrow"><span /> The GSE opportunity</p><h2>Through GSE, AMHS aims<br /><em>to create opportunities.</em></h2></div><p>GSE gives AMHS students the opportunity to look beyond their local community, discover the wider world and learn with others across borders.</p></div><ul className="exchange-objectives">{exchangeObjectives.map((objective) => <li key={objective}>{objective}</li>)}</ul><div className="exchange-taglines"><strong>Connecting Students. Inspiring Changemakers. Transforming Communities.</strong><span>Connect. Learn. Share. Grow.</span></div><a className="button button-navy exchange-objective-cta" href="mailto:asabamemorialhighschool@gmail.com?subject=Global%20School%20Exchange%20Partnership">Become a Partner School <Arrow /></a></div></section>
+
+    <section className="exchange-amhs-section"><div className="container exchange-amhs-grid"><div><p className="eyebrow"><span /> Meet Asaba Memorial High School</p><h2>A School Built to Bring<br /><em>Opportunity Closer.</em></h2></div><div className="exchange-copy"><p>Asaba Memorial High School (AMHS) was established by AMEF in Kiruli Sub-County, Masindi District, Uganda, to bring secondary education closer to children and families who previously faced barriers to access.</p><p>Asaba Memorial High School (AMHS) is a member of the Global School Alliance and is partnering with the International Book Project, creating opportunities for AMHS students to connect with students in other countries.</p><p>Become our partner and experience learning beyond the classroom and beyond the blackboard.</p></div></div></section>
+
+    <section className="exchange-pbl-section"><div className="container exchange-pbl-grid"><div className="exchange-pbl-title"><p className="eyebrow eyebrow-light"><span /> Learning by Doing</p><h2>Project-Based Learning<br /><em>Across Borders.</em></h2></div><div className="exchange-copy"><p>At Asaba Memorial High School (AMHS), we believe that students are not only learners—they are change makers. Project-Based Learning (PBL) connects classroom learning with real-life challenges.</p><p>Students are encouraged to identify a problem in their school or community, investigate its causes, develop ideas, create practical solutions and share what they learn.</p><p>Through the Global School Exchange, students can work with international peers to challenges, exchange ideas and develop solutions together.</p><strong>Identify. Investigate. Create. Collaborate. Transform.</strong></div></div></section>
+
+    <section className="exchange-pathway-section"><div className="container"><div className="exchange-section-heading"><div><p className="eyebrow"><span /> The AMHS STDCCEVG Approach</p><h2>From a Simple Connection<br /><em>to Lasting Impact.</em></h2></div><p>At AMHS, we believe meaningful international school partnerships can begin with something simple—a conversation between students and teachers or between schools—and grow into long-term relationships that create opportunities for learning, collaboration and positive change.</p></div><p className="exchange-pathway-intro">Our AMHS STDCCEVG Approach provides a simple pathway for schools and students to connect, learn from one another, collaborate and create meaningful impact.</p><div className="exchange-steps">{exchangeSteps.map(([letter, title, copy], index) => <article className="exchange-step" key={title}><span>0{index + 1}</span><strong>{letter}</strong><h3>{title}</h3><p>{copy}</p></article>)}</div><p className="exchange-path">Start → Talk → Discover → Connect → Collaborate → Exchange → Visit → Grow → Impact</p></div></section>
+
+    <section className="exchange-partner-section"><div className="container exchange-partner-grid"><div><p className="eyebrow"><span /> Become an AMHS Partner School</p><h2>Connect Your school with<br /><em>our school in Uganda.</em></h2><p className="exchange-lead">Your students do not need to travel across the world to begin learning across borders.</p><p className="exchange-steps-copy">Start with a conversation.<br />Build a connection.<br />Develop a project.<br />Create a lasting partnership.</p><p className="exchange-lead">Whether your school is interested in virtual exchange, student-to-student connections, Project-Based Learning, cultural exchange, teacher collaboration or a future visitor to Uganda, AMHS would be delighted to explore the possibilities with you.</p></div><aside className="exchange-contact-card"><p className="label">Tell Us About Your School</p><p>Please share:</p><ul className="check-list">{partnerSchoolDetails.map((detail) => <li key={detail}>{detail}</li>)}</ul><p className="label exchange-contact-label">Contact AMHS</p><a href="mailto:asabamemorialhighschool@gmail.com">asabamemorialhighschool@gmail.com</a><a className="button button-navy" href="mailto:asabamemorialhighschool@gmail.com?subject=Global%20School%20Exchange%20Partnership">Become a Partner School <Arrow /></a></aside></div></section>
+
+    <section className="exchange-final-callout"><div className="container"><p>One classroom in Uganda. One classroom somewhere in the world. One shared opportunity to learn, create and grow together.</p></div></section>
+  </>;
+}
+
 export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (slug === "apply-now") return <ApplyPage />;
   if (slug === "donate" || slug === "sponsor-a-child") return <GivingPage sponsor={slug === "sponsor-a-child"} />;
   const page = pages[slug];
   if (!page) notFound();
+  if (slug === "school-exchange-programmes") return <SchoolExchangeProgramme />;
   const [sectionTitle, sectionEmphasis] = pageHeadings[slug] ?? [page.eyebrow, "at AMHS."];
   const family = getPageFamily(slug);
 
