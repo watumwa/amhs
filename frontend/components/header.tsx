@@ -36,7 +36,7 @@ export function Header() {
   const path = usePathname();
   const closeAll = () => { setOpen(false); setOpenMenu(null); };
   return <>
-    <div className="utility-bar"><div className="container"><span>Applications for 2027 are now open</span><div><a href="mailto:info@amhs.sc.ug">info@amhs.sc.ug</a><span className="utility-dot" /> <span>+256 766 610 442</span><span className="utility-dot" />
+    <div className="utility-bar"><div className="container"><span>Applications for 2027 are now open</span><div><a href="mailto:asabamemorialhighschool@gmail.com">asabamemorialhighschool@gmail.com</a><span className="utility-dot" /> <span>+256 766 610 442</span><span className="utility-dot" />
       <SocialLinks className="socials socials--utility" />
     </div></div></div>
     <header className="site-header"><div className="container header-inner">

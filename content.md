@@ -460,7 +460,7 @@ Kitanyata 1 LCI, Kiruli Sub-county, Buruli County, Masindi District, Uganda
 Along Kyatiri–Kitanyata Road, approximately 8 km from Kyatiri Town
 Telephone: +256 766 610 442 / +256 771 477 454
 WhatsApp: +256 775 749 226
-Email: info@amhs.sc.ug
+Email: asabamemorialhighschool@gmail.com
 P.O. Box: 480486 Masindi
 About AMHS | Academics | Admissions | Student Life | Safeguarding | Donate | Contact Us
 Quick Actions:

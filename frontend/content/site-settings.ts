@@ -10,10 +10,10 @@ export const siteSettings = {
   admissions: {
     announcement: "Applications for 2027 are now open",
     entryYears: ["2027", "2028", "2029"],
-    email: "info@amhs.sc.ug",
+    email: "asabamemorialhighschool@gmail.com",
   },
   contact: {
-    email: "info@amhs.sc.ug",
+    email: "asabamemorialhighschool@gmail.com",
     phone: "+256 766 610 442 / +256 771 477 454",
     whatsapp: "+256 775 749 226",
     location: "Kitanyata 1 LCI, Kiruli Sub-county, Buruli County, Masindi District, Uganda",

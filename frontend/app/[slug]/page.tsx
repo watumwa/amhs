@@ -71,14 +71,14 @@ const pageHeadings: Record<string, [string, string]> = {
 };
 
 const actionDestinations: Record<string, string> = {
-  academics: "/subjects", about: "/team", "amhs-roots": "/about", team: "/staff", staff: "mailto:info@amhs.sc.ug",
-  "board-of-governors": "mailto:info@amhs.sc.ug", "pta-leadership": "mailto:info@amhs.sc.ug", "student-leadership": "/students-life",
-  "success-stories": "mailto:info@amhs.sc.ug?subject=Mentorship%20enquiry", "school-policies": "mailto:info@amhs.sc.ug", partners: "mailto:info@amhs.sc.ug", facilities: "/apply-now",
-  curriculum: "/subjects", "academic-calendar": "mailto:info@amhs.sc.ug", subjects: "mailto:info@amhs.sc.ug", library: "mailto:info@amhs.sc.ug",
-  syllabus: "mailto:info@amhs.sc.ug", admission: "/apply-now", fees: "mailto:info@amhs.sc.ug", uniform: "mailto:info@amhs.sc.ug",
+  academics: "/subjects", about: "/team", "amhs-roots": "/about", team: "/staff", staff: "mailto:asabamemorialhighschool@gmail.com",
+  "board-of-governors": "mailto:asabamemorialhighschool@gmail.com", "pta-leadership": "mailto:asabamemorialhighschool@gmail.com", "student-leadership": "/students-life",
+  "success-stories": "mailto:asabamemorialhighschool@gmail.com?subject=Mentorship%20enquiry", "school-policies": "mailto:asabamemorialhighschool@gmail.com", partners: "mailto:asabamemorialhighschool@gmail.com", facilities: "/apply-now",
+  curriculum: "/subjects", "academic-calendar": "mailto:asabamemorialhighschool@gmail.com", subjects: "mailto:asabamemorialhighschool@gmail.com", library: "mailto:asabamemorialhighschool@gmail.com",
+  syllabus: "mailto:asabamemorialhighschool@gmail.com", admission: "/apply-now", fees: "mailto:asabamemorialhighschool@gmail.com", uniform: "mailto:asabamemorialhighschool@gmail.com",
   "our-approach": "/students-life", "project-based-learning": "/our-approach", "brass-band-club": "/students-life", "games-and-sport": "/students-life",
   "talent-development": "/students-life", "associations-and-clubs": "/students-life", "students-life": "/our-approach", "get-involved": "/donate",
-  "news-and-events": "/news-and-events", "contact-us": "mailto:info@amhs.sc.ug",
+  "news-and-events": "/news-and-events", "contact-us": "mailto:asabamemorialhighschool@gmail.com",
   "school-exchange-programmes": "#exchange-form",
 };
 
@@ -234,7 +234,7 @@ function SuccessStoryFeature() {
         <h3>Future leaders need mentors.</h3>
         <p>Be the person who inspires, guides and empowers them. Be a mentor now.</p>
       </div>
-      <a className="button button-gold" href="mailto:info@amhs.sc.ug?subject=Mentorship%20enquiry">Be a mentor now <Arrow /></a>
+      <a className="button button-gold" href="mailto:asabamemorialhighschool@gmail.com?subject=Mentorship%20enquiry">Be a mentor now <Arrow /></a>
     </div>
   </section>;
 }
@@ -255,7 +255,7 @@ function ProfileDirectory({ type }: { type: "team" | "staff" }) {
           <p className="profile-bio">{profile.bio}</p>
         </article>)}
       </div>
-      <p className="profiles-contact">For a school enquiry or to reach the right member of the team, <a href="mailto:info@amhs.sc.ug">contact the school office</a>.</p>
+      <p className="profiles-contact">For a school enquiry or to reach the right member of the team, <a href="mailto:asabamemorialhighschool@gmail.com">contact the school office</a>.</p>
     </div>
   </section>;
 }
@@ -276,7 +276,7 @@ function GovernanceDirectory({ type }: { type: "board" | "pta" }) {
           <p className="profile-bio">{profile.bio}</p>
         </article>)}
       </div>
-      <p className="profiles-contact">To contact the PTA or Board of Governors, <a href="mailto:info@amhs.sc.ug">write to the school office</a>.</p>
+      <p className="profiles-contact">To contact the PTA or Board of Governors, <a href="mailto:asabamemorialhighschool@gmail.com">write to the school office</a>.</p>
     </div>
   </section>;
 }
@@ -380,7 +380,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   </>;
 }
 
-function ApplyPage() { return <><section className="page-hero page-hero-short"><div className="page-photo image-admission" /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> Admission</p><h1>Let&apos;s begin<br /><em>together.</em></h1><p>Your child&apos;s AMHS story can start with a simple conversation.</p></div></section><section className="application-section container"><div className="application-aside"><p className="eyebrow"><span /> A personal process</p><h2>Every application starts with <em>getting to know you.</em></h2><p>We take time to understand each applicant and help your family decide whether AMHS is the right fit.</p><ol><li><span>01</span> Send your enquiry</li><li><span>02</span> Speak with admissions</li><li><span>03</span> Visit, apply, and belong</li></ol><a href="mailto:info@amhs.sc.ug" className="text-link">Have a question? Email us <Arrow /></a></div><AdmissionForm /></section></> }
+function ApplyPage() { return <><section className="page-hero page-hero-short"><div className="page-photo image-admission" /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> Admission</p><h1>Let&apos;s begin<br /><em>together.</em></h1><p>Your child&apos;s AMHS story can start with a simple conversation.</p></div></section><section className="application-section container"><div className="application-aside"><p className="eyebrow"><span /> A personal process</p><h2>Every application starts with <em>getting to know you.</em></h2><p>We take time to understand each applicant and help your family decide whether AMHS is the right fit.</p><ol><li><span>01</span> Send your enquiry</li><li><span>02</span> Speak with admissions</li><li><span>03</span> Visit, apply, and belong</li></ol><a href="mailto:asabamemorialhighschool@gmail.com" className="text-link">Have a question? Email us <Arrow /></a></div><AdmissionForm /></section></> }
 
 const donationAreas = ["Books and learning materials", "ICT equipment", "Science facilities", "Library development", "Vocational equipment", "Sports equipment", "Boarding facilities", "Classroom development", "Water and sanitation", "Student support"];
 
@@ -389,7 +389,7 @@ function GivingPage({ sponsor }: { sponsor: boolean }) {
   return <><section className="page-hero page-hero-short"><div className="page-photo image-involved" /><div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {sponsor ? "Sponsor a child" : "Donate"}</p><h1>{heading[0]}<br /><em>{heading[1]}</em></h1><p>{sponsor ? "Some young people have the ability and determination to succeed but face circumstances that make continuing secondary education difficult." : "Your contribution can help strengthen the learning environment for current and future AMHS students."}</p></div></section>
     <section className="giving-section container">
       {sponsor
-        ? <div className="giving-copy"><p className="eyebrow"><span /> Make an impact</p><h2>A sponsorship that <em>keeps a learner learning.</em></h2><p>AMHS&apos;s inclusive education model specifically recognises girls at risk, orphans, refugee learners and other vulnerable children, with bursary support contemplated according to assessed socio-economic circumstances.</p><p>Sponsors should receive appropriate, privacy-respecting updates about the programme and its educational impact.</p><a className="text-link" href="mailto:info@amhs.sc.ug?subject=Sponsorship%20enquiry">Ask About Sponsorship <Arrow /></a></div>
+        ? <div className="giving-copy"><p className="eyebrow"><span /> Make an impact</p><h2>A sponsorship that <em>keeps a learner learning.</em></h2><p>AMHS&apos;s inclusive education model specifically recognises girls at risk, orphans, refugee learners and other vulnerable children, with bursary support contemplated according to assessed socio-economic circumstances.</p><p>Sponsors should receive appropriate, privacy-respecting updates about the programme and its educational impact.</p><a className="text-link" href="mailto:asabamemorialhighschool@gmail.com?subject=Sponsorship%20enquiry">Ask About Sponsorship <Arrow /></a></div>
         : <div className="giving-copy"><p className="eyebrow"><span /> Make an impact</p><h2>Support may be <em>directed towards:</em></h2><ul className="check-list check-list--columns">{donationAreas.map((area) => <li key={area}>{area}</li>)}</ul></div>}
       <div className="giving-payment-stack"><BankAccountCard /><GivingOptions sponsor={sponsor} /></div>
     </section></>;
