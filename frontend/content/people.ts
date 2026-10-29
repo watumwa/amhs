@@ -17,7 +17,7 @@ export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
     { initials: "KC", name: "Kamusiime Christine", role: "Deputy Headteacher", bio: "Coordinates the daily rhythm of the school, supporting high expectations in learning alongside a positive and well-organised student experience.", image: "/people/staff/kamusiime-christine.jpg" },
     { initials: "VU", name: "Valentine Uwachu", role: "Social Media Officer", bio: "Helps share the AMHS story with families, alumni and the wider community through school communication and digital media.", image: "/people/staff/valentine-uwachu.jpg" },
     { initials: "KI", name: "Kamatari Issa", role: "Director of Studies (DOS)", bio: "Guides curriculum planning and assessment practice, helping teachers create clear pathways for every student to make progress.", image: "/people/staff/kamatari-issa.jpeg" },
-    { initials: "PW", name: "Pastoral Lead", role: "Wellbeing and safeguarding", bio: "Leads the systems and relationships that help students feel safe, heard and ready to learn with confidence." },
+    { initials: "PM", name: "Pastor Mpindu Jackson", role: "Pastoral Lead", bio: "Supports the pastoral life of the school and helps nurture a caring, values-based environment for every learner.", image: "/people/staff/pastor-mpindu-jackson.jpeg" },
     { initials: "AC", name: "Activities Coordinator", role: "Enrichment and student voice", bio: "Creates opportunities for students to lead, perform, compete and contribute beyond the classroom through clubs, sport and service." },
   ],
   staff: [
@@ -30,12 +30,15 @@ export const peopleProfiles: Record<"team" | "staff", Profile[]> = {
     { initials: "KG", name: "Kaburuli Grace", role: "School Matron", bio: "Supports student welfare, care and the routines that help learners feel settled at school.", image: "/people/staff/kaburuli-grace.jpg" },
     { initials: "OC", name: "Omirambe Charles", role: "Teacher for Geography and ICT", bio: "Teaches Geography and ICT, helping students understand their communities, environment and digital tools through practical, relevant learning.", image: "/people/staff/omirambe-charles.jpeg" },
     { initials: "MS", name: "Mujuni Silver", role: "Head of the Agriculture Department", bio: "Leads Agriculture learning and helps students connect practical skills with responsible stewardship.", image: "/people/staff/mujuni-silver.jpg" },
+    { initials: "PM", name: "Pastor Mpindu Jackson", role: "Pastoral Lead", bio: "Supports the pastoral life of the school and helps nurture a caring, values-based environment for every learner.", image: "/people/staff/pastor-mpindu-jackson.jpeg" },
+    { initials: "AI", name: "Apio Isabella", role: "English Teacher", bio: "Teaches English and supports students to build confident communication, reading and writing skills.", image: "/people/staff/apio-isabella.jpeg" },
   ],
 };
 
 export const governanceProfiles: Record<"board" | "pta", Profile[]> = {
   board: [
     { initials: "BG", name: "Board of Governors Member", role: "PTA Treasurer", bio: "Supports responsible governance and the careful stewardship of resources for the AMHS community.", image: "/people/governance/board-member-pta-treasurer.jpg" },
+    { initials: "MC", name: "Mugisa Chrisesistom", role: "Board Member", bio: "Supports the Board of Governors in providing responsible oversight and strengthening the AMHS community.", image: "/people/governance/mugisa-chrisesistom.jpeg" },
   ],
   pta: [
     { initials: "BW", name: "Businge William", role: "PTA Chairperson", bio: "Leads the Parents Teachers Association in strengthening partnership between families and the school.", image: "/people/governance/businge-william.jpg" },
