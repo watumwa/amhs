@@ -201,8 +201,9 @@ function PageAction({ slug, label }: { slug: string; label: string }) {
 function DocumentDownloads({ documents }: { documents: DocumentDownload[] }) {
   return <div className="document-links" aria-label="Downloads">
     {documents.map((document) => <a className="document-link" href={document.href} download key={document.href}>
-      <span>{document.label}</span>
-      <small>{document.description}</small>
+      <span className="document-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3" /></svg></span>
+      <span className="document-link-copy"><strong>{document.label}</strong><small>{document.description}</small></span>
+      <span className="document-link-action">Download <Arrow /></span>
     </a>)}
   </div>;
 }

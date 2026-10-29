@@ -343,11 +343,17 @@ button { cursor:pointer; }
 .exchange-final-callout { background:var(--maroon);color:#fff;padding:65px 0 69px; }
 .exchange-final-callout p { color:#fff;font:400 clamp(28px,4vw,48px)/1.12 var(--serif);letter-spacing:-.035em;max-width:880px;margin:0; }
 
-.document-links { display:grid;gap:10px;margin-top:24px; }
-.document-link { display:block;border:1px solid #cdd9de;background:#f6f9fa;padding:14px 16px;text-decoration:none;transition:border-color .2s ease,background .2s ease; }
-.document-link:hover { border-color:var(--gold);background:#fff; }
-.document-link span { display:block;color:var(--navy);font-size:13px;font-weight:700;line-height:1.35; }
-.document-link small { display:block;margin-top:4px;color:#60717c;font-size:11px;line-height:1.45; }
+.document-links { display:grid;gap:12px;margin-top:26px;max-width:600px; }
+.document-link { align-items:center;background:linear-gradient(135deg,#fff 0%,#f4f8f9 100%);border:1px solid #d9e1e5;border-radius:9px;box-shadow:0 8px 20px rgba(14,38,52,.07);color:var(--navy);display:grid;gap:14px;grid-template-columns:46px minmax(0,1fr) auto;padding:12px;text-decoration:none;transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease; }
+.document-link:hover { background:#fff;border-color:var(--gold);box-shadow:0 13px 27px rgba(14,38,52,.13);transform:translateY(-2px); }
+.document-link:focus-visible { outline:3px solid rgba(242,186,24,.45);outline-offset:3px; }
+.document-link-icon { align-items:center;background:var(--maroon);border-radius:7px;color:#fff;display:flex;height:46px;justify-content:center;width:46px; }
+.document-link-icon svg { fill:none;height:21px;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8;width:21px; }
+.document-link-copy { display:block;min-width:0; }
+.document-link-copy strong { color:var(--navy);display:block;font-size:13px;font-weight:800;line-height:1.35; }
+.document-link-copy small { color:#60717c;display:block;font-size:11px;line-height:1.45;margin-top:4px; }
+.document-link-action { align-items:center;background:var(--navy);border-radius:5px;color:#fff;display:inline-flex;font-size:10px;font-weight:800;gap:7px;letter-spacing:.05em;line-height:1;padding:11px 12px;text-transform:uppercase;white-space:nowrap; }
+.document-link-action svg { fill:none;height:13px;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2;width:13px; }
 
 /* Mobile fixes: page banners grow with their text instead of clipping it */
 .page-hero,.page-hero-short { height:auto;min-height:475px;padding-bottom:64px; }
@@ -368,6 +374,9 @@ button { cursor:pointer; }
   .page-hero,.page-hero-short { min-height:380px;padding-bottom:48px; }
   .page-hero h1 { font-size:clamp(34px,10.5vw,46px); }
   .hero h1 { font-size:clamp(38px,11.5vw,47px); }
+  .document-link { grid-template-columns:42px minmax(0,1fr);gap:12px; }
+  .document-link-icon { height:42px;width:42px; }
+  .document-link-action { grid-column:2;justify-self:start;padding:10px 11px; }
   .content-copy h2,.application-aside h2,.giving-copy h2,.intro-copy h2,.section-heading h2,.topic-heading h2,.profiles-heading h2 { font-size:clamp(30px,9vw,38px); }
   /* 16px stops iPhone Safari zooming in when a field is tapped */
   .admission-form input,.admission-form select,.admission-form textarea,.giving-card input { font-size:16px; }
