@@ -2,26 +2,26 @@ import Link from "next/link";
 import { Arrow, Book, Compass, Medal, Sparkle } from "../components/icons";
 
 const featureCards = [
-  { icon: <Book />, number: "01", title: "Academic Learning", text: "A broad curriculum designed to build strong foundations in sciences, humanities, languages, technology and practical subjects.", href: "/curriculum" },
+  { icon: <Book />, number: "01", title: "Academic Learning", text: "A competency-based curriculum that builds strong foundations in sciences, humanities, languages, technology and practical subjects.", href: "/curriculum" },
   { icon: <Compass />, number: "02", title: "Project-Based Learning", text: "Students apply classroom knowledge to practical projects and real-life challenges through investigation, creativity and teamwork.", href: "/project-based-learning" },
   { icon: <Medal />, number: "03", title: "Day & Boarding Education", text: "Our model serves learners from nearby communities and those travelling from farther away.", href: "/admission" },
-  { icon: <Sparkle />, number: "04", title: "Practical & Vocational Skills", text: "Learning opportunities include ICT, branding and garment printing, tailoring and design, carpentry, entrepreneurship and other practical skills.", href: "/our-approach" },
+  { icon: <Sparkle />, number: "04", title: "Practical & Vocational Skills", text: "Through Sifa Skilling Hub, students explore multimedia, hairdressing, tailoring, brass band, carpentry, branding and garment printing.", href: "/our-approach" },
   { icon: <Book />, number: "05", title: "Inclusive Education", text: "We seek to make secondary education accessible to learners from different social and economic backgrounds, including vulnerable and underserved learners.", href: "/about" },
   { icon: <Compass />, number: "06", title: "Character & Leadership", text: "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", href: "/student-leadership" },
 ];
 
 const approaches = [
   ["Academic excellence", "Our students learn in a school that values strong foundations, clear thinking and purposeful growth.", "ACADEMIC", "/curriculum"],
-  ["Practical skills", "Learning includes ICT, branding and garment printing, tailoring and design, carpentry, entrepreneurship and other practical skills.", "PRACTICAL", "/our-approach"],
+  ["Practical skills", "Through Sifa Skilling Hub, learning includes multimedia, tailoring, hairdressing, brass band, carpentry, branding and garment printing.", "PRACTICAL", "/our-approach"],
   ["Character & leadership", "Education at AMHS develops responsible, disciplined, confident and service-minded young people.", "LEAD", "/student-leadership"],
 ];
 
 const asabaValues = [
-  ["A", "Accountability", "We teach learners to take responsibility for their choices, learning and responsibilities and to act with honesty and integrity."],
-  ["S", "Service", "We believe leadership begins with serving others. Students are encouraged to care, contribute and use their abilities for the good of others."],
-  ["A", "Ambition", "We encourage every learner to dream, set meaningful goals and work persistently towards achieving them."],
-  ["B", "Belief", "We nurture confidence, resilience, faith and optimism so that students learn to believe in their potential and the potential of others."],
-  ["A", "Action for Empowerment", "Knowledge should lead to action. We equip learners with knowledge, skills and confidence that they can use to improve their lives and contribute positively to society."],
+  ["A", "Accountability", "We uphold responsibility, honesty, reliability and integrity as the foundation for trust, growth and excellence."],
+  ["S", "Service", "We teach that true leadership begins with caring for others and building together with love and humility."],
+  ["A", "Ambition", "We encourage every learner to dream, reach higher, work with purpose and believe that meaningful goals are possible."],
+  ["B", "Belief", "We nurture faith, resilience and optimism so learners believe in themselves, the potential of others and a brighter future."],
+  ["A", "Action for Empowerment", "We turn knowledge into purposeful action through experiential learning, leadership and self-confidence."],
 ];
 
 const plannedFacilities = ["Science laboratories", "Additional classrooms", "Dormitories", "Sports facilities", "Other learning infrastructure"];
@@ -60,9 +60,9 @@ export default function HomePage() {
         <div className="hero-image hero-image-one" aria-hidden="true" />
         <div className="hero-image hero-image-two" aria-hidden="true" />
         <div className="hero-content container">
-          <p className="eyebrow eyebrow-light"><span /> Asaba Memorial High School</p>
-          <h1 id="hero-heading">Lighting the Path to a Brighter Tomorrow</h1>
-          <p className="hero-copy">Quality Education. Practical Skills. Strong Values. Brighter Futures.</p>
+          <p className="eyebrow eyebrow-light"><span /> Lighting the Path to a Brighter Tomorrow</p>
+          <h1 id="hero-heading">Nurturing Leaders, Innovators and Changemakers</h1>
+          <p className="hero-copy">To solve community problems and build brighter futures.</p>
           <div className="hero-actions">
             <Link className="button button-gold" href="/apply-now">Apply for Admission <Arrow /></Link>
             <Link className="text-link text-link-light" href="/about">Explore AMHS <Arrow /></Link>
@@ -90,12 +90,11 @@ export default function HomePage() {
         <div className="intro-copy">
           <p className="eyebrow"><span /> Welcome to AMHS</p>
           <h2>Welcome to Asaba<br /><em>Memorial High School.</em></h2>
-          <p>Asaba Memorial High School (AMHS) is a mixed day and boarding secondary school located in Kitanyata, Kiruli Sub-county, Masindi District, Uganda. We provide an inclusive, values-based and learner-centred education designed to help young people grow academically, socially, spiritually and practically.</p>
-          <p>The school was established to improve access to secondary education within Kiruli Sub-county and surrounding communities, particularly for families affected by distance, poverty and limited access to affordable secondary schools.</p>
-          <p>At Asaba Memorial High School, we believe that every child deserves an opportunity to learn, discover their potential and build a meaningful future.</p>
-          <p>Our school combines the national secondary school curriculum with practical learning, leadership development, character formation, technology, vocational skills, sports and co-curricular activities.</p>
-          <p>We serve learners from Kiruli Sub-county, the wider Masindi District and other communities, including learners who require boarding facilities. Particular attention is given to creating opportunities for vulnerable and underserved learners.</p>
-          <p>Whether a learner&apos;s future lies in university education, professional training, entrepreneurship, technology, vocational work or community leadership, our goal is to provide the foundation upon which that future can be built.</p>
+          <p>Asaba Memorial High School (AMHS) is a mixed day and boarding secondary school in Kitanyata Village, Kiruli Sub-county, Masindi District, Uganda. We provide inclusive, values-based and learner-centred education that helps young people grow academically, develop practical skills and discover their potential.</p>
+          <p>Education at AMHS is about more than passing examinations. We equip students to lead, innovate and thrive—preparing them for employment, entrepreneurship, further education and professional training after graduation.</p>
+          <p>Our approach combines competency-based learning, Project-Based Learning, Work-Based Learning, technology, leadership development, Music, Dance and Drama, sports, multimedia and co-curricular activities.</p>
+          <p>Through Sifa Skilling Hub, established by Asaba Memorial Education Foundation, students develop practical skills in hairdressing and barbering, tailoring and fashion design, brass band, branding, garment printing and heat transfer.</p>
+          <p>We are committed to expanding access to quality secondary education for learners in Kiruli Sub-county and surrounding communities, especially vulnerable and underserved learners.</p>
           <Link className="text-link" href="/about">Who we are <Arrow /></Link>
         </div>
       </section>

@@ -183,10 +183,10 @@ Playground & Sports Areas — spaces for physical education, games and co-curric
 3. ACADEMICS
 Curriculum
 Learning for Understanding, Application and Life
-AMHS follows Uganda's national secondary education curriculum while promoting a learner-centred approach that emphasises understanding, application, creativity and problem-solving.
-Academic learning is complemented by continuous assessment, Project-Based Learning, practical skills and co-curricular experiences.
-Our aim is not simply to prepare students for examinations.
-We want students to become independent thinkers, effective communicators, problem-solvers, innovators and responsible citizens.
+AMHS follows Uganda's national secondary education curriculum, combining strong academic foundations with practical learning, vocational skills, life skills and hands-on projects.
+Uganda's Lower Secondary Curriculum is competency-based. At AMHS, learners develop knowledge, practical abilities and the confidence to apply what they learn in everyday life, further education and future careers.
+Academic learning is complemented by continuous assessment, Project-Based Learning, Work-Based Learning, vocational learning, Global School Exchange and co-curricular experiences.
+Our aim is not simply to prepare students for examinations. We want students to become independent thinkers, effective communicators, problem-solvers, innovators, responsible citizens and changemakers.
 
 Subjects Offered
 Ordinary Level
@@ -206,9 +206,18 @@ The School Development Plan identifies the following O-Level subjects:
 13.	Literature in English
 14.	Entrepreneurship Education
 15.	Physical Education
-Advanced Level Development
-AMHS's long-term academic plan includes development of A-Level provision.
-Planned science areas include Physics, Chemistry, Biology, Mathematics, Agriculture and ICT, while planned arts areas include History, Geography, Economics, Divinity, Literature in English, Kiswahili and Entrepreneurship.
+Advanced Level Curriculum (S.5–S.6)
+Beginning in 2027, AMHS will commence Advanced Level education with Senior Five. The programme will prepare students for UACE, university admission, professional training and future career opportunities.
+Students select three principal subjects based on their strengths, interests and career aspirations, with General Paper and the appropriate subsidiary subject in line with UNEB requirements.
+The supplied subject-combination guide, subject to confirmation by the Director of Studies, is:
+ GEO, ENT, ART / ICT — Geography, Entrepreneurship, Art
+ PCM — Physics, Chemistry, Mathematics
+ DIV, ENT, ART / ICT — Divinity, Entrepreneurship, Art
+ DIV, ECO, ART / SM — Divinity, Economics, Art
+ KISW, ENT, GEO / ICT — Kiswahili, Entrepreneurship, Geography
+ KISW, ECO, GEO / SM — Kiswahili, Economics, Geography
+ HIS, ECO, DIV / ART — History, Economics, Divinity
+AMHS will provide structured teaching, regular assessment, revision sessions and mock examinations. UACE uses the Distinction 1 (D1) to Fail 9 (F9) grading scale; a minimum of two principal passes is required for university admission.
 
 Academic Calendar
 Plan the School Year
@@ -220,8 +229,10 @@ Because specific term dates are not contained in the Development Plan, these sho
 
 School Library
 Building a Culture of Reading
-The AMHS library is intended to become more than a room containing books. It will serve as a centre for reading, research, independent study and intellectual discovery.
-Students are encouraged to use library resources to deepen classroom learning, explore personal interests and develop lifelong reading habits.
+AMHS is developing a modern library as a learning hub and community resource centre for reading, research, independent learning and innovation.
+The physical library will include textbooks, reference materials, academic journals, reading corners and research stations. The virtual library will use computers, e-learning platforms, online educational resources and AI-powered research tools.
+The library will also welcome the wider community, including students from other schools and adults who want to read, learn new skills or access digital information.
+AMHS has established a Reading Club and organises Spelling Bees to strengthen reading, spelling, vocabulary, communication, confidence and lifelong reading habits.
 National & School Syllabus
 AMHS aligns academic delivery with the applicable national curriculum and syllabus requirements.
 This section of the website can provide students, parents and teachers with organised access to approved academic resources.
@@ -239,17 +250,17 @@ These include:
 4. ADMISSION
 Join the AMHS Community
 Choosing a secondary school is an important decision for every learner and family.
-AMHS welcomes students who are ready to learn, develop their abilities and participate positively in school life.
-We provide both day and boarding options, enabling families to select the arrangement most appropriate for their circumstances.
+Applications for the 2027 academic year are open for Senior One (S.1) to Senior Five (S.5). AMHS welcomes Ugandan and refugee learners into a supportive, student-centred day and boarding environment.
+Students awaiting PLE or UCE results may begin the process while waiting for official results. Final admission and placement depend on the school’s entry requirements and verification of required academic results.
+Key 2027 dates: applications open 18 October 2026; S.1 preliminary interviews 30 November 2026; S.2 and S.3 registration and interviews 20 November 2026–1 February 2027; S.5 preliminary interviews 20 December 2026; planned reporting date 3 February 2027, subject to confirmation.
 Fees Structure
-The Development Plan currently records indicative term fees of:
+For the 2027 academic year, school fees are paid per term as follows:
 Category	Fee per Term
-Day Student	UGX 150,000
-Boarding Student	UGX 300,000
+Day Student	UGX 200,000
+Boarding Student	UGX 400,000
 
-Add:
-“Please contact the school or download the current official fees structure before making payment, as fees and other requirements may be reviewed.”
-The downloadable fees sheet can separately show tuition, boarding, meals, uniform, development requirements and any other approved charges.
+Medical fees are UGX 10,000 and the school uniform is UGX 100,000. Fees are the same for O-Level and A-Level students, and all students receive free vocational and practical-skills training. Instalment payments are accepted through the Bursar’s Office.
+Parents and guardians paying by bank deposit, MTN MoMo or Airtel Money must present their payment confirmation receipt to the school for verification and record-keeping.
 Official School Fee Payment Channels
 MTN MoMo Merchant ID: 26616498
 Pay using the MoMo app or *165*3#
@@ -291,8 +302,10 @@ Step 5 — Additional Information
 Medical or accessibility needs
 Special learning needs
 Bursary/sponsorship enquiry where applicable
+Food allergies
+Student talent or interest
 Step 6 — Documents
-Upload previous school report/results and other required admission documents.
+Upload previous school report/results, birth certificate and other required admission documents.
 Step 7 — Declaration
 Parent/guardian confirms that the information provided is accurate.
 Button: SUBMIT APPLICATION
@@ -345,6 +358,13 @@ The Club looks forward to participating in;
 	Exchange programmes 
 	Special performances
 Add photos
+
+Arts & Culture
+Creating Positive Change through Music, Dance and Drama
+At AMHS, Arts & Culture helps students discover talent, express creativity, celebrate cultural heritage and use their skills to inspire others. Through music, dance, drama, poetry, storytelling, acting, singing and brass band performances, students build confidence, communication, teamwork and leadership skills.
+The AMHS school choir has recorded four original educational songs. An HIV/AIDS prevention song has reached more than 100,000 listeners, with students’ music broadcast on Radio King FM in Masindi and shared through social media across Masindi, Hoima, Kikuube, Buliisa, Kiryandongo and Kibaale districts.
+The Brass Band Club, Drama Club, school choir and other creative clubs are student-led. In six months, the Brass Band Club and Drama Club have reached more than 2,000 people through performances and community engagement.
+AMHS welcomes musical instruments, sound equipment, recording tools, video cameras, computers, production software and technical training to strengthen students’ creative, digital and entrepreneurial skills.
 
 Games and Sports
 Strong Bodies. Strong Minds. Strong Teams.

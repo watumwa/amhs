@@ -343,6 +343,12 @@ button { cursor:pointer; }
 .exchange-final-callout { background:var(--maroon);color:#fff;padding:65px 0 69px; }
 .exchange-final-callout p { color:#fff;font:400 clamp(28px,4vw,48px)/1.12 var(--serif);letter-spacing:-.035em;max-width:880px;margin:0; }
 
+.document-links { display:grid;gap:10px;margin-top:24px; }
+.document-link { display:block;border:1px solid #cdd9de;background:#f6f9fa;padding:14px 16px;text-decoration:none;transition:border-color .2s ease,background .2s ease; }
+.document-link:hover { border-color:var(--gold);background:#fff; }
+.document-link span { display:block;color:var(--navy);font-size:13px;font-weight:700;line-height:1.35; }
+.document-link small { display:block;margin-top:4px;color:#60717c;font-size:11px;line-height:1.45; }
+
 /* Mobile fixes: page banners grow with their text instead of clipping it */
 .page-hero,.page-hero-short { height:auto;min-height:475px;padding-bottom:64px; }
 .page-hero-short { min-height:410px; }
