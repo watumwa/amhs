@@ -7,6 +7,7 @@ import { BankAccountCard, BankAccountSection, SchoolFeesPaymentSection } from ".
 import { ExchangeForm } from "../../components/exchange-form";
 import { ContactOptions } from "../../components/contact-options";
 import { governanceProfiles, peopleProfiles, studentLeaders, type Profile } from "../../content/people";
+import valuesStyles from "./asaba-values.module.css";
 
 type PageSection = { title: string; body?: string[]; items?: string[] };
 type DocumentDownload = { label: string; href: string; description: string };
@@ -227,6 +228,35 @@ function TopicOverview({ page, family }: { page: PageInfo; family: PageFamily })
   </section>;
 }
 
+const asabaValues = [
+  { letter: "A", name: "Accountability", description: "We uphold responsibility, honesty, reliability and integrity as the foundation for trust, growth and excellence." },
+  { letter: "S", name: "Service", description: "We teach that true leadership begins with caring for others and building together with love and humility." },
+  { letter: "A", name: "Ambition", description: "We encourage every learner to dream, reach higher, work with purpose and believe that meaningful goals are possible." },
+  { letter: "B", name: "Belief", description: "We nurture faith, resilience and optimism so learners believe in themselves, the potential of others and a brighter future." },
+  { letter: "A", name: "Action for Empowerment", description: "We turn knowledge into purposeful action through experiential learning, leadership and self-confidence." },
+];
+
+function AsabaValues() {
+  return <section className={valuesStyles.section} aria-labelledby="asaba-values-heading">
+    <div className="container">
+      <div className={valuesStyles.heading}>
+        <p className="eyebrow eyebrow-light"><span /> Our guiding principles</p>
+        <h2 id="asaba-values-heading">The <em>ASABA</em> Values</h2>
+        <p className={valuesStyles.introduction}>Our name expresses the values we want every learner to carry beyond the school gates.</p>
+        <p className={valuesStyles.connection}>At AMHS, our identity is reflected not only in our name but also in the principles that guide how we learn, lead, serve and grow.</p>
+      </div>
+      <ol className={valuesStyles.grid}>
+        {asabaValues.map((value) => <li className={valuesStyles.card} key={value.name}>
+          <span className={valuesStyles.letter} aria-hidden="true">{value.letter}</span>
+          <h3><span className={valuesStyles.srOnly}>{value.letter} – </span>{value.name}</h3>
+          <p>{value.description}</p>
+        </li>)}
+      </ol>
+      <p className={valuesStyles.closing}>Five Values. One Identity. A Future of Purpose.</p>
+    </div>
+  </section>;
+}
+
 function PageSections({ sections }: { sections: PageSection[] }) {
   return <section className="page-sections container">
     <div className="page-sections-grid">
@@ -423,6 +453,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     {slug === "our-approach" || slug === "project-based-learning" ? <PracticalLearningGallery /> : null}
     {slug === "brass-band-club" ? <BrassBandGallery /> : null}
     {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : slug === "pta-leadership" ? <GovernanceDirectory type="pta" /> : slug === "board-of-governors" ? <GovernanceDirectory type="board" /> : <TopicOverview page={page} family={family} />}
+    {slug === "about" ? <AsabaValues /> : null}
     {slug === "school-exchange-programmes" ? <section className="application-section container" id="exchange-form"><ExchangeForm /></section> : null}
   </>;
 }
