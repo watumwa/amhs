@@ -38,6 +38,18 @@ export function TiktokIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3c.3 2.3 1.6 3.8 3.9 4v2.6c-1.4.1-2.6-.3-3.9-1.1v5.9c0 3.9-3.4 6.4-6.8 5.4-3.6-1.1-4.6-5.6-2.2-8.1 1.2-1.3 2.9-1.8 4.6-1.5v2.8c-.4-.1-.8-.2-1.2-.1-1.4.2-2.3 1.4-2 2.8.4 1.7 2.6 2.3 3.8 1 .4-.5.6-1.1.6-1.7V3h3.2Z" fill="currentColor"/></svg>;
 }
 
+export function WhatsAppIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 14.9L2 22l5.2-1.4A10 10 0 1 0 12 2Zm.4 15.3c-.2.6-1.2 1.1-2.5.9-1.6-.3-3-1.7-3.8-3.1-.8-1.4-1-2.9-.2-3.9.6-.8 1.6-.6 2.2-.3.5.2.8.8.6 1.4-.2.5-.8.7-1.3.3-.4-.3-.6-.8-.4-1.2.2-.4.6-.5.9-.4.3 0 .6.2.7.5.2.3.2.7 0 1.1-.3.5-.7.7-1.2.6-.5-.1-.9-.5-1.1-1-.2-.5-.1-1 .2-1.3.4-.4.9-.5 1.3-.4.4.1.7.4.8.8.1.4 0 .8-.2 1.2-.3.5-.8.8-1.3.9-.5.1-1-.1-1.4-.5-.4-.4-.6-1-.4-1.5.2-.5.6-.8 1.1-.9.5-.1 1 0 1.4.4.4.4.5 1 .2 1.5-.3.5-.8.8-1.3.9-.5.1-1-.1-1.4-.5-.4-.4-.6-1-.4-1.5.2-.5.6-.8 1.1-.9.5-.1 1 0 1.4.4.4.4.5 1 .2 1.5-.3.5-.8.8-1.3.9-.5.1-1-.1-1.4-.5-.4-.4-.6-1-.4-1.5.2-.5.6-.8 1.1-.9.5-.1 1 0 1.4.4.4.4.5 1 .2 1.5-.3.5-.8.8-1.3.9-.5.1-1-.1-1.4-.5-.4-.4-.6-1-.4-1.5.2-.5.6-.8 1.1-.9.5-.1 1 0 1.4.4Z" fill="currentColor"/></svg>;
+}
+
+export function PhoneIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l.5 1.9-.6.6a12.5 12.5 0 0 0 5.6 5.6l.6-.6L19 20.5v3.5a2 2 0 0 1-2 2A19 19 0 0 1 2 22a2 2 0 0 1 2-2V4Z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg>;
+}
+
+export function MailIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg>;
+}
+
 const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/share/1FzBptSnYQ", Icon: FacebookIcon },
   { label: "Instagram", href: "https://www.instagram.com/amhs2.025", Icon: InstagramIcon },
