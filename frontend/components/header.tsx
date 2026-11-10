@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SocialLinks } from "./icons";
+import { DONATION_URL } from "../content/donation";
 
 type NavigationItem = {
   label: string;
@@ -45,6 +46,7 @@ export function Header() {
       <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
         {navigation.map((item) => item.href ? <Link className={path === item.href ? "active" : ""} aria-current={path === item.href ? "page" : undefined} href={item.href} key={item.label} onClick={closeAll}>{item.label}</Link> :
           <div className={`nav-menu ${openMenu === item.label ? "is-open" : ""}`} key={item.label}><button type="button" aria-expanded={openMenu === item.label} onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)} className={item.links!.some(([, href]) => path === href) ? "active" : ""}>{item.label}</button><div className="dropdown">{item.links!.map(([name, href]) => <Link href={href} key={href} onClick={closeAll}>{name}</Link>)}</div></div>)}
+        <Link href={DONATION_URL} className="nav-donate" aria-current={path === DONATION_URL ? "page" : undefined} onClick={closeAll}>Donate</Link>
       </nav>
       <Link href="/apply-now" className="header-apply">Apply now <span>↗</span></Link>
     </div></header>

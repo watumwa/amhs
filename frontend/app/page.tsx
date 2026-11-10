@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Arrow, Book, Compass, Medal, Sparkle } from "../components/icons";
+import { DonationCTA } from "../components/donation-cta";
+import { DONATION_URL } from "../content/donation";
 
 const featureCards = [
   { icon: <Book />, number: "01", title: "Academic Learning", text: "A competency-based curriculum that builds strong foundations in sciences, humanities, languages, technology and practical subjects.", href: "/curriculum" },
@@ -99,6 +101,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <DonationCTA heading="Help Shape a Brighter Future" description="Help AMHS strengthen its learning environment and expand educational opportunities. Explore ways to contribute to the school community." buttonLabel="Support Our School" />
+
       <section className="values-section">
         <div className="container values-grid">
           <div className="values-intro"><p className="eyebrow"><span /> Our foundation</p><h2>Knowledge, character<br /><em>and purpose.</em></h2><p>Our educational approach combines academic excellence, spiritual growth, life skills development and community responsibility.</p></div>
@@ -184,7 +188,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="support-strip"><div className="container"><div><p className="eyebrow eyebrow-light"><span /> A shared future</p><h2>Support a student.<br /><em>Transform a future.</em></h2></div><div className="support-copy"><p>Some capable young people face significant financial and social barriers to secondary education.</p><p>AMHS seeks to ensure that vulnerability does not automatically end a learner&apos;s educational journey. The school&apos;s inclusive approach includes consideration of bursary support based on individual socio-economic circumstances.</p><p>Through sponsorships, donations and partnerships, individuals and organisations can help us expand educational opportunities and strengthen the learning environment.</p></div><div className="support-actions"><Link className="button button-gold" href="/sponsor-a-child">Sponsor a Child <Arrow /></Link><Link className="button button-outline-light" href="/get-involved">Support AMHS <Arrow /></Link></div></div></section>
+      <section className="support-strip"><div className="container"><div><p className="eyebrow eyebrow-light"><span /> A shared future</p><h2>Support a student.<br /><em>Transform a future.</em></h2></div><div className="support-copy"><p>Some capable young people face significant financial and social barriers to secondary education.</p><p>AMHS seeks to ensure that vulnerability does not automatically end a learner&apos;s educational journey. The school&apos;s inclusive approach includes consideration of bursary support based on individual socio-economic circumstances.</p><p>Through sponsorships, donations and partnerships, individuals and organisations can help us expand educational opportunities and strengthen the learning environment.</p></div><div className="support-actions"><Link className="button button-gold" href="/sponsor-a-child">Sponsor a Child <Arrow /></Link><Link className="button button-outline-light" href={DONATION_URL}>Support AMHS <Arrow /></Link></div></div></section>
     </>
   );
 }

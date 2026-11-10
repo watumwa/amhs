@@ -6,6 +6,7 @@ import { GivingOptions } from "../../components/giving-options";
 import { BankAccountCard, BankAccountSection, SchoolFeesPaymentSection } from "../../components/bank-account";
 import { ExchangeForm } from "../../components/exchange-form";
 import { ContactOptions } from "../../components/contact-options";
+import { DonationCTA } from "../../components/donation-cta";
 import { governanceProfiles, peopleProfiles, studentLeaders, type Profile } from "../../content/people";
 import valuesStyles from "./asaba-values.module.css";
 
@@ -454,6 +455,12 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     {slug === "brass-band-club" ? <BrassBandGallery /> : null}
     {slug === "team" || slug === "staff" ? <ProfileDirectory type={slug} /> : slug === "pta-leadership" ? <GovernanceDirectory type="pta" /> : slug === "board-of-governors" ? <GovernanceDirectory type="board" /> : <TopicOverview page={page} family={family} />}
     {slug === "about" ? <AsabaValues /> : null}
+    {slug === "about" ? <DonationCTA heading="Help Put Our Values into Practice" description="Share in our commitment to knowledge, character and purpose. Explore ways to support AMHS and its educational mission." buttonLabel="Support Our Mission" /> : null}
+    {slug === "academics" || slug === "curriculum" ? <DonationCTA heading="Invest in Quality Education" description="Support books, learning materials and educational resources that help AMHS provide meaningful learning opportunities." buttonLabel="Support Learning at AMHS" /> : null}
+    {slug === "students-life" ? <DonationCTA subtle heading="Support Life Beyond the Classroom" description="Help strengthen student wellbeing and development through support for boarding facilities, sports equipment and student resources." buttonLabel="Support Student Life" /> : null}
+    {slug === "news-and-events" ? <DonationCTA subtle heading="Encourage Learning and Participation" description="Interested in supporting the school life and activities highlighted here? Explore ways to contribute learning resources, sports equipment and student support." buttonLabel="Support Our School Community" /> : null}
+    {slug === "contact-us" ? <DonationCTA subtle heading="Partner With AMHS" description="Interested in supporting the school? Explore our donation page for ways to contribute, or contact our team to discuss your support." buttonLabel="Explore Ways to Give" /> : null}
+    {slug === "admission" ? <DonationCTA subtle heading="Share Our Commitment to Education" description="If you would also like to support the wider school community, explore the ways you can contribute to AMHS." buttonLabel="Support AMHS" /> : null}
     {slug === "school-exchange-programmes" ? <section className="application-section container" id="exchange-form"><ExchangeForm /></section> : null}
   </>;
 }
