@@ -1,3 +1,4 @@
+import { SchoolPolicies } from "../../components/school-policies";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdmissionForm } from "../../components/admission-form";
@@ -433,6 +434,7 @@ function SchoolExchangeProgramme() {
 
 export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (slug === "school-policies") return <SchoolPolicies />;
   if (slug === "apply-now") return <ApplyPage />;
   if (slug === "donate" || slug === "sponsor-a-child") return <GivingPage sponsor={slug === "sponsor-a-child"} />;
   const page = pages[slug];

@@ -1,3 +1,6 @@
+import { policies } from "../content/policies";
+import { PolicyIcon } from "./school-policies";
+import policyStyles from "./school-policies.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { SocialLinks } from "./icons";
@@ -54,10 +57,11 @@ export function Footer() {
   return <footer className="site-footer">
     <FooterPayments />
     <div className="container footer-support"><div><h2>Support AMHS</h2><p>Help strengthen our school community and its learning environment.</p></div><Link className="button button-gold" href={DONATION_URL}>Donate to AMHS</Link></div>
-    <div className="container footer-grid">
+    <div className={`container footer-grid ${policyStyles.footerGrid}`}>
       <div className="footer-brand"><div className="brand"><span className="crest" aria-hidden="true"><Image className="crest-image" src="/asaba-memorial-logo-tight.jpeg" alt="" width={500} height={500} /></span><span>Asaba Memorial <br /><strong>High School</strong></span></div><p>Lighting the Path to a Brighter Tomorrow</p></div>
       <div><h3>Explore</h3><Link href="/about">About AMHS</Link><Link href="/academics">Academics</Link><Link href="/admission">Admissions</Link><Link href="/students-life">Student Life</Link><Link href="/news-and-events">News and Events</Link><Link href="/contact-us">Contact Us</Link></div>
       <div><h3>Community</h3><Link href="/school-policies">Safeguarding</Link><Link href="/donate">Donate</Link><Link href="/sponsor-a-child">Sponsor a Child</Link><Link href="/school-exchange-programmes">Partner With Us</Link></div>
+      <div className={policyStyles.footerPolicies}><h3>School Policies</h3><Link href="/school-policies">View All School Policies</Link>{policies.filter(policy => policy.document).map(policy => <a key={policy.id} href={policy.document} download={policy.document!.split("/").pop()}><PolicyIcon type="download" /><span>{policy.title}<span className={policyStyles.srOnly}> (download PDF)</span></span></a>)}</div>
       <div className="footer-contact"><h3>Stay in touch</h3><p>Kitanyata 1 LCI, Kiruli Sub-county,<br />Buruli County, Masindi District, Uganda</p><p>Along Kyatiri–Kitanyata Road, approximately 8 km from Kyatiri Town</p><p>Telephone: +256 766 610 442 / +256 771 477 454</p><p>WhatsApp: +256 775 749 226</p><a href="mailto:asabamemorialhighschool@gmail.com">asabamemorialhighschool@gmail.com</a><p>P.O. Box: 480486 Masindi</p><SocialLinks /></div>
     </div>
     <FooterLicence />
