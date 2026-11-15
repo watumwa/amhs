@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DirectorPreview } from "../components/director-preview";
 import { Arrow, Book, Compass, Medal, Sparkle } from "../components/icons";
 import { DonationCTA } from "../components/donation-cta";
 import { DONATION_URL } from "../content/donation";
@@ -100,6 +101,8 @@ export default function HomePage() {
           <Link className="text-link" href="/about">Who we are <Arrow /></Link>
         </div>
       </section>
+
+      <DirectorPreview />
 
       <DonationCTA heading="Help Shape a Brighter Future" description="Help AMHS strengthen its learning environment and expand educational opportunities. Explore ways to contribute to the school community." buttonLabel="Support Our School" />
 
