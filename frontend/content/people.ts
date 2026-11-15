@@ -193,6 +193,7 @@ export const governanceProfiles: Record<"board" | "pta", Profile[]> = {
 
 export type StudentLeader = {
   image: string;
+  imagePosition?: string;
   name?: string;
   role?: string;
 };
@@ -201,13 +202,18 @@ export type StudentLeader = {
 export const studentLeaders: StudentLeader[] = [
   { image: "/people/student-leaders/basome-robinson.jpg", name: "Basome Robinson", role: "Head Boy" },
   { image: "/people/student-leaders/shania-asifiwe.jpg", name: "Shania Asifiwe", role: "Head Prefect" },
-  { image: "/people/student-leaders/faith-michelle.jpg", name: "Faith Michelle", role: "Head Girl" },
+  { image: "/people/student-leaders/faith-michelle.jpg", imagePosition: "center top", name: "Faith Michelle", role: "Head Girl" },
   { image: "/people/student-leaders/lillian-sifa.jpg", name: "Lillian Sifa", role: "Assistant Head Girl" },
   { image: "/people/student-leaders/gift-emmanuel.jpg", name: "Gift Emmanuel", role: "Clubs and Societies" },
   { image: "/people/student-leaders/ibrahim-ssekaja.jpg", name: "Ibrahim Ssekaja", role: "Prefect in Charge of Welfare" },
   { image: "/people/student-leaders/mucunguzi-lawrence.jpg", name: "Mucunguzi Lawrence", role: "ICT Laboratory" },
   { image: "/people/student-leaders/sabiti-joseph.jpg", name: "Sabiti Joseph", role: "Sanitation Prefect" },
-  { image: "/people/student-leaders/kobusinge-racheal.jpg", name: "Kobusinge Racheal", role: "Timekeeper" },
-  { image: "/people/student-leaders/mbabazi-sarah.jpg", name: "Mbabazi Sarah", role: "Assistant Games and Sports" },
+  { image: "/people/student-leaders/kobusinge-racheal.jpg", imagePosition: "center top", name: "Kobusinge Racheal", role: "Timekeeper" },
+  { image: "/people/student-leaders/mbabazi-sarah.jpg", imagePosition: "center top", name: "Mbabazi Sarah", role: "Assistant Games and Sports" },
   { image: "/people/student-leaders/namudu-doreen.jpg", name: "Namudu Doreen", role: "Assistant Entertainment" },
+  { image: "/Images/Student%20Leadership/Nyakato_Imelda_Academic_prefect.jpeg", name: "Nyakato Imelda", role: "Academic Prefect" },
+  { image: "/Images/Student%20Leadership/Alinda_Angelica_Information_prefect.jpeg", imagePosition: "center top", name: "Alinda Angelica", role: "Information Prefect" },
+  { image: "/Images/Student%20Leadership/Faida_Jane_Discipline_prefect.jpeg", name: "Faida Jane", role: "Discipline Prefect" },
+  { image: "/Images/Student%20Leadership/Aseera_Linus_Assistant_Head_Boy.jpeg", name: "Aseera Linus", role: "Assistant Head Boy" },
+  { image: "/Images/Student%20Leadership/Nansiima_Mercy_Religious_Affairs_Prefect.jpeg", name: "Nansiima Mercy", role: "Religious Affairs Prefect" },
 ];

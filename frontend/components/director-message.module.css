@@ -16,6 +16,9 @@
 .prose { max-width:960px; margin:auto; font-size:16px; line-height:1.85; overflow-wrap:break-word; }
 .prose > p { margin:0 0 24px; }
 .prose > .signature { margin-top:32px; }
+.inlineLink { color:var(--maroon); text-decoration:underline; text-underline-offset:3px; }
+.inlineLink:hover { color:var(--navy-2); text-decoration-thickness:2px; }
+.inlineLink:focus-visible { outline:2px solid var(--maroon); outline-offset:3px; }
 @media (max-width:820px) {
   .previewGrid { grid-template-columns:180px minmax(0,1fr); gap:28px; }
   .profile { width:230px; margin-right:28px; }

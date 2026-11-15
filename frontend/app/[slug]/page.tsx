@@ -1,3 +1,5 @@
+import { AcademicCalendar } from "../../components/academic-calendar";
+import { SchoolLibrary } from "../../components/school-library";
 import { PersonnelPortrait } from "../../components/personnel-portrait";
 import type { Metadata } from "next";
 import directoryStyles from "./personnel.module.css";
@@ -41,9 +43,9 @@ const pages: Record<string, PageInfo> = {
     { title: "Vocational and skills-based learning", body: ["Through Sifa Skilling Hub (SSH), established by Asaba Memorial Education Foundation (AMEF), students can develop practical skills alongside their academic studies."], items: ["Multimedia", "Hairdressing and barbering", "Tailoring and fashion design", "Brass band", "Welding and carpentry", "Cosmetics and soap making", "Branding, garment printing and heat transfer"] },
     { title: "Curriculum outcomes", body: ["AMHS aims to develop confident, responsible and creative learners who think critically, communicate effectively, work collaboratively, adapt to change and contribute positively to society."] },
   ], downloads: [{ label: "Download the Uganda Lower Secondary Curriculum Framework", href: "/documents/uganda-lower-secondary-curriculum-framework.pdf", description: "Official NCDC curriculum framework (PDF)" }] },
-  "academic-calendar": { label: "Academics", title: "Plan the school year", emphasis: "with confidence.", eyebrow: "Academic Calendar", intro: "The AMHS calendar will organise opening, visiting days, assessment periods, candidate activities, examinations and closing dates for each term.", image: "calendar", details: ["Term I: Opening, Visiting Day, Assessment Period and Closing. Term II: Opening, Visiting Day, Assessment Period and Closing. Term III: Opening, Candidate Activities, Examinations and Closing.", "Because specific term dates are not contained in the Development Plan, the current approved annual calendar should be populated here when available. Families will receive important reminders through the school office."], facts: [["Term I", "Opening to closing"], ["Term II", "Opening to closing"], ["Term III", "Candidates & exams"]], cta: "Download calendar" },
-  subjects: { label: "Academics", title: "Find the subjects", emphasis: "that spark you.", eyebrow: "Subjects Offered", intro: "AMHS offers a broad O-Level subject programme and will begin its Advanced Level programme with Senior Five in 2027.", image: "subjects", details: ["The O-Level programme covers English Language, Mathematics, sciences, humanities, languages, technology, agriculture, entrepreneurship, fine art and physical education, subject to applicable national curriculum requirements and approved school offerings.", "A-Level students choose three principal subjects guided by their strengths, interests and career aspirations, alongside General Paper and the appropriate subsidiary subject under UNEB requirements."], facts: [["14", "O-Level subjects"], ["S.5–S.6", "Advanced Level"], ["3", "Principal subjects"]], cta: "Explore A-Level curriculum", sections: [
-    { title: "O-Level subjects (S.1–S.4)", items: ["English Language", "Mathematics", "Physics", "Biology", "Chemistry", "Geography", "History and Political Education", "Religious Education", "Physical Education", "Kiswahili", "Agriculture", "ICT / Computer Studies", "Entrepreneurship", "Fine Art"] },
+  "academic-calendar": { label: "Academics", title: "Plan the school year", emphasis: "with confidence.", eyebrow: "Academic Calendar", intro: "The AMHS academic calendar helps families plan school terms, reporting dates and important school activities.", image: "calendar", details: ["Term I: Opening, Visiting Day, Assessment Period and Closing. Term II: Opening, Visiting Day, Assessment Period and Closing. Term III: Opening, Candidate Activities, Examinations and Closing.", "The 2027 provisional Ministry calendar is available below. Families will receive important reminders about school activities through the school office."], facts: [["Term I", "Opening to closing"], ["Term II", "Opening to closing"], ["Term III", "Candidates & exams"]], cta: "View 2027 calendar" },
+  subjects: { label: "Academics", title: "Find the subjects", emphasis: "that spark you.", eyebrow: "Subjects Offered", intro: "AMHS offers a broad O-Level subject programme and will begin its Advanced Level programme with Senior Five in 2027.", image: "subjects", details: ["The O-Level programme covers English Language, Mathematics, sciences, humanities, languages, technology, agriculture, entrepreneurship, fine art and physical education, subject to applicable national curriculum requirements and approved school offerings.", "A-Level students choose three principal subjects guided by their strengths, interests and career aspirations, alongside General Paper and the appropriate subsidiary subject under UNEB requirements."], facts: [["15", "O-Level subjects"], ["S.5–S.6", "Advanced Level"], ["3", "Principal subjects"]], cta: "Explore A-Level curriculum", sections: [
+    { title: "O-Level subjects (S.1–S.4)", items: ["English Language", "Mathematics", "Physics", "Biology", "Chemistry", "Geography", "History and Political Education", "Religious Education", "Physical Education", "Kiswahili", "Agriculture", "ICT / Computer Studies", "Entrepreneurship", "Fine Art", "Literature in English"] },
     { title: "Advanced Level", body: ["Senior Five begins in 2027. Visit the A-Level curriculum page for the current subject-combination guide, UACE preparation information and admissions guidance."] },
   ] },
   "advanced-level-curriculum": { label: "Academics", title: "Advanced Level Curriculum", emphasis: "S.5–S.6.", eyebrow: "A-Level at AMHS", intro: "Beginning in 2027, AMHS will commence Advanced Level education with Senior Five, preparing students for UACE, university admission, professional training and future careers.", image: "curriculum", details: ["The programme is for students who have completed Senior Four and meet the entry requirements for Senior Five. Students select three principal subjects according to their strengths, interests and career aspirations.", "Every combination includes General Paper and the appropriate subsidiary subject—Subsidiary Mathematics or Subsidiary ICT—in accordance with UNEB requirements."], facts: [["2027", "S.5 starts"], ["3", "Principal subjects"], ["UACE", "Exam preparation"]], cta: "Apply for S.5", sections: [
@@ -116,7 +118,7 @@ const actionDestinations: Record<string, string> = {
   academics: "/subjects", about: "/team", "amhs-roots": "/about", team: "/staff", staff: "mailto:asabamemorialhighschool@gmail.com",
   "board-of-governors": "mailto:asabamemorialhighschool@gmail.com", "pta-leadership": "mailto:asabamemorialhighschool@gmail.com", "student-leadership": "/students-life",
   "success-stories": "mailto:asabamemorialhighschool@gmail.com?subject=Mentorship%20enquiry", "school-policies": "mailto:asabamemorialhighschool@gmail.com", partners: "mailto:asabamemorialhighschool@gmail.com", facilities: "/apply-now",
-  curriculum: "/subjects", "academic-calendar": "mailto:asabamemorialhighschool@gmail.com", subjects: "/advanced-level-curriculum", "advanced-level-curriculum": "/apply-now", library: "mailto:asabamemorialhighschool@gmail.com?subject=Library%20support",
+  curriculum: "/subjects", "academic-calendar": "#calendar-2027", subjects: "/advanced-level-curriculum", "advanced-level-curriculum": "/apply-now", library: "mailto:asabamemorialhighschool@gmail.com?subject=Library%20support",
   syllabus: "mailto:asabamemorialhighschool@gmail.com", admission: "/apply-now", fees: "mailto:asabamemorialhighschool@gmail.com", uniform: "mailto:asabamemorialhighschool@gmail.com",
   "our-approach": "/students-life", "project-based-learning": "/our-approach", "brass-band-club": "/students-life", "arts-and-culture": "mailto:asabamemorialhighschool@gmail.com?subject=Creative%20learning%20support", "games-and-sport": "/students-life",
   "talent-development": "/students-life", "associations-and-clubs": "/students-life", "students-life": "/our-approach", "get-involved": "/donate",
@@ -363,8 +365,8 @@ function StudentLeaders() {
         <p>Our prefects and student leaders represent their fellow learners, support school routines and set an example of responsibility, service and respect.</p>
       </div>
       <div className="leader-grid">
-        {studentLeaders.map((leader) => <figure className="leader-card" key={leader.image}>
-          <img src={leader.image} alt={leader.name ? `${leader.name}, ${leader.role ?? "student leader"} at AMHS` : "AMHS student leader"} loading="lazy" width={600} height={750} />
+        {studentLeaders.map((leader) => <figure className="leader-card" key={leader.name ?? leader.image}>
+          <img src={leader.image} alt={leader.name ? `${leader.name}, ${leader.role ?? "student leader"} at AMHS` : "AMHS student leader"} loading="lazy" width={240} height={300} style={{ objectPosition: leader.imagePosition }} />
           <figcaption>{leader.name ? <strong>{leader.name}</strong> : null}<span>{leader.role ?? "Student leader"}</span></figcaption>
         </figure>)}
       </div>
@@ -406,6 +408,10 @@ function PracticalLearningGallery() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  if (slug === "library") return {
+    title: "School Library | Asaba Memorial High School",
+    description: "Explore the AMHS school library, our reading culture, independent study and learning resources, and opportunities to support its continued development.",
+  };
   if (!["team", "staff", "board-of-governors", "pta-leadership"].includes(slug)) return {};
   const page = pages[slug];
   return { title: `${page.title} | Asaba Memorial High School`, description: page.intro };
@@ -438,6 +444,7 @@ function SchoolExchangeProgramme() {
 export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (slug === "school-policies") return <SchoolPolicies />;
+  if (slug === "library") return <SchoolLibrary />;
   if (slug === "apply-now") return <ApplyPage />;
   if (slug === "donate" || slug === "sponsor-a-child") return <GivingPage sponsor={slug === "sponsor-a-child"} />;
   const page = pages[slug];
@@ -448,7 +455,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
 
   return <>
     <section className={`page-hero${slug === "about" ? " page-hero--text-only" : ""}`}>{slug === "about" ? null : <div className={mediaClass(page.image)} />}<div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{slug === "team" ? "Meet Our School Management Team" : page.title}{page.emphasis ? <><br /><em>{page.emphasis}</em></> : null}</h1><p>{page.intro}</p></div></section>
-    <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}{sectionEmphasis ? <><br /><em>{sectionEmphasis}</em></> : null}</h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}{page.cta ? <PageAction slug={slug} label={page.cta} /> : null}{page.downloads ? <DocumentDownloads documents={page.downloads} /> : null}</div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
+    <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}{sectionEmphasis ? <><br /><em>{sectionEmphasis}</em></> : null}</h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}{page.cta ? <PageAction slug={slug} label={page.cta} /> : null}{["academics", "curriculum", "subjects"].includes(slug) ? <p><Link className="text-link" href="/academics/o-level-curriculum">Explore the O-Level Curriculum (S.1–S.4) <Arrow /></Link></p> : null}{page.downloads ? <DocumentDownloads documents={page.downloads} /> : null}</div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
+    {slug === "academic-calendar" ? <AcademicCalendar /> : null}
     {slug === "contact-us" ? <ContactOptions /> : null}
     {slug === "amhs-roots" ? <LegacyFeature /> : null}
     {slug === "success-stories" ? <SuccessStoryFeature /> : null}

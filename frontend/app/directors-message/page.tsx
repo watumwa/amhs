@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { directorMessage, directorPortrait } from "../../content/directors-message";
 import styles from "../../components/director-message.module.css";
 
@@ -25,7 +26,13 @@ export default function DirectorsMessagePage() {
       <div className={styles.prose}>
         <h2 className={styles.heading}>Welcome to Asaba Memorial High School (AMHS)!</h2>
         <p>Dear Students, Parents, Guardians, Partners and Friends,</p>
-        {directorMessage.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+        {directorMessage.map(paragraph => {
+          const phrase = "Global School Exchange (GSE)";
+          const index = paragraph.indexOf(phrase);
+          return <p key={paragraph}>{index < 0 ? paragraph : <>
+            {paragraph.slice(0, index)}<Link className={styles.inlineLink} href="/school-exchange-programmes">{phrase}</Link>{paragraph.slice(index + phrase.length)}
+          </>}</p>;
+        })}
         <p className={styles.signature}><strong>Bienvenu Byamungu</strong><strong>School Director</strong><strong>Asaba Memorial High School</strong></p>
       </div>
     </article>
