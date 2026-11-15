@@ -1,3 +1,6 @@
+import { PersonnelPortrait } from "../../components/personnel-portrait";
+import type { Metadata } from "next";
+import directoryStyles from "./personnel.module.css";
 import { SchoolPolicies } from "../../components/school-policies";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -8,7 +11,7 @@ import { BankAccountCard, BankAccountSection, SchoolFeesPaymentSection } from ".
 import { ExchangeForm } from "../../components/exchange-form";
 import { ContactOptions } from "../../components/contact-options";
 import { DonationCTA } from "../../components/donation-cta";
-import { governanceProfiles, peopleProfiles, studentLeaders, type Profile } from "../../content/people";
+import { governanceProfiles, peopleProfiles, staffGroups, studentLeaders, type Profile } from "../../content/people";
 import valuesStyles from "./asaba-values.module.css";
 
 type PageSection = { title: string; body?: string[]; items?: string[] };
@@ -22,11 +25,11 @@ const pages: Record<string, PageInfo> = {
     { title: "From Memory to Opportunity", body: ["The school's roots continue to shape its commitment to:"], items: ["Serving underserved communities", "Expanding access to secondary education", "Supporting vulnerable learners", "Developing responsible young leaders", "Turning education into practical community transformation"] },
     { title: "A continuing story", body: ["Every learner who discovers a talent, completes secondary education, acquires a practical skill, proceeds to further education, establishes an enterprise or returns to serve the community becomes part of that continuing story."] },
   ] },
-  team: { label: "Who we are", title: "People Committed to Every Learner", emphasis: "and every future.", eyebrow: "Our Team", intro: "Behind every successful school is a community of people working together. AMHS brings together school leadership, teachers, administrative personnel, support staff, parents, governors and student leaders.", image: "team", details: ["Our teaching staff deliver classroom instruction while also supporting student guidance, supervision and co-curricular activities.", "Our administrative and support teams help manage records, finance, boarding, catering, sanitation, security, maintenance and student welfare."], facts: [["Leadership", "School leadership"], ["Support", "Parent & staff teams"], ["Student", "Voice & leadership"]], cta: "Meet our staff" },
-  staff: { label: "Our team", title: "Our Staff", emphasis: "learning and care in action.", eyebrow: "Our Staff", intro: "Our teaching staff deliver classroom instruction while also supporting student guidance, supervision and co-curricular activities.", image: "team", details: ["Our administrative and support teams help manage records, finance, boarding, catering, sanitation, security, maintenance and student welfare.", "Together, they create an environment where learners can develop academically and personally."], facts: [["Teaching", "Classroom excellence"], ["Support", "Welfare & operations"], ["Care", "Student guidance"]], cta: "Contact the school" },
-  "board-of-governors": { label: "Our team", title: "Governance for Quality and Accountability", emphasis: "for the school community.", eyebrow: "Board of Governors", intro: "The Board of Governors provides institutional governance and oversight, helping ensure that AMHS operates responsibly and remains focused on its educational mission.", image: "board", details: ["The Board supports strategic direction, accountability, school development, learner welfare, policy oversight and engagement with the wider school community.", "The Board works closely with school leadership to keep students at the centre of every decision."], facts: [["Governance", "Strategic oversight"], ["Welfare", "Learner wellbeing"], ["Accountability", "Responsible leadership"]], cta: "Our governance" },
-  "pta-leadership": { label: "Our team", title: "Parents as Partners in Education", emphasis: "in every learner's journey.", eyebrow: "PTA Leadership", intro: "AMHS recognises that educating a child requires cooperation between the school and the home.", image: "parents", details: ["The Parents Teachers Association provides an important link between parents, teachers and school administration.", "It supports dialogue on student welfare, discipline, academic performance and school development while strengthening parental participation in education."], facts: [["Partnership", "Home & school"], ["Welfare", "Student support"], ["Participation", "School development"]], cta: "Join the PTA" },
-  "student-leadership": { label: "Our team", title: "Learning to Lead by Leading", emphasis: "with responsibility.", eyebrow: "Student Leadership", intro: "Leadership development should begin while young people are still learning.", image: "prefects", details: ["Student leadership at AMHS provides learners with opportunities to develop responsibility, communication, teamwork, accountability and service.", "Student leaders help promote positive behaviour, represent student concerns and support activities within the school community."], facts: [["Responsibility", "Student voice"], ["Leadership", "Service & teamwork"], ["Growth", "Confidence & accountability"]], cta: "Student life", sections: [
+  team: { label: "Who We Are", title: "School Management Team", emphasis: "", eyebrow: "School Management Team", intro: "Our School Management Team provides the leadership, administration and coordination necessary to ensure effective teaching, learning, student welfare and the continued development of Asaba Memorial High School.", image: "team", details: ["The School Director, Headteacher and Director of Studies provide school management and academic administration."], facts: [["Management","Leadership & administration"],["Learning","Academic coordination"],["Welfare","Student support"]], cta: "Meet our staff" },
+  staff: { label: "Who We Are", title: "Our Staff", emphasis: "", eyebrow: "Our Staff", intro: "Our dedicated teaching and non-teaching staff work together to provide quality education, a supportive learning environment and the essential services that enable our students to succeed.", image: "team", details: ["Teaching staff deliver classroom instruction and subject learning.","Non-teaching staff support school administration, communications, finance, security and student welfare."], facts: [["Teaching", "Classroom excellence"], ["Support", "Welfare & operations"], ["Care", "Student guidance"]], cta: "Contact the school" },
+  "board-of-governors": { label: "Who We Are", title: "Board of Governors", emphasis: "", eyebrow: "Board of Governors", intro: "The Board of Governors provides institutional governance, strategic guidance and oversight to support accountability, responsible school management and the long-term development of Asaba Memorial High School.", image: "board", details: ["The Board supports strategic direction, accountability, school development, learner welfare, policy oversight and engagement with the wider school community.", "The Board works closely with school leadership to keep students at the centre of every decision."], facts: [["Governance", "Strategic oversight"], ["Welfare", "Learner wellbeing"], ["Accountability", "Responsible leadership"]], cta: "Our governance" },
+  "pta-leadership": { label: "Who We Are", title: "PTA Leadership", emphasis: "", eyebrow: "PTA Leadership", intro: "The Parent–Teacher Association promotes meaningful cooperation between parents, guardians, teachers and school leadership to support student welfare, effective communication and the development of the school community.", image: "parents", details: ["The Parents Teachers Association provides an important link between parents, teachers and school administration.", "It supports dialogue on student welfare, discipline, academic performance and school development while strengthening parental participation in education."], facts: [["Partnership", "Home & school"], ["Welfare", "Student support"], ["Participation", "School development"]], cta: "Join the PTA" },
+  "student-leadership": { label: "Who We Are", title: "Learning to Lead by Leading", emphasis: "with responsibility.", eyebrow: "Student Leadership", intro: "Leadership development should begin while young people are still learning.", image: "prefects", details: ["Student leadership at AMHS provides learners with opportunities to develop responsibility, communication, teamwork, accountability and service.", "Student leaders help promote positive behaviour, represent student concerns and support activities within the school community."], facts: [["Responsibility", "Student voice"], ["Leadership", "Service & teamwork"], ["Growth", "Confidence & accountability"]], cta: "Student life", sections: [
     { title: "Student leadership roles", items: ["Head Prefect", "Deputy Head Prefect", "Dormitory Leaders", "Class Leaders", "Club Leaders", "Other Prefects"] },
   ] },
   "success-stories": { label: "Who we are", title: "Every Journey Matters", emphasis: "and every story counts.", eyebrow: "Success Stories", intro: "Success at AMHS is not measured only by examination results. It can be seen when a learner improves academically, develops confidence, discovers a talent, learns a practical skill or becomes an example to others.", image: "success", details: ["Success can also mean assuming responsibility, taking initiative, contributing to a project, finding a voice through teamwork or learning to serve the community.", "Kanshabe Natasha's story shows how AMHS helps students build confidence, communication, problem-solving and leadership skills so they can become responsible changemakers in their communities."], facts: [["Leadership", "Confidence & responsibility"], ["Teamwork", "Ideas into action"], ["Community", "Service & change"]], cta: "Be a Mentor" },
@@ -98,8 +101,8 @@ type PageFamily = "story" | "people" | "learning" | "practical" | "experience" |
 
 const pageHeadings: Record<string, [string, string]> = {
   academics: ["Ambition with", "the right support."], about: ["A shared vision for", "every learner."], "amhs-roots": ["A story worth", "carrying forward."],
-  team: ["Teaching, mentoring,", "and belonging."], staff: ["Dedicated to each", "student’s growth."], "board-of-governors": ["Leadership with students", "at the centre."],
-  "pta-leadership": ["Home and school", "working together."], "student-leadership": ["A voice, a responsibility,", "a chance to lead."], "success-stories": ["What our community", "carries forward."],
+  team: ["Meet Our School Management Team",""], staff: ["Our Staff",""], "board-of-governors": ["Institutional Governance and Strategic Oversight",""],
+  "pta-leadership": ["Strengthening Parent–Teacher Collaboration",""], "student-leadership": ["A voice, a responsibility,", "a chance to lead."], "success-stories": ["What our community", "carries forward."],
   "school-policies": ["The guidance that keeps", "our community safe."], partners: ["Partnerships with", "real purpose."], facilities: ["A campus ready for", "every kind of learning."],
   curriculum: ["A clear journey through", "knowledge and possibility."], "academic-calendar": ["Plan the year", "with confidence."], subjects: ["Areas of study that", "open up choices."], "advanced-level-curriculum": ["Senior Five starts", "a new academic journey."],
   library: ["Time and space", "to think deeply."], syllabus: ["What students learn,", "and how it builds."], admission: ["Everything families need", "to begin well."],
@@ -317,43 +320,36 @@ function SuccessStoryFeature() {
   </section>;
 }
 
+function ProfileCards({ profiles }: { profiles: Profile[] }) {
+  return <div className="profile-grid">
+    {profiles.map(profile => <article className={`profile-card ${directoryStyles.card}`} key={profile.name}>
+      <PersonnelPortrait profile={profile} />
+      <p>{profile.role}</p><h3>{profile.name}</h3><span className="profile-rule" />
+      <p className="profile-bio">{profile.bio}</p>
+    </article>)}
+  </div>;
+}
+
 function ProfileDirectory({ type }: { type: "team" | "staff" }) {
-  const isLeadership = type === "team";
-  const profiles = peopleProfiles[type];
   return <section className="profiles-section">
     <div className="container">
-      <div className="profiles-heading">
-        <div><p className="eyebrow"><span /> {isLeadership ? "Meet the leadership team" : "Meet our staff"}</p><h2>{isLeadership ? "Guided by care." : "Expertise in every"}<br /><em>{isLeadership ? "Focused on every learner." : "part of school life."}</em></h2></div>
-        <p>{isLeadership ? "Our leadership team creates the conditions for excellent learning, strong relationships and a school community that stays true to its values." : "Our teaching and support teams bring specialist knowledge, personal care and a shared commitment to helping young people flourish."}</p>
-      </div>
-      <div className="profile-grid">
-        {profiles.map((profile) => <article className="profile-card" key={profile.name}>
-          <div className={`profile-avatar${profile.image ? " has-photo" : ""}`} aria-hidden="true" style={profile.image ? { backgroundImage: `url(${profile.image})` } : undefined}>{profile.image ? "" : profile.initials}</div>
-          <p>{profile.role}</p><h3>{profile.name}</h3><span className="profile-rule" />
-          <p className="profile-bio">{profile.bio}</p>
-        </article>)}
-      </div>
-      <p className="profiles-contact">For a school enquiry or to reach the right member of the team, <a href="mailto:asabamemorialhighschool@gmail.com">contact the school office</a>.</p>
+      {type === "team" ? <>
+        <div className="profiles-heading"><h2>School Management Team</h2></div>
+        <ProfileCards profiles={peopleProfiles.team} />
+      </> : staffGroups.map(group => <section className={directoryStyles.group} key={group.title} aria-label={group.title}>
+        <div className="profiles-heading"><h2>{group.title}</h2></div>
+        <ProfileCards profiles={group.profiles} />
+      </section>)}
+      <p className="profiles-contact">For a school enquiry or to reach the right member of staff, <a href="mailto:asabamemorialhighschool@gmail.com">contact the school office</a>.</p>
     </div>
   </section>;
 }
 
 function GovernanceDirectory({ type }: { type: "board" | "pta" }) {
-  const isPta = type === "pta";
-  const profiles = governanceProfiles[type];
   return <section className="profiles-section">
     <div className="container">
-      <div className="profiles-heading">
-        <div><p className="eyebrow"><span /> {isPta ? "Meet the PTA leadership" : "Meet the governors"}</p><h2>{isPta ? "Parents and teachers." : "Responsible oversight."}<br /><em>{isPta ? "Working as one." : "Students at the centre."}</em></h2></div>
-        <p>{isPta ? "Our PTA leaders keep families, teachers and school leadership connected around learner welfare, progress and the continued development of AMHS." : "Our governors support sound leadership, accountability and long-term stewardship for the school community."}</p>
-      </div>
-      <div className={`profile-grid${isPta ? " profile-grid--governance" : ""}`}>
-        {profiles.map((profile) => <article className="profile-card" key={profile.name}>
-          <div className={`profile-avatar${profile.image ? " has-photo" : ""}`} aria-hidden="true" style={profile.image ? { backgroundImage: `url(${profile.image})` } : undefined}>{profile.image ? "" : profile.initials}</div>
-          <p>{profile.role}</p><h3>{profile.name}</h3><span className="profile-rule" />
-          <p className="profile-bio">{profile.bio}</p>
-        </article>)}
-      </div>
+      <div className="profiles-heading"><h2>{type === "pta" ? "PTA Leadership" : "Board of Governors"}</h2></div>
+      <ProfileCards profiles={governanceProfiles[type]} />
       <p className="profiles-contact">To contact the PTA or Board of Governors, <a href="mailto:asabamemorialhighschool@gmail.com">write to the school office</a>.</p>
     </div>
   </section>;
@@ -408,6 +404,13 @@ function PracticalLearningGallery() {
   </section>;
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  if (!["team", "staff", "board-of-governors", "pta-leadership"].includes(slug)) return {};
+  const page = pages[slug];
+  return { title: `${page.title} | Asaba Memorial High School`, description: page.intro };
+}
+
 export function generateStaticParams() {
   return [...Object.keys(pages), "apply-now", "donate", "sponsor-a-child"].map((slug) => ({ slug }));
 }
@@ -444,8 +447,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   const family = getPageFamily(slug);
 
   return <>
-    <section className={`page-hero${slug === "about" ? " page-hero--text-only" : ""}`}>{slug === "about" ? null : <div className={mediaClass(page.image)} />}<div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{page.title}<br /><em>{page.emphasis}</em></h1><p>{page.intro}</p></div></section>
-    <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}<br /><em>{sectionEmphasis}</em></h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}{page.cta ? <PageAction slug={slug} label={page.cta} /> : null}{page.downloads ? <DocumentDownloads documents={page.downloads} /> : null}</div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
+    <section className={`page-hero${slug === "about" ? " page-hero--text-only" : ""}`}>{slug === "about" ? null : <div className={mediaClass(page.image)} />}<div className="page-hero-overlay" /><div className="container page-hero-content"><p className="eyebrow eyebrow-light"><span /> {page.label}</p><h1>{slug === "team" ? "Meet Our School Management Team" : page.title}{page.emphasis ? <><br /><em>{page.emphasis}</em></> : null}</h1><p>{page.intro}</p></div></section>
+    <section className={`content-section content-section--${family} container`}><div className="content-copy"><p className="eyebrow"><span /> {page.eyebrow}</p><h2>{sectionTitle}{sectionEmphasis ? <><br /><em>{sectionEmphasis}</em></> : null}</h2>{page.details.map((detail) => <p key={detail}>{detail}</p>)}{page.cta ? <PageAction slug={slug} label={page.cta} /> : null}{page.downloads ? <DocumentDownloads documents={page.downloads} /> : null}</div><aside className="facts-card"><p>At a glance</p>{page.facts.map(([value, label]) => <div key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}</aside></section>
     {slug === "contact-us" ? <ContactOptions /> : null}
     {slug === "amhs-roots" ? <LegacyFeature /> : null}
     {slug === "success-stories" ? <SuccessStoryFeature /> : null}

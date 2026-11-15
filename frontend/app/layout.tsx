@@ -3,6 +3,7 @@ import "./globals.css";
 import "./brand-theme.css";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
+import { WhatsAppSupport } from "../components/whatsapp-support";
 
 export const metadata: Metadata = {
   title: "Asaba Memorial High School | Lighting the Path to a Brighter Tomorrow",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppSupport />
       </body>
     </html>
   );

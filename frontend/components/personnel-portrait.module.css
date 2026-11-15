@@ -1,0 +1,17 @@
+.frame {
+  position:relative;
+  width:calc(100% + 56px);
+  aspect-ratio:4 / 5;
+  margin:-27px -28px 22px;
+  overflow:hidden;
+  background:#f1efea;
+}
+.frame img {
+  display:block;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
