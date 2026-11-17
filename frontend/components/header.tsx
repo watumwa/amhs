@@ -19,8 +19,8 @@ const navigation: readonly NavigationItem[] = [
   { label: "Academics", links: [["Curriculum", "/curriculum"], ["O-Level Curriculum (S.1–S.4)", "/academics/o-level-curriculum"], ["A-Level curriculum (S.5–S.6)", "/advanced-level-curriculum"], ["Academic calendar", "/academic-calendar"], ["Subjects offered", "/subjects"], ["School library", "/library"], ["National & school syllabus", "/syllabus"]] },
   { label: "Admission", links: [["Admission overview", "/admission"], ["Fees structure", "/fees"], ["School uniform", "/uniform"], ["Apply now", "/apply-now"]] },
   { label: "Our approach", links: [["Our approach overview", "/our-approach"], ["Project-based learning", "/project-based-learning"], ["School Exchange Programme", "/school-exchange-programmes"], ["Arts & Culture", "/arts-and-culture"], ["Brass Band Club (BBC)", "/brass-band-club"], ["Games & sports", "/games-and-sport"], ["Talent development", "/talent-development"], ["Associations & clubs", "/associations-and-clubs"]] },
-  { label: "Student Life", href: "/students-life" },
-  { label: "Get involved", links: [["Get involved overview", "/get-involved"], ["Donate", "/donate"], ["Sponsor a child", "/sponsor-a-child"], ["School Exchange Programme", "/school-exchange-programmes"]] },
+  { label: "Student Life", links: [["Student Life overview", "/students-life"], ["Clubs and Societies", "/associations-and-clubs"], ["Religious Fellowships", "/student-life/religious-fellowships"]] },
+  { label: "Get involved", links: [["Get involved overview", "/get-involved"], ["Careers & Job Opportunities", "/get-involved/careers"], ["Donate", "/donate"], ["Sponsor a child", "/sponsor-a-child"], ["School Exchange Programme", "/school-exchange-programmes"]] },
   { label: "News and Events", href: "/news-and-events" },
   { label: "Contact Us", href: "/contact-us" },
 ] as const;

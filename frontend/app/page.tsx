@@ -1,3 +1,6 @@
+import { RecruitmentNotice } from "../components/recruitment-status";
+import { vacancyStatus } from "../content/vacancies";
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { DirectorPreview } from "../components/director-preview";
 import { Arrow, Book, Compass, Medal, Sparkle } from "../components/icons";
@@ -74,6 +77,7 @@ export default function HomePage() {
         <a href="#welcome" className="scroll-cue"><span>Explore AMHS</span><i /></a>
         <div className="hero-geometry" />
       </section>
+      <RecruitmentNotice initialOpen={vacancyStatus().open} />
 
       <section className="stats-band" aria-label="School highlights">
         <div className="container stats-grid">
